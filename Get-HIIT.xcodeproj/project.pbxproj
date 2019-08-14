@@ -97,12 +97,11 @@
 		85DBA93023049C1D006990A1 /* Get-HIIT */ = {
 			isa = PBXGroup;
 			children = (
-				85DBA93123049C1D006990A1 /* AppDelegate.swift */,
-				85DBA93323049C1D006990A1 /* ViewController.swift */,
-				85DBA93523049C1D006990A1 /* Main.storyboard */,
-				85DBA93823049C1E006990A1 /* Assets.xcassets */,
-				85DBA93A23049C1E006990A1 /* LaunchScreen.storyboard */,
-				85DBA93D23049C1E006990A1 /* Info.plist */,
+				85DBA96723049DD1006990A1 /* Models */,
+				85DBA96623049DC7006990A1 /* Views */,
+				85DBA96223049DA1006990A1 /* Controllers */,
+				85DBA96023049D8F006990A1 /* Storyboards */,
+				85DBA95F23049D83006990A1 /* Resources */,
 			);
 			path = "Get-HIIT";
 			sourceTree = "<group>";
@@ -123,6 +122,79 @@
 				85DBA95323049C1E006990A1 /* Info.plist */,
 			);
 			path = "Get-HIITUITests";
+			sourceTree = "<group>";
+		};
+		85DBA95F23049D83006990A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85DBA93123049C1D006990A1 /* AppDelegate.swift */,
+				85DBA93823049C1E006990A1 /* Assets.xcassets */,
+				85DBA93D23049C1E006990A1 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		85DBA96023049D8F006990A1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85DBA93A23049C1E006990A1 /* LaunchScreen.storyboard */,
+				85DBA93523049C1D006990A1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		85DBA96123049D98006990A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				85DBA93323049C1D006990A1 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		85DBA96223049DA1006990A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85DBA96523049DB6006990A1 /* AnimationControllers */,
+				85DBA96423049DAE006990A1 /* Helpers+Extensions */,
+				85DBA96323049DA7006990A1 /* ModelControllers */,
+				85DBA96123049D98006990A1 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85DBA96323049DA7006990A1 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		85DBA96423049DAE006990A1 /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helpers+Extensions";
+			sourceTree = "<group>";
+		};
+		85DBA96523049DB6006990A1 /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AnimationControllers;
+			sourceTree = "<group>";
+		};
+		85DBA96623049DC7006990A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85DBA96723049DD1006990A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
