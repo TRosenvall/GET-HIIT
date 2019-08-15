@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let appSkeletonStoryBoard = UIStoryboard(name: "AppSkeleton", bundle: nil)
+        let appSkeleton = appSkeletonStoryBoard.instantiateInitialViewController()
+        present(appSkeleton!, animated: false, completion: nil)
+    }
 }
 
