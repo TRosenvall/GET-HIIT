@@ -14,11 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        let appSkeletonStoryBoard = UIStoryboard(name: "AppSkeleton", bundle: nil)
-//        let appSkeleton = appSkeletonStoryBoard.instantiateInitialViewController()
-//        present(appSkeleton!, animated: false, completion: nil)
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let appSkeletonStoryBoard = UIStoryboard(name: "AppSkeleton", bundle: nil)
+        let appSkeleton = appSkeletonStoryBoard.instantiateInitialViewController()
+        present(appSkeleton!, animated: false, completion: nil)
+    }
 }
 
