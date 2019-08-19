@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16543A95230B0B63009A7A8C /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A94230B0B63009A7A8C /* TimerController.swift */; };
+		16543A97230B127E009A7A8C /* WorkoutMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */; };
+		16543A99230B12BB009A7A8C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */; };
 		168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168DBDE52304A08F00BB9A24 /* Timer.swift */; };
 		85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A76230B01A800CAB428 /* Dashboard.storyboard */; };
 		85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A78230B01C500CAB428 /* MyPlan.storyboard */; };
@@ -49,7 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16543A8A230B02BC009A7A8C /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerController.swift; path = ../../../../TimerController.swift; sourceTree = "<group>"; };
+		16543A94230B0B63009A7A8C /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = SOURCE_ROOT; };
+		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
+		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		168DBDE52304A08F00BB9A24 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		85137A76230B01A800CAB428 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		85137A79230B01C500CAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Get-HIIT/Storyboards/Base.lproj/MyPlan.storyboard"; sourceTree = "<group>"; };
@@ -105,6 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16543A9C230B4036009A7A8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		85137A72230B015500CAB428 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +152,7 @@
 		85137A80230B02D300CAB428 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				16543A94230B0B63009A7A8C /* TimerController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -211,6 +224,7 @@
 				85DBA96723049DD1006990A1 /* Models */,
 				85137A82230B02E600CAB428 /* Views */,
 				85DBA96223049DA1006990A1 /* Controllers */,
+				16543A9C230B4036009A7A8C /* Extensions */,
 				85DBA97323061F22006990A1 /* SkeletonStoryboard */,
 				85DBA96023049D8F006990A1 /* Storyboards */,
 				85DBA95F23049D83006990A1 /* Resources */,
@@ -264,6 +278,8 @@
 			children = (
 				85137A8C230B373700CAB428 /* ProfileViewControllers */,
 				85DBA93323049C1D006990A1 /* ViewController.swift */,
+				16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */,
+				16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */,
 				85DBA97023061E70006990A1 /* Skeleton */,
 			);
 			path = ViewControllers;
