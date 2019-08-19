@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16543A8B230B02BC009A7A8C /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A8A230B02BC009A7A8C /* TimerController.swift */; };
 		168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168DBDE52304A08F00BB9A24 /* Timer.swift */; };
 		85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A76230B01A800CAB428 /* Dashboard.storyboard */; };
 		85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A78230B01C500CAB428 /* MyPlan.storyboard */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16543A8A230B02BC009A7A8C /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerController.swift; path = ../../../../TimerController.swift; sourceTree = "<group>"; };
 		168DBDE52304A08F00BB9A24 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		85137A76230B01A800CAB428 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		85137A79230B01C500CAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Get-HIIT/Storyboards/Base.lproj/MyPlan.storyboard"; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */,
 				85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */,
 				8596FA07230A5229008CC790 /* ProfileViewController.swift in Sources */,
+				16543A8B230B02BC009A7A8C /* TimerController.swift in Sources */,
 				85DBA97923076C91006990A1 /* MyPlanViewController.swift in Sources */,
 				85DBA97B2309BE6E006990A1 /* CreateNewWorkoutViewController.swift in Sources */,
 			);
