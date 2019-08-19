@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-797" y="-1387"/>
         </scene>
-        <!--Main Tab Bar View Controller-->
+        <!--Skeleton Main Tab Bar View Controller-->
         <scene sceneID="8Hw-Qb-8HT">
             <objects>
-                <tabBarController storyboardIdentifier="AppSkeletonTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="lAW-K8-Zpd" customClass="MainTabBarViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AppSkeletonTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="lAW-K8-Zpd" customClass="SkeletonMainTabBarViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IkP-rk-UPo">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-1251" y="837"/>
         </scene>
-        <!--Workout In Progress View Controller-->
+        <!--Skeleton Workout In Progress View Controller-->
         <scene sceneID="xY2-mg-Nbj">
             <objects>
-                <viewController id="Snm-6b-nkD" customClass="WorkoutInProgressViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Snm-6b-nkD" customClass="SkeletonWorkoutInProgressViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v6z-RI-MR2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="-797" y="1567"/>
         </scene>
-        <!--Post Workout View Controller-->
+        <!--Skeleton Post Workout View Controller-->
         <scene sceneID="Kah-lx-JBl">
             <objects>
-                <viewController storyboardIdentifier="PostExerciseViewController" id="Wjb-v5-JwN" customClass="PostWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostExerciseViewController" id="Wjb-v5-JwN" customClass="SkeletonPostWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Taj-2G-eps">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,7 +284,7 @@
         <!--Item-->
         <scene sceneID="v2v-o4-YV9">
             <objects>
-                <viewController id="7wH-Im-0ir" customClass="ProfileViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7wH-Im-0ir" customClass="SkeletonProfileViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMm-vD-AtI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -335,7 +335,7 @@
         <!--Item-->
         <scene sceneID="EFU-oB-QQi">
             <objects>
-                <viewController id="qn7-sk-Puz" customClass="MyPlanViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qn7-sk-Puz" customClass="SkeletonMyPlanViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6Y-gd-1JO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,10 +412,10 @@
             </objects>
             <point key="canvasLocation" x="768" y="-299"/>
         </scene>
-        <!--Create New Workout View Controller-->
+        <!--Skeleton Create New Workout View Controller-->
         <scene sceneID="WBN-c1-jxb">
             <objects>
-                <viewController id="kFU-9j-3qP" customClass="CreateNewWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kFU-9j-3qP" customClass="SkeletonCreateNewWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZpT-th-5ds">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

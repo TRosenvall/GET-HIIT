@@ -1,5 +1,5 @@
 //
-//  WorkoutInProgressViewController.swift
+//  SkeletonWorkoutInProgressViewController.swift
 //  Get-HIIT
 //
 //  Created by Timothy Rosenvall on 8/16/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WorkoutInProgressViewController: UIViewController {
+class SkeletonWorkoutInProgressViewController: UIViewController {
 
     @IBOutlet weak var imageButton: UIButton!
     
@@ -39,7 +39,7 @@ class WorkoutInProgressViewController: UIViewController {
         if x < 6 {
             imageButton.setImage(UIImage(named: "Workout \(x) Screenshot"), for: .normal)
         } else {
-            MainTabBarViewController.finishedExercise = 1
+            SkeletonMainTabBarViewController.finishedExercise = 1
             let appSkeletonStoryboard = UIStoryboard(name: "AppSkeleton", bundle: nil)
             let postExerciseViewController = appSkeletonStoryboard.instantiateViewController(withIdentifier: "PostExerciseViewController")
             present(postExerciseViewController, animated: true) {
@@ -50,8 +50,8 @@ class WorkoutInProgressViewController: UIViewController {
     }
     
     func dismissFromPostExercise() {
-        if WorkoutInProgressViewController.fromPostExercise == 1 {
-            WorkoutInProgressViewController.fromPostExercise = 0
+        if SkeletonWorkoutInProgressViewController.fromPostExercise == 1 {
+            SkeletonWorkoutInProgressViewController.fromPostExercise = 0
             self.dismiss(animated: true, completion: nil)
         }
     }

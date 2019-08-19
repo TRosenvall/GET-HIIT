@@ -1,5 +1,5 @@
 //
-//  MainTabBarViewController.swift
+//  SkeletonMainTabBarViewController.swift
 //  Get-HIIT
 //
 //  Created by Timothy Rosenvall on 8/15/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+class SkeletonMainTabBarViewController: UITabBarController {
 
     static var finishedExercise = 0
     let defaultColor = UIColor(displayP3Red: 249, green: 249, blue: 249, alpha: 1)
@@ -33,9 +33,9 @@ class MainTabBarViewController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if MainTabBarViewController.finishedExercise == 1 {
+        if SkeletonMainTabBarViewController.finishedExercise == 1 {
             self.selectedIndex = 0
-            MainTabBarViewController.finishedExercise = 0
+            SkeletonMainTabBarViewController.finishedExercise = 0
         }
     }
     
