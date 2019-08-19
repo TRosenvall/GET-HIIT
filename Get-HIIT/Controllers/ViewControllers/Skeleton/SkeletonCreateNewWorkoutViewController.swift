@@ -1,5 +1,5 @@
 //
-//  CreateNewWorkoutViewController.swift
+//  SkeletonCreateNewWorkoutViewController.swift
 //  Get-HIIT
 //
 //  Created by Timothy Rosenvall on 8/18/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateNewWorkoutViewController: UIViewController {
+class SkeletonCreateNewWorkoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

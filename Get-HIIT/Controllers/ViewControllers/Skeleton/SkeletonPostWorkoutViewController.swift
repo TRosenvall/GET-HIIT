@@ -1,5 +1,5 @@
 //
-//  PostWorkoutViewController.swift
+//  SkeletonPostWorkoutViewController.swift
 //  Get-HIIT
 //
 //  Created by Timothy Rosenvall on 8/16/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostWorkoutViewController: UIViewController {
+class SkeletonPostWorkoutViewController: UIViewController {
 
     @IBOutlet weak var discardPromptImageView: UIImageView!
     @IBOutlet weak var promptSaveButton: UIButton!
@@ -16,7 +16,7 @@ class PostWorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        WorkoutInProgressViewController.fromPostExercise = 1
+        SkeletonWorkoutInProgressViewController.fromPostExercise = 1
         discardPromptImageView.isHidden = true
         promptSaveButton.isHidden = true
         discardButton.isHidden = true

@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  SkeletonProfileViewController.swift
 //  Get-HIIT
 //
 //  Created by Timothy Rosenvall on 8/18/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class SkeletonProfileViewController: UIViewController {
 
     @IBOutlet weak var optionsMenuImageView: UIImageView!
     

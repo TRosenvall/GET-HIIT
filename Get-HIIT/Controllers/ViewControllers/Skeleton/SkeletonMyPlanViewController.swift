@@ -1,5 +1,5 @@
 //
-//  MyPlanViewController.swift
+//  SkeletonMyPlanViewController.swift
 //  Get-HIIT
 //
 //  Created by Timothy Rosenvall on 8/16/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyPlanViewController: UIViewController {
+class SkeletonMyPlanViewController: UIViewController {
 
     @IBOutlet weak var upcomingImageView: UIImageView!
     @IBOutlet weak var newImageView: UIImageView!
