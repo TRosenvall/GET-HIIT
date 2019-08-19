@@ -22,5 +22,4 @@ class Timer: NSObject {
         let secondsRemaining = timeRemaining - (minutesRemaining * 60)
         return String(format: "%02d : %02d", arguments: [minutesRemaining, secondsRemaining])
     }
-    
 }
