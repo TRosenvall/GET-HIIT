@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16543A95230B0B63009A7A8C /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A94230B0B63009A7A8C /* TimerController.swift */; };
-		16543A97230B127E009A7A8C /* WorkoutMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */; };
-		16543A99230B12BB009A7A8C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */; };
+		16060649230C4E4500866424 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16060648230C4E4500866424 /* Exercise.swift */; };
+		1606064B230C63AE00866424 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606064A230C63AE00866424 /* ExerciseController.swift */; };
+		1619ED0D230C840200DFACEC /* WorkoutTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */; };
 		168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168DBDE52304A08F00BB9A24 /* Timer.swift */; };
 		85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A76230B01A800CAB428 /* Dashboard.storyboard */; };
 		85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A78230B01C500CAB428 /* MyPlan.storyboard */; };
@@ -52,7 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16543A94230B0B63009A7A8C /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = SOURCE_ROOT; };
+		16060648230C4E4500866424 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		1606064A230C63AE00866424 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseController.swift; path = "Get-HIIT/Controllers/Helpers+Extensions/ExerciseController.swift"; sourceTree = SOURCE_ROOT; };
+		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTimerViewController.swift; sourceTree = "<group>"; };
 		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
 		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		168DBDE52304A08F00BB9A24 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		16543A9C230B4036009A7A8C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				168DBDE52304A08F00BB9A24 /* Timer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -152,7 +155,7 @@
 		85137A80230B02D300CAB428 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				16543A94230B0B63009A7A8C /* TimerController.swift */,
+				1606064A230C63AE00866424 /* ExerciseController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -184,7 +187,6 @@
 		85137A84230B078600CAB428 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				16543A8A230B02BC009A7A8C /* TimerController.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -306,7 +308,7 @@
 		85DBA96723049DD1006990A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				168DBDE52304A08F00BB9A24 /* Timer.swift */,
+				16060648230C4E4500866424 /* Exercise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +322,7 @@
 				85DBA97423071E11006990A1 /* SkeletonWorkoutInProgressViewController.swift */,
 				85DBA97623073972006990A1 /* SkeletonPostWorkoutViewController.swift */,
 				8596FA06230A5229008CC790 /* SkeletonProfileViewController.swift */,
+				1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */,
 			);
 			path = Skeleton;
 			sourceTree = "<group>";
@@ -470,11 +473,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				85DBA97723073972006990A1 /* SkeletonPostWorkoutViewController.swift in Sources */,
+				16060649230C4E4500866424 /* Exercise.swift in Sources */,
 				85DBA97523071E11006990A1 /* SkeletonWorkoutInProgressViewController.swift in Sources */,
 				85DBA93423049C1D006990A1 /* ViewController.swift in Sources */,
 				85DBA97223061EFD006990A1 /* SkeletonMainTabBarViewController.swift in Sources */,
+				1606064B230C63AE00866424 /* ExerciseController.swift in Sources */,
 				168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */,
 				85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */,
+				1619ED0D230C840200DFACEC /* WorkoutTimerViewController.swift in Sources */,
 				85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */,
 				8596FA07230A5229008CC790 /* SkeletonProfileViewController.swift in Sources */,
 				85DBA97923076C91006990A1 /* SkeletonMyPlanViewController.swift in Sources */,
