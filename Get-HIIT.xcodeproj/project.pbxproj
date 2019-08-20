@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16543A95230B0B63009A7A8C /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A94230B0B63009A7A8C /* TimerController.swift */; };
-		16543A97230B127E009A7A8C /* WorkoutMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */; };
-		16543A99230B12BB009A7A8C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */; };
 		168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168DBDE52304A08F00BB9A24 /* Timer.swift */; };
 		85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A76230B01A800CAB428 /* Dashboard.storyboard */; };
 		85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A78230B01C500CAB428 /* MyPlan.storyboard */; };
@@ -32,6 +29,9 @@
 		85DBA97723073972006990A1 /* SkeletonPostWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBA97623073972006990A1 /* SkeletonPostWorkoutViewController.swift */; };
 		85DBA97923076C91006990A1 /* SkeletonMyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBA97823076C91006990A1 /* SkeletonMyPlanViewController.swift */; };
 		85DBA97B2309BE6E006990A1 /* SkeletonCreateNewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBA97A2309BE6E006990A1 /* SkeletonCreateNewWorkoutViewController.swift */; };
+		85F5F705230C549900693594 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F704230C549900693594 /* AboutMeViewController.swift */; };
+		85F5F707230C682F00693594 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F706230C682F00693594 /* Profile.swift */; };
+		85F5F709230C84FA00693594 /* PasteDisabledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +83,9 @@
 		85DBA97623073972006990A1 /* SkeletonPostWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonPostWorkoutViewController.swift; sourceTree = "<group>"; };
 		85DBA97823076C91006990A1 /* SkeletonMyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonMyPlanViewController.swift; sourceTree = "<group>"; };
 		85DBA97A2309BE6E006990A1 /* SkeletonCreateNewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCreateNewWorkoutViewController.swift; sourceTree = "<group>"; };
+		85F5F704230C549900693594 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		85F5F706230C682F00693594 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteDisabledTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
+				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -184,7 +188,6 @@
 		85137A84230B078600CAB428 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				16543A8A230B02BC009A7A8C /* TimerController.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				85137A8D230B374D00CAB428 /* ProfileViewController.swift */,
+				85F5F704230C549900693594 /* AboutMeViewController.swift */,
 			);
 			path = ProfileViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				168DBDE52304A08F00BB9A24 /* Timer.swift */,
+				85F5F706230C682F00693594 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -472,13 +477,16 @@
 				85DBA97723073972006990A1 /* SkeletonPostWorkoutViewController.swift in Sources */,
 				85DBA97523071E11006990A1 /* SkeletonWorkoutInProgressViewController.swift in Sources */,
 				85DBA93423049C1D006990A1 /* ViewController.swift in Sources */,
+				85F5F707230C682F00693594 /* Profile.swift in Sources */,
 				85DBA97223061EFD006990A1 /* SkeletonMainTabBarViewController.swift in Sources */,
 				168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */,
 				85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */,
+				85F5F709230C84FA00693594 /* PasteDisabledTextField.swift in Sources */,
 				85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */,
 				8596FA07230A5229008CC790 /* SkeletonProfileViewController.swift in Sources */,
 				85DBA97923076C91006990A1 /* SkeletonMyPlanViewController.swift in Sources */,
 				85137A89230B14DA00CAB428 /* ColorExtension.swift in Sources */,
+				85F5F705230C549900693594 /* AboutMeViewController.swift in Sources */,
 				85DBA97B2309BE6E006990A1 /* SkeletonCreateNewWorkoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
