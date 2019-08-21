@@ -31,7 +31,6 @@ class WorkoutTimerViewController: UIViewController {
         }
     }
 
-    
     // MARK: - Navigation
 
     @IBAction func startTimerButton(_ sender: Any) {

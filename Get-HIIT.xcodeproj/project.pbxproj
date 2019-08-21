@@ -33,6 +33,7 @@
 		85F5F70B230C8DBA00693594 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F70A230C8DBA00693594 /* Profile.swift */; };
 		85F5F70C230C8E1D00693594 /* PasteDisabledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */; };
 		85F5F70D230C8E9700693594 /* WorkoutTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */; };
+		85F5F713230CAA3F00693594 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F712230CAA3F00693594 /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		85F5F706230C682F00693594 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteDisabledTextField.swift; sourceTree = "<group>"; };
 		85F5F70A230C8DBA00693594 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		85F5F712230CAA3F00693594 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileController.swift; path = "Get-HIIT/Controllers/Helpers+Extensions/ProfileController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				1606064A230C63AE00866424 /* ExerciseController.swift */,
+				85F5F712230CAA3F00693594 /* ProfileController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				85F5F70B230C8DBA00693594 /* Profile.swift in Sources */,
 				85DBA97223061EFD006990A1 /* SkeletonMainTabBarViewController.swift in Sources */,
 				168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */,
+				85F5F713230CAA3F00693594 /* ProfileController.swift in Sources */,
 				85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */,
 				85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */,
 				8596FA07230A5229008CC790 /* SkeletonProfileViewController.swift in Sources */,

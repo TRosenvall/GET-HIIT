@@ -13,9 +13,10 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var healthKitSwitch: UISwitch!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var ageTextField: PasteDisabledTextField!
     @IBOutlet weak var weightTextField: PasteDisabledTextField!
     
-    var profile: Profile?
+    let profile = ProfileController.sharedInstance.profile
     let genderPicker = UIPickerView()
     
     override func viewDidLoad() {
@@ -28,15 +29,20 @@ class AboutMeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func screenTapped(_ sender: Any) {
+        nameTextField.resignFirstResponder()
+        genderTextField.endEditing(true)
+        ageTextField.resignFirstResponder()
+        weightTextField.resignFirstResponder()
+        
+    }
+
     func setupViews() {
-        if let profile = profile {
-            healthKitSwitch.isOn = profile.healthKitIsOn
-        } else {
-            healthKitSwitch.isOn = false
-        }
-        nameTextField.layer.borderWidth = 0
-        genderTextField.layer.borderWidth = 0
-        weightTextField.layer.borderWidth = 0
+        healthKitSwitch.isOn = profile.healthKitIsOn
+        nameTextField.delegate = self
+        genderTextField.delegate = self
+        ageTextField.delegate = self
+        weightTextField.delegate = self
     }
     
     func setupPickerView() {
@@ -44,8 +50,6 @@ class AboutMeViewController: UIViewController {
         self.genderPicker.dataSource = self as UIPickerViewDataSource
         genderTextField.inputView = genderPicker
     }
-    
-    
 }
 
 extension AboutMeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -76,12 +80,28 @@ extension AboutMeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             genderTextField.text = genderTextField.text
         case 1:
             genderTextField.text = "Male"
-            self.view.endEditing(true)
+            profile.gender = 0
         case 2:
             genderTextField.text = "Female"
-            self.view.endEditing(true)
+            profile.gender = 1
         default:
             genderTextField.text = "Error"
         }
+    }
+}
+
+extension AboutMeViewController: UITextFieldDelegate {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let char = string.cString(using: String.Encoding.utf8) {
+            let isBackSpace = strcmp(char, "\\b")
+            if (isBackSpace == -92) {
+                return true
+            }
+        }
+        guard let text = textField.text else {return false}
+        if textField == ageTextField || textField == weightTextField {
+            return text.count < 5
+        }
+        return text.count < 9
     }
 }
