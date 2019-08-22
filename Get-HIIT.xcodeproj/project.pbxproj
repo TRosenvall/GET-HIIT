@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168DBDE52304A08F00BB9A24 /* Timer.swift */; };
+		16E42B22230DB71B002A6251 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B21230DB71B002A6251 /* Workout.swift */; };
+		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
 		85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A76230B01A800CAB428 /* Dashboard.storyboard */; };
 		85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A78230B01C500CAB428 /* MyPlan.storyboard */; };
 		85137A7C230B01E400CAB428 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A7B230B01E400CAB428 /* Workout.storyboard */; };
@@ -60,7 +61,8 @@
 		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
 		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
 		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
-		168DBDE52304A08F00BB9A24 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = ../../Extensions/Timer.swift; sourceTree = "<group>"; };
+		16E42B21230DB71B002A6251 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		85137A76230B01A800CAB428 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		85137A79230B01C500CAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Get-HIIT/Storyboards/Base.lproj/MyPlan.storyboard"; sourceTree = "<group>"; };
 		85137A7B230B01E400CAB428 /* Workout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workout.storyboard; sourceTree = "<group>"; };
@@ -168,7 +170,6 @@
 		85137A81230B02DE00CAB428 /* Helpers+Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				168DBDE52304A08F00BB9A24 /* Timer.swift */,
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
 			);
@@ -321,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				85F5F70A230C8DBA00693594 /* Profile.swift */,
+				16E42B21230DB71B002A6251 /* Workout.swift */,
+				16E42B23230DBE17002A6251 /* CountdownTimer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -502,7 +505,7 @@
 				85DBA93423049C1D006990A1 /* ViewController.swift in Sources */,
 				85F5F70B230C8DBA00693594 /* Profile.swift in Sources */,
 				85DBA97223061EFD006990A1 /* SkeletonMainTabBarViewController.swift in Sources */,
-				168DBDE62304A08F00BB9A24 /* Timer.swift in Sources */,
+				16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */,
 				85F5F713230CAA3F00693594 /* ProfileController.swift in Sources */,
 				85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */,
 				85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */,
@@ -512,6 +515,7 @@
 				85137A89230B14DA00CAB428 /* ColorExtension.swift in Sources */,
 				85F5F70D230C8E9700693594 /* WorkoutTimerViewController.swift in Sources */,
 				85F5F705230C549900693594 /* AboutMeViewController.swift in Sources */,
+				16E42B22230DB71B002A6251 /* Workout.swift in Sources */,
 				85DBA97B2309BE6E006990A1 /* SkeletonCreateNewWorkoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
