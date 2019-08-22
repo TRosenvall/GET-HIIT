@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-    
+    // Setup the color scheme to be used specifically in this app.
     static let accentBlue = UIColor(named: "Get-HIITAccentBlue")!
     static let accentYellow = UIColor(named: "Get-HIITAccentYellow")!
     static let primaryOne = UIColor(named: "Get-HIITPrimary1")!

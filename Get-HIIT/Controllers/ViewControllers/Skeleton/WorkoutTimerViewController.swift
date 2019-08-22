@@ -11,8 +11,6 @@ import UIKit
 class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     
     
-    
-    
     var countdownTimerDidStart = false
     
     
@@ -30,6 +28,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     
     func countdownTime(time: (minutes: String, seconds: String)) {
         
+        
     }
     
     func countdownTimerDone() {
@@ -37,7 +36,6 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     }
     
     // MARK: - Actions
-    
     @IBAction func startTimerButton(_ sender: Any) {
 
     }
