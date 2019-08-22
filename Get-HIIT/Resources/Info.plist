@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Allow Get-HIIT to have access to HealthKit to pull biometric data.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Allow Get-HIIT to have access to push data to HealthKit</string>
 </dict>
 </plist>

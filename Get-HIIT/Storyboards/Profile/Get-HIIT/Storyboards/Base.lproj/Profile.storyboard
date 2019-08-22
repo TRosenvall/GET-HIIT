@@ -260,6 +260,7 @@
                     <connections>
                         <outlet property="aboutMeView" destination="ufJ-gL-a51" id="hzj-yB-u8G"/>
                         <outlet property="fitnessPlanView" destination="qnI-hw-XfH" id="6w1-bx-uVu"/>
+                        <outlet property="greetingLabel" destination="3aC-LH-nPV" id="AkF-Pu-2DB"/>
                         <outlet property="numberOfCaloriesBurnedLabel" destination="p3a-Qr-VBv" id="8E6-bo-KSK"/>
                         <outlet property="numberOfExercisesLabel" destination="HRE-Ze-azg" id="Zcd-NF-vd1"/>
                         <outlet property="numberOfExercisesThisWeekLabel" destination="ceG-Xx-AP4" id="zM2-KP-LO9"/>
@@ -315,7 +316,7 @@
                                     <action selector="backButtonTapped:" destination="NJB-c8-CHz" eventType="touchUpInside" id="68e-RS-N3a"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us a bit about yourself so that we can show you exactly what you want." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8X-I8-Wji">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us a bit about yourself so that we can run your numbers correctly." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8X-I8-Wji">
                                 <rect key="frame" x="31" y="227" width="352" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="omk-Sl-FJf"/>
@@ -332,6 +333,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFl-oj-2c4">
                                 <rect key="frame" x="334" y="301.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="healthKitSwitchTapped:" destination="NJB-c8-CHz" eventType="valueChanged" id="xKb-4Y-JCA"/>
+                                </connections>
                             </switch>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="n3B-m7-XpT">
                                 <rect key="frame" x="31" y="363.5" width="352" height="179"/>
@@ -400,16 +404,23 @@
                                                 <rect key="frame" x="205.5" y="0.0" width="146.5" height="28"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Denied, Please Enable In Health App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebw-Ou-ySH">
+                                <rect key="frame" x="31" y="332.5" width="352" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Ebw-Ou-ySH" firstAttribute="trailing" secondItem="c8P-1m-SIM" secondAttribute="trailing" id="2Ol-gK-h9d"/>
                             <constraint firstItem="7SR-h7-JWQ" firstAttribute="top" secondItem="ENi-g1-cF2" secondAttribute="top" id="4cm-fX-Gks"/>
                             <constraint firstItem="MlC-wH-qGq" firstAttribute="height" secondItem="7SR-h7-JWQ" secondAttribute="height" id="6UX-ht-KDI"/>
                             <constraint firstItem="c8P-1m-SIM" firstAttribute="centerY" secondItem="ENi-g1-cF2" secondAttribute="centerY" multiplier="0.7" id="9b2-N4-HFo"/>
@@ -420,6 +431,7 @@
                             <constraint firstItem="c8P-1m-SIM" firstAttribute="height" secondItem="Y4L-AC-Ad5" secondAttribute="height" multiplier="0.03" id="Hio-4R-6fd"/>
                             <constraint firstItem="n3B-m7-XpT" firstAttribute="width" secondItem="Y4L-AC-Ad5" secondAttribute="width" multiplier="0.85" id="JiQ-MO-Sf4"/>
                             <constraint firstItem="MlC-wH-qGq" firstAttribute="width" secondItem="7SR-h7-JWQ" secondAttribute="width" id="VnU-WU-VKo"/>
+                            <constraint firstItem="Ebw-Ou-ySH" firstAttribute="leading" secondItem="c8P-1m-SIM" secondAttribute="leading" id="XoF-zu-zIP"/>
                             <constraint firstItem="w8X-I8-Wji" firstAttribute="centerY" secondItem="ENi-g1-cF2" secondAttribute="centerY" multiplier="0.55" id="ZEc-0Z-4Lv"/>
                             <constraint firstItem="c8P-1m-SIM" firstAttribute="centerX" secondItem="ENi-g1-cF2" secondAttribute="centerX" id="bXI-dK-Ovh"/>
                             <constraint firstItem="kFl-oj-2c4" firstAttribute="trailing" secondItem="c8P-1m-SIM" secondAttribute="trailing" id="biL-Tf-CIa"/>
@@ -429,6 +441,7 @@
                             <constraint firstItem="kFl-oj-2c4" firstAttribute="centerY" secondItem="c8P-1m-SIM" secondAttribute="centerY" id="jpY-V9-bHO"/>
                             <constraint firstItem="ENi-g1-cF2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NId-b1-yEw" secondAttribute="trailing" symbolic="YES" id="jtO-95-Irq"/>
                             <constraint firstItem="MlC-wH-qGq" firstAttribute="centerX" secondItem="7SR-h7-JWQ" secondAttribute="centerX" id="kw5-ht-EuQ"/>
+                            <constraint firstItem="Ebw-Ou-ySH" firstAttribute="top" secondItem="kFl-oj-2c4" secondAttribute="bottom" id="l7Q-Xn-QsW"/>
                             <constraint firstItem="NId-b1-yEw" firstAttribute="leading" secondItem="w8X-I8-Wji" secondAttribute="leading" id="l9j-KZ-Qwh"/>
                             <constraint firstItem="MlC-wH-qGq" firstAttribute="centerY" secondItem="7SR-h7-JWQ" secondAttribute="centerY" id="o49-Eh-IBl"/>
                             <constraint firstItem="w8X-I8-Wji" firstAttribute="centerX" secondItem="ENi-g1-cF2" secondAttribute="centerX" id="q5O-cp-bPe"/>
@@ -442,6 +455,7 @@
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="mMx-Ri-pAG" id="v10-5s-RIr"/>
+                        <outlet property="enableInSettingsLabel" destination="Ebw-Ou-ySH" id="UMd-Ay-uki"/>
                         <outlet property="genderTextField" destination="yR4-7Q-SwJ" id="AVA-N6-WbM"/>
                         <outlet property="healthKitSwitch" destination="kFl-oj-2c4" id="PmV-zh-b6G"/>
                         <outlet property="nameTextField" destination="8a2-nz-aY9" id="rbf-Dl-Go0"/>
