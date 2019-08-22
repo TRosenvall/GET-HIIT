@@ -8,6 +8,7 @@
 
 import UIKit
 
+// This is a subclass of UITextField used to disable the paste option for the age and weight labels in the aboutMeController so that users can't paste in non-numbers.
 class PasteDisabledTextField: UITextField {
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         if action == #selector(UIResponderStandardEditActions.paste(_:)) {
