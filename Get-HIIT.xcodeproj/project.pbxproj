@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16E42B22230DB71B002A6251 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B21230DB71B002A6251 /* Workout.swift */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
+		4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */; };
 		85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A76230B01A800CAB428 /* Dashboard.storyboard */; };
 		85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A78230B01C500CAB428 /* MyPlan.storyboard */; };
 		85137A7C230B01E400CAB428 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A7B230B01E400CAB428 /* Workout.storyboard */; };
@@ -38,6 +39,8 @@
 		85F5F717230DBE1000693594 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F5F716230DBE1000693594 /* HealthKit.framework */; };
 		85F5F719230DBE5600693594 /* HealthKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F718230DBE5600693594 /* HealthKitController.swift */; };
 		85F5F71B230E548E00693594 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F71A230E548E00693594 /* RemindersViewController.swift */; };
+		B66D8E823902E014DAD84D00 /* Pods_Get_HIIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */; };
+		DAF270A9612F4993383774C3 /* Pods_Get_HIITTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		16E42B21230DB71B002A6251 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		25FFF6610E22626BFCCC89E9 /* Pods-Get-HIIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.debug.xcconfig"; sourceTree = "<group>"; };
+		3EB631764EB12882A9CABC16 /* Pods-Get-HIIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.release.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.release.xcconfig"; sourceTree = "<group>"; };
+		8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIITTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85137A76230B01A800CAB428 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		85137A79230B01C500CAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Get-HIIT/Storyboards/Base.lproj/MyPlan.storyboard"; sourceTree = "<group>"; };
 		85137A7B230B01E400CAB428 /* Workout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workout.storyboard; sourceTree = "<group>"; };
@@ -100,6 +106,12 @@
 		85F5F716230DBE1000693594 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		85F5F718230DBE5600693594 /* HealthKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitController.swift; sourceTree = "<group>"; };
 		85F5F71A230E548E00693594 /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		8EE7231185A5D4DC2C815043 /* Pods-Get-HIITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIITTests.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIITTests/Pods-Get-HIITTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIITUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3D0D3A7ABB9D4FF7DD75022 /* Pods-Get-HIITTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIITTests.release.xcconfig"; path = "Target Support Files/Pods-Get-HIITTests/Pods-Get-HIITTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6B862F395FE5B029E8D63EC /* Pods-Get-HIITUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIITUITests.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIITUITests/Pods-Get-HIITUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3E7070D86DC35EEEF0E82B3 /* Pods-Get-HIITUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIITUITests.release.xcconfig"; path = "Target Support Files/Pods-Get-HIITUITests/Pods-Get-HIITUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F5F717230DBE1000693594 /* HealthKit.framework in Frameworks */,
+				B66D8E823902E014DAD84D00 /* Pods_Get_HIIT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF270A9612F4993383774C3 /* Pods_Get_HIITTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,12 +136,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51004EFFFC177879D16FECF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25FFF6610E22626BFCCC89E9 /* Pods-Get-HIIT.debug.xcconfig */,
+				3EB631764EB12882A9CABC16 /* Pods-Get-HIIT.release.xcconfig */,
+				8EE7231185A5D4DC2C815043 /* Pods-Get-HIITTests.debug.xcconfig */,
+				D3D0D3A7ABB9D4FF7DD75022 /* Pods-Get-HIITTests.release.xcconfig */,
+				E6B862F395FE5B029E8D63EC /* Pods-Get-HIITUITests.debug.xcconfig */,
+				F3E7070D86DC35EEEF0E82B3 /* Pods-Get-HIITUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		85137A72230B015500CAB428 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +250,7 @@
 				85DBA92F23049C1D006990A1 /* Products */,
 				85137A84230B078600CAB428 /* Recovered References */,
 				85F5F715230DBE1000693594 /* Frameworks */,
+				51004EFFFC177879D16FECF6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -356,6 +386,9 @@
 			isa = PBXGroup;
 			children = (
 				85F5F716230DBE1000693594 /* HealthKit.framework */,
+				9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */,
+				8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */,
+				8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -367,9 +400,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85DBA95623049C1E006990A1 /* Build configuration list for PBXNativeTarget "Get-HIIT" */;
 			buildPhases = (
+				14C33CB1CEEE661AA8100BE3 /* [CP] Check Pods Manifest.lock */,
 				85DBA92A23049C1D006990A1 /* Sources */,
 				85DBA92B23049C1D006990A1 /* Frameworks */,
 				85DBA92C23049C1D006990A1 /* Resources */,
+				5B1E5FFAFA89DF83E4A3B0EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,6 +419,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85DBA95923049C1E006990A1 /* Build configuration list for PBXNativeTarget "Get-HIITTests" */;
 			buildPhases = (
+				A4A2C0A0A4DD3544CF39AE06 /* [CP] Check Pods Manifest.lock */,
 				85DBA93E23049C1E006990A1 /* Sources */,
 				85DBA93F23049C1E006990A1 /* Frameworks */,
 				85DBA94023049C1E006990A1 /* Resources */,
@@ -402,6 +438,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85DBA95C23049C1E006990A1 /* Build configuration list for PBXNativeTarget "Get-HIITUITests" */;
 			buildPhases = (
+				A6E7D58BBDB1EB433BFDF454 /* [CP] Check Pods Manifest.lock */,
 				85DBA94923049C1E006990A1 /* Sources */,
 				85DBA94A23049C1E006990A1 /* Frameworks */,
 				85DBA94B23049C1E006990A1 /* Resources */,
@@ -496,6 +533,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14C33CB1CEEE661AA8100BE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-HIIT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B1E5FFAFA89DF83E4A3B0EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A2C0A0A4DD3544CF39AE06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-HIITTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E7D58BBDB1EB433BFDF454 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get-HIITUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85DBA92A23049C1D006990A1 /* Sources */ = {
@@ -709,6 +832,7 @@
 		};
 		85DBA95723049C1E006990A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25FFF6610E22626BFCCC89E9 /* Pods-Get-HIIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Get-HIIT/Get-HIIT.entitlements";
@@ -728,6 +852,7 @@
 		};
 		85DBA95823049C1E006990A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EB631764EB12882A9CABC16 /* Pods-Get-HIIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Get-HIIT/Get-HIIT.entitlements";
@@ -747,6 +872,7 @@
 		};
 		85DBA95A23049C1E006990A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE7231185A5D4DC2C815043 /* Pods-Get-HIITTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -768,6 +894,7 @@
 		};
 		85DBA95B23049C1E006990A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D0D3A7ABB9D4FF7DD75022 /* Pods-Get-HIITTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -789,6 +916,7 @@
 		};
 		85DBA95D23049C1E006990A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6B862F395FE5B029E8D63EC /* Pods-Get-HIITUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -809,6 +937,7 @@
 		};
 		85DBA95E23049C1E006990A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3E7070D86DC35EEEF0E82B3 /* Pods-Get-HIITUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

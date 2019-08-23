@@ -1,0 +1,6 @@
+framework module Pods_Get_HIITUITests {
+  umbrella header "Pods-Get-HIITUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
