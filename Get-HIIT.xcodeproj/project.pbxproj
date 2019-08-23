@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
 		16E42B22230DB71B002A6251 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B21230DB71B002A6251 /* Workout.swift */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
 		4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */; };
@@ -65,6 +66,7 @@
 		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
 		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
 		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		16E42B21230DB71B002A6251 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		25FFF6610E22626BFCCC89E9 /* Pods-Get-HIIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,7 +155,6 @@
 				E6B862F395FE5B029E8D63EC /* Pods-Get-HIITUITests.debug.xcconfig */,
 				F3E7070D86DC35EEEF0E82B3 /* Pods-Get-HIITUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -300,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				85DBA93123049C1D006990A1 /* AppDelegate.swift */,
+				169E01F5230FA24100A7BC79 /* nunito */,
 				85DBA93823049C1E006990A1 /* Assets.xcassets */,
 				85137A86230B113C00CAB428 /* ColorAssets.xcassets */,
 				85DBA93D23049C1E006990A1 /* Info.plist */,
@@ -511,6 +513,7 @@
 				85137A7F230B020500CAB428 /* Profile.storyboard in Resources */,
 				85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */,
 				85137A87230B113C00CAB428 /* ColorAssets.xcassets in Resources */,
+				169E01F6230FA24100A7BC79 /* nunito in Resources */,
 				85DBA93923049C1E006990A1 /* Assets.xcassets in Resources */,
 				85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */,
 				85DBA93723049C1D006990A1 /* Main.storyboard in Resources */,
