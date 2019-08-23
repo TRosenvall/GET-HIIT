@@ -6,21 +6,24 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="GcC-Ok-iZC">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZBe-3Z-nLA" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZBe-3Z-nLA" customClass="MainTabBarViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6DL-yk-4b5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Get-HIITPrimaryOrange"/>
                     </tabBar>
                     <connections>
+                        <outlet property="mainTabBar" destination="6DL-yk-4b5" id="ErH-eY-pwg"/>
                         <segue destination="SW5-0Q-Oqe" kind="relationship" relationship="viewControllers" id="SPj-LO-aqO"/>
                         <segue destination="rsn-Tt-SbF" kind="relationship" relationship="viewControllers" id="ZbM-dq-JNH"/>
                         <segue destination="0Wk-HK-Jkp" kind="relationship" relationship="viewControllers" id="DZT-OS-vza"/>
@@ -41,20 +44,20 @@
             </objects>
             <point key="canvasLocation" x="1043" y="10"/>
         </scene>
-        <!--MyPlan-->
+        <!--Workout-->
         <scene sceneID="5ji-SV-n3S">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyPlan" id="rsn-Tt-SbF" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Workout" id="rsn-Tt-SbF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vd2-Dg-2Cg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSf-lV-Vn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="70"/>
         </scene>
-        <!--Workout-->
+        <!--MyPlan-->
         <scene sceneID="o5n-fY-aw2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Workout" id="0Wk-HK-Jkp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyPlan" id="0Wk-HK-Jkp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vG8-4o-qBU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdf-aS-fNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,4 +75,9 @@
             <point key="canvasLocation" x="1025" y="189"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Get-HIITPrimaryOrange">
+            <color red="1" green="0.50588235294117645" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="J3X-E0-Qsd">
             <objects>
                 <viewController id="UvV-bh-AOK" customClass="ProfileViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,11 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcs-3O-agl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                <color key="backgroundColor" name="Get-HIITPrimaryOrange"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-Vp-GqV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="174.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey (name)!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aC-LH-nPV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="174.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,7 +42,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Mw3-gL-riL">
-                                <rect key="frame" x="20.5" y="262.5" width="373" height="131"/>
+                                <rect key="frame" x="20.5" y="198" width="373" height="131"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="AX2-FL-qm6">
                                         <rect key="frame" x="0.0" y="0.0" width="164.5" height="131"/>
@@ -55,7 +59,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercises Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX8-Ab-dO3">
                                                         <rect key="frame" x="0.0" y="40" width="119" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Get-HIITPrimaryBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -72,7 +76,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZl-vN-cHy">
                                                         <rect key="frame" x="0.0" y="40" width="90.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Get-HIITPrimaryBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -94,7 +98,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min. Spent Exercising" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUY-Vk-MDC">
                                                         <rect key="frame" x="0.0" y="40" width="122" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Get-HIITPrimaryBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -111,7 +115,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercises This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0h-s0-DBX">
                                                         <rect key="frame" x="0.0" y="40" width="115.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Get-HIITPrimaryBlue"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -245,18 +249,22 @@
                             <constraint firstItem="fIY-hi-QgQ" firstAttribute="width" secondItem="Paf-WP-s2h" secondAttribute="width" multiplier="1.02" id="B0V-Mp-B1l"/>
                             <constraint firstItem="fIY-hi-QgQ" firstAttribute="height" secondItem="Paf-WP-s2h" secondAttribute="height" multiplier="0.14" id="DBh-cQ-y8l"/>
                             <constraint firstItem="lHc-6w-fbl" firstAttribute="leading" secondItem="Mw3-gL-riL" secondAttribute="leading" id="DTn-AN-8oC"/>
+                            <constraint firstItem="Tcs-3O-agl" firstAttribute="width" secondItem="Paf-WP-s2h" secondAttribute="width" id="HqN-sS-1Gn"/>
                             <constraint firstItem="qZ4-Cn-VqR" firstAttribute="leading" secondItem="Mw3-gL-riL" secondAttribute="leading" id="NNG-Jg-nFz"/>
                             <constraint firstItem="Mw3-gL-riL" firstAttribute="centerX" secondItem="8nv-Pj-owY" secondAttribute="centerX" id="WfH-bO-JH5"/>
                             <constraint firstItem="fIY-hi-QgQ" firstAttribute="centerY" secondItem="8nv-Pj-owY" secondAttribute="centerY" multiplier="1.15" id="dEm-cx-nEb"/>
                             <constraint firstItem="d9r-dX-oji" firstAttribute="leading" secondItem="Mw3-gL-riL" secondAttribute="leading" id="eLe-Bx-Y9y"/>
+                            <constraint firstItem="Tcs-3O-agl" firstAttribute="top" secondItem="8nv-Pj-owY" secondAttribute="top" constant="-44" id="fy0-OY-9As"/>
                             <constraint firstItem="Mw3-gL-riL" firstAttribute="top" secondItem="6Px-Vp-GqV" secondAttribute="bottom" constant="44" id="gUB-oy-cmA"/>
+                            <constraint firstItem="Tcs-3O-agl" firstAttribute="height" secondItem="Paf-WP-s2h" secondAttribute="height" multiplier="0.123" id="p6l-R8-Crm"/>
                             <constraint firstItem="Mw3-gL-riL" firstAttribute="width" secondItem="Paf-WP-s2h" secondAttribute="width" multiplier="0.9" id="sFa-Cs-s7G"/>
                             <constraint firstItem="6Px-Vp-GqV" firstAttribute="top" secondItem="8nv-Pj-owY" secondAttribute="top" id="vmd-rd-zq4"/>
-                            <constraint firstItem="6Px-Vp-GqV" firstAttribute="height" secondItem="Paf-WP-s2h" secondAttribute="height" multiplier="0.195" id="zF7-Zd-KIT"/>
+                            <constraint firstItem="Tcs-3O-agl" firstAttribute="centerX" secondItem="8nv-Pj-owY" secondAttribute="centerX" id="yRg-p5-U7R"/>
+                            <constraint firstItem="6Px-Vp-GqV" firstAttribute="height" secondItem="Paf-WP-s2h" secondAttribute="height" multiplier="0.123" id="zF7-Zd-KIT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8nv-Pj-owY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="LvL-Q8-Whg"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="ProfileUnselectedIcon" selectedImage="ProfileSelectedIcon" id="LvL-Q8-Whg"/>
                     <connections>
                         <outlet property="aboutMeView" destination="ufJ-gL-a51" id="hzj-yB-u8G"/>
                         <outlet property="fitnessPlanView" destination="qnI-hw-XfH" id="6w1-bx-uVu"/>
@@ -743,6 +751,8 @@ you get there</string>
         </scene>
     </scenes>
     <resources>
+        <image name="ProfileSelectedIcon" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="ProfileUnselectedIcon" width="66.666664123535156" height="66.666664123535156"/>
         <image name="backArrowIcon" width="14" height="24"/>
         <namedColor name="Get-HIITAccentYellow">
             <color red="1" green="0.96470588235294119" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -752,6 +762,12 @@ you get there</string>
         </namedColor>
         <namedColor name="Get-HIITPrimary2">
             <color red="0.92941176470588238" green="0.71372549019607845" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Get-HIITPrimaryBlue">
+            <color red="0.035294117647058823" green="0.70196078431372544" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Get-HIITPrimaryOrange">
+            <color red="1" green="0.50588235294117645" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

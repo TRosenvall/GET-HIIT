@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zwy-Rw-fU0">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Dashboard-->
         <scene sceneID="QYh-G4-P3c">
             <objects>
                 <viewController id="zwy-Rw-fU0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="05u-09-Eil">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsS-k9-CoS">
@@ -22,14 +27,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Get-HIITWhite"/>
                         <viewLayoutGuide key="safeArea" id="yEI-eA-QYP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="FWX-Xa-MIz"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="DashboardUnselectedIcon" selectedImage="DashboardSelectedIcon" id="FWX-Xa-MIz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htq-YY-OiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1090" y="-685"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DashboardSelectedIcon" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="DashboardUnselectedIcon" width="66.666664123535156" height="66.666664123535156"/>
+        <namedColor name="Get-HIITWhite">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

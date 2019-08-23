@@ -40,6 +40,16 @@
 		85F5F717230DBE1000693594 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F5F716230DBE1000693594 /* HealthKit.framework */; };
 		85F5F719230DBE5600693594 /* HealthKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F718230DBE5600693594 /* HealthKitController.swift */; };
 		85F5F71B230E548E00693594 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F71A230E548E00693594 /* RemindersViewController.swift */; };
+		85F5F7572310808C00693594 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F7562310808C00693594 /* MainTabBarViewController.swift */; };
+		85F5F76C23109E9F00693594 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76323109E9F00693594 /* Nunito-Regular.ttf */; };
+		85F5F76D23109E9F00693594 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76423109E9F00693594 /* Nunito-ExtraLight.ttf */; };
+		85F5F76E23109E9F00693594 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76523109E9F00693594 /* Nunito-SemiBold.ttf */; };
+		85F5F76F23109E9F00693594 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76623109E9F00693594 /* Nunito-Bold.ttf */; };
+		85F5F77023109E9F00693594 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76723109E9F00693594 /* Nunito-Black.ttf */; };
+		85F5F77123109E9F00693594 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76823109E9F00693594 /* Nunito-ExtraBold.ttf */; };
+		85F5F77223109E9F00693594 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76923109E9F00693594 /* Nunito-Light.ttf */; };
+		85F5F77323109E9F00693594 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76A23109E9F00693594 /* Nunito-Medium.ttf */; };
+		85F5F77423109E9F00693594 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76B23109E9F00693594 /* SIL Open Font License.txt */; };
 		B66D8E823902E014DAD84D00 /* Pods_Get_HIIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */; };
 		DAF270A9612F4993383774C3 /* Pods_Get_HIITTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +118,16 @@
 		85F5F716230DBE1000693594 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		85F5F718230DBE5600693594 /* HealthKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitController.swift; sourceTree = "<group>"; };
 		85F5F71A230E548E00693594 /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		85F5F7562310808C00693594 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		85F5F76323109E9F00693594 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		85F5F76423109E9F00693594 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		85F5F76523109E9F00693594 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		85F5F76623109E9F00693594 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		85F5F76723109E9F00693594 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		85F5F76823109E9F00693594 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		85F5F76923109E9F00693594 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		85F5F76A23109E9F00693594 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		85F5F76B23109E9F00693594 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		8EE7231185A5D4DC2C815043 /* Pods-Get-HIITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIITTests.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIITTests/Pods-Get-HIITTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIITUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +320,7 @@
 		85DBA95F23049D83006990A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85F5F76223109E8000693594 /* Font */,
 				85DBA93123049C1D006990A1 /* AppDelegate.swift */,
 				169E01F5230FA24100A7BC79 /* nunito */,
 				85DBA93823049C1E006990A1 /* Assets.xcassets */,
@@ -313,8 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				85137A72230B015500CAB428 /* Dashboard */,
-				85137A73230B016300CAB428 /* MyPlan */,
 				85137A74230B016E00CAB428 /* Workout */,
+				85137A73230B016300CAB428 /* MyPlan */,
 				85137A75230B017C00CAB428 /* Profile */,
 				85137A83230B030100CAB428 /* Main+LaunchScreen */,
 			);
@@ -324,6 +345,7 @@
 		85DBA96123049D98006990A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				85F5F7562310808C00693594 /* MainTabBarViewController.swift */,
 				85137A8C230B373700CAB428 /* ProfileViewControllers */,
 				85DBA93323049C1D006990A1 /* ViewController.swift */,
 				16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */,
@@ -393,6 +415,22 @@
 				8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85F5F76223109E8000693594 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				85F5F76723109E9F00693594 /* Nunito-Black.ttf */,
+				85F5F76623109E9F00693594 /* Nunito-Bold.ttf */,
+				85F5F76823109E9F00693594 /* Nunito-ExtraBold.ttf */,
+				85F5F76423109E9F00693594 /* Nunito-ExtraLight.ttf */,
+				85F5F76923109E9F00693594 /* Nunito-Light.ttf */,
+				85F5F76A23109E9F00693594 /* Nunito-Medium.ttf */,
+				85F5F76323109E9F00693594 /* Nunito-Regular.ttf */,
+				85F5F76523109E9F00693594 /* Nunito-SemiBold.ttf */,
+				85F5F76B23109E9F00693594 /* SIL Open Font License.txt */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,16 +546,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F5F76F23109E9F00693594 /* Nunito-Bold.ttf in Resources */,
+				85F5F76E23109E9F00693594 /* Nunito-SemiBold.ttf in Resources */,
+				85F5F76C23109E9F00693594 /* Nunito-Regular.ttf in Resources */,
 				85137A7C230B01E400CAB428 /* Workout.storyboard in Resources */,
 				85DBA93C23049C1E006990A1 /* LaunchScreen.storyboard in Resources */,
+				85F5F76D23109E9F00693594 /* Nunito-ExtraLight.ttf in Resources */,
 				85137A7F230B020500CAB428 /* Profile.storyboard in Resources */,
 				85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */,
+				85F5F77323109E9F00693594 /* Nunito-Medium.ttf in Resources */,
 				85137A87230B113C00CAB428 /* ColorAssets.xcassets in Resources */,
 				169E01F6230FA24100A7BC79 /* nunito in Resources */,
 				85DBA93923049C1E006990A1 /* Assets.xcassets in Resources */,
+				85F5F77023109E9F00693594 /* Nunito-Black.ttf in Resources */,
 				85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */,
 				85DBA93723049C1D006990A1 /* Main.storyboard in Resources */,
 				85DBA96B2304A3BB006990A1 /* AppSkeleton.storyboard in Resources */,
+				85F5F77223109E9F00693594 /* Nunito-Light.ttf in Resources */,
+				85F5F77123109E9F00693594 /* Nunito-ExtraBold.ttf in Resources */,
+				85F5F77423109E9F00693594 /* SIL Open Font License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +680,7 @@
 				85DBA97523071E11006990A1 /* SkeletonWorkoutInProgressViewController.swift in Sources */,
 				85DBA93423049C1D006990A1 /* ViewController.swift in Sources */,
 				85F5F70B230C8DBA00693594 /* Profile.swift in Sources */,
+				85F5F7572310808C00693594 /* MainTabBarViewController.swift in Sources */,
 				85DBA97223061EFD006990A1 /* SkeletonMainTabBarViewController.swift in Sources */,
 				16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */,
 				85F5F713230CAA3F00693594 /* ProfileController.swift in Sources */,
