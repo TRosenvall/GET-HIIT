@@ -22,14 +22,15 @@ class RemindersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        notificationCenter.delegate = self as? UNUserNotificationCenterDelegate
         setupViews()
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func remindersSwitchTapped(_ sender: Any) {
+        profile.notificationsEnabled = !profile.notificationsEnabled
         requestNotificationAuthorization()
         setupViews()
     }
@@ -99,11 +100,5 @@ class RemindersViewController: UIViewController {
                 print("Error \(error.localizedDescription)")
             }
         }
-    }
-}
-
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound])
     }
 }
