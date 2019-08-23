@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160E7D5B2310897C009DC286 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 160E7D5A2310897C009DC286 /* nunito */; };
 		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
 		16E42B22230DB71B002A6251 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B21230DB71B002A6251 /* Workout.swift */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		1606064A230C63AE00866424 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseController.swift; path = "Get-HIIT/Controllers/Helpers+Extensions/ExerciseController.swift"; sourceTree = SOURCE_ROOT; };
+		160E7D5A2310897C009DC286 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
 		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
 		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				85DBA93123049C1D006990A1 /* AppDelegate.swift */,
 				169E01F5230FA24100A7BC79 /* nunito */,
 				85DBA93823049C1E006990A1 /* Assets.xcassets */,
+				160E7D5A2310897C009DC286 /* nunito */,
 				85137A86230B113C00CAB428 /* ColorAssets.xcassets */,
 				85DBA93D23049C1E006990A1 /* Info.plist */,
 			);
@@ -561,6 +564,7 @@
 				85F5F77023109E9F00693594 /* Nunito-Black.ttf in Resources */,
 				85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */,
 				85DBA93723049C1D006990A1 /* Main.storyboard in Resources */,
+				160E7D5B2310897C009DC286 /* nunito in Resources */,
 				85DBA96B2304A3BB006990A1 /* AppSkeleton.storyboard in Resources */,
 				85F5F77223109E9F00693594 /* Nunito-Light.ttf in Resources */,
 				85F5F77123109E9F00693594 /* Nunito-ExtraBold.ttf in Resources */,
