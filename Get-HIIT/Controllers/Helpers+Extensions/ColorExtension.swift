@@ -10,11 +10,11 @@ import UIKit
 
 extension UIColor {
     // Setup the color scheme to be used specifically in this app.
-    static let accentBlue = UIColor(named: "Get-HIITAccentBlue")!
-    static let accentYellow = UIColor(named: "Get-HIITAccentYellow")!
-    static let primaryOne = UIColor(named: "Get-HIITPrimary1")!
-    static let primaryTwo = UIColor(named: "Get-HIITPrimary2")!
+    static let getHIITAccentBlue = UIColor(named: "Get-HIITAccentBlue")!
+    static let getHIITAccentOrange = UIColor(named: "Get-HIITAccentOrange")!
+    static let getHIITPrimaryOrange = UIColor(named: "Get-HIITPrimaryOrange")!
+    static let getHIITPrimaryBlue = UIColor(named: "Get-HIITPrimaryBlue")!
     static let getHIITBlack = UIColor(named: "Get-HIITBlack")!
+    static let getHIITGray = UIColor(named: "Get-HIITGray")!
     static let getHIITWhite = UIColor(named: "Get-HIITWhite")!
-    
 }
