@@ -13,12 +13,17 @@ class ExerciseController {
     static let sharedExercises = ExerciseController()
     
     var workouts: [Workout] {
-        let burpee = Workout(name: "Burpee", description: "cry for 10 minutes")
-        let crunches = Workout(name: "Crunches", description: "time to break that spine")
-        let yourMom = Workout(name: "Your Mom", description: "Oh sorry was that too far?")
-        let fatty = Workout(name: "Fatty", description: "Don't deny it.")
-        let mountainClimber = Workout(name: "Mountain Climber", description: "meant to break your soul")
-        let run = Workout(name: "Run", description: "If you don't know how to do this come find me for the zombie apocalypse")
+        let sitUp = Workout(name: "Sit Up", description: "Lay down on your back and bring your legs in by bending your knees 90 degrees. Place your hands by your ears and extend your elbows out wide. From this start position engage your core by contracting your stomach muscles and raise up to a sitting position.")
+        let lunges = Workout(name: "Lunges", description: "Go easy on the knees with this lunge. Stand with feet hip-width apart, engage core, and take a big step backward. Engage glutes as you bend front knee to lower body so back knee lightly taps floor while keeping upper body upright. Drive front heel into floor to return to starting position.")
+        let squats = Workout(name: "Squats", description: "Place your feet shoulder-width apart. Sit back and down like you're sitting into an imaginary chair. Keep your head facing forward as your upper body bends forward a bit. Lower yourself down so your thighs are parallel to the floor, with your knees over your ankles. Press your weight back into your heels. Push through your heels to bring yourself back to the starting position.")
+        let pushUps = Workout(name: "Push Up", description: "To do a pushup, start by positioning yourself on the floor with your face down, your palms on the floor shoulder-width apart, and the balls of your feet touching the ground. When you're ready to start, push yourself up, keeping your body in a straight line and your elbows pointed to your toes")
+        let climbers = Workout(name: "Climbers", description: "Start in a traditional plank with shoulders over hands and weight on your toes. Bring your right knee forward under your chest, with the toes just off the ground. Return to your basic plank. Switch legs, bringing the left knee forward. Keep switching legs and begin to pick up the pace until it feels a little like running in place in a plank position.")
+   
+        let pullUps = Workout(name: "Pull ups", description: "Grab the bar with your palms down, shoulder-width apart. Hang on the bar with straight arms and your legs off the floor. Pull yourself up by pulling your elbows down to the floor. Go all the way up until your chin passes the bar. Slowly lower yourself until your arms are straight.")
+        let dips = Workout(name: "Dips", description: "Place your hands behind you on a flat surface that is 2 feet above the ground. Straighten your legs in front of you and straighten your arms. Lower your body by bending your arms until you can’t go any lower. Lift your body up by straightening your arms.")
+        let pike = Workout(name: "Pike", description: "Assume a pushup position on the floor. Straighten your arms and place your hands shoulder-width apart. Lift up your hips so that your body forms an upside down V. Keep your legs and arms straight as you bend your elbows. Lower your upper body until the top of your head nearly touches the floor. Pause, and then push yourself back up.")
+        
+
     }
     
     func createWorkout() {
