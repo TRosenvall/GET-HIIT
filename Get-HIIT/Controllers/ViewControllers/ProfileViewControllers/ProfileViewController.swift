@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var numberOfMinutesExercisedLabel: UILabel!
     @IBOutlet weak var numberOfCaloriesBurnedLabel: UILabel!
     @IBOutlet weak var numberOfExercisesThisWeekLabel: UILabel!
-    // Source of Truth
+    // Source Of Truth
     var profile = ProfileController.sharedInstance.profile
     
     override func viewDidLoad() {

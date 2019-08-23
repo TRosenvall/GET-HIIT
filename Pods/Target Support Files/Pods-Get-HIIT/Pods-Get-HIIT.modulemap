@@ -1,0 +1,6 @@
+framework module Pods_Get_HIIT {
+  umbrella header "Pods-Get-HIIT-umbrella.h"
+
+  export *
+  module * { export * }
+}
