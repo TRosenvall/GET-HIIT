@@ -51,6 +51,7 @@
 		85F5F77223109E9F00693594 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76923109E9F00693594 /* Nunito-Light.ttf */; };
 		85F5F77323109E9F00693594 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76A23109E9F00693594 /* Nunito-Medium.ttf */; };
 		85F5F77423109E9F00693594 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76B23109E9F00693594 /* SIL Open Font License.txt */; };
+		85F5F7762310CAF500693594 /* SetGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F7752310CAF500693594 /* SetGradient.swift */; };
 		B66D8E823902E014DAD84D00 /* Pods_Get_HIIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */; };
 		DAF270A9612F4993383774C3 /* Pods_Get_HIITTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 		85F5F76923109E9F00693594 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		85F5F76A23109E9F00693594 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
 		85F5F76B23109E9F00693594 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		85F5F7752310CAF500693594 /* SetGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGradient.swift; sourceTree = "<group>"; };
 		8EE7231185A5D4DC2C815043 /* Pods-Get-HIITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIITTests.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIITTests/Pods-Get-HIITTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIITUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +228,7 @@
 			children = (
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
+				85F5F7752310CAF500693594 /* SetGradient.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */,
 				85F5F713230CAA3F00693594 /* ProfileController.swift in Sources */,
 				85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */,
+				85F5F7762310CAF500693594 /* SetGradient.swift in Sources */,
 				85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */,
 				8596FA07230A5229008CC790 /* SkeletonProfileViewController.swift in Sources */,
 				85F5F719230DBE5600693594 /* HealthKitController.swift in Sources */,
