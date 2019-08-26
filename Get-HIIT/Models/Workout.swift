@@ -12,10 +12,12 @@ class Workout {
     
     var name: String
     var description: String
+    var duration: CountdownTimer
     
-    init(name: String, description: String) {
+    init(name: String, description: String, duration: CountdownTimer) {
         
         self.name = name
         self.description = description
+        self.duration = duration
     }
 }

@@ -29,8 +29,6 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         return countdownTimer
     }()
     
- //   let selectedSecs: Int = CountdownTimer.durationDummy
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         countdownTimer.delegate = self
