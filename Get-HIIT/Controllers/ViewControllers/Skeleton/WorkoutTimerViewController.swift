@@ -25,7 +25,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         return countdownTimer
     }()
     
-    let selectedSecs: Int = 60
+   // let selectedSecs: Int = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     }
     
     func countdownTimerDone() {
-        secondsLabel.text = String(selectedSecs)
+        secondsLabel.text = String()
         countdownTimerDidStart = false
         stopButton.isEnabled = false
         stopButton.alpha = 0.5
