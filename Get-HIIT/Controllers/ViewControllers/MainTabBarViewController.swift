@@ -20,6 +20,8 @@ class MainTabBarViewController: UITabBarController {
         mainTabBar.backgroundImage = UIImage()
         mainTabBar.layer.backgroundColor = UIColor.getHIITWhite.cgColor
         setTabBarItems()
+        let colors: [UIColor] = [.getHIITAccentOrange, .getHIITWhite]
+        navigationController?.navigationBar.setGradientBackground(colors: colors)
     }
     
     override func viewWillLayoutSubviews() {
@@ -41,5 +43,13 @@ class MainTabBarViewController: UITabBarController {
         guard let font: UIFont = UIFont(name: "Nunito-Light", size: 14) else {return}
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .selected)
+    }
+}
+extension UINavigationBar {
+    func setGradientBackground(colors: [UIColor], startPoint: CAGradientLayer.Point = .topLeft, endPoint: CAGradientLayer.Point = .bottomLeft) {
+        var updatedFrame = bounds
+        updatedFrame.size.height += self.frame.origin.y
+        let gradientLayer = CAGradientLayer(frame: updatedFrame, colors: colors, startPoint: startPoint, endPoint: endPoint)
+        setBackgroundImage(gradientLayer.createGradientImage(), for: UIBarMetrics.default)
     }
 }
