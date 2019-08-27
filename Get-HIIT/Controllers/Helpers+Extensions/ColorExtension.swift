@@ -16,5 +16,7 @@ extension UIColor {
     static let getHIITPrimaryBlue = UIColor(named: "Get-HIITPrimaryBlue")!
     static let getHIITBlack = UIColor(named: "Get-HIITBlack")!
     static let getHIITGray = UIColor(named: "Get-HIITGray")!
+    static let getHIITLightGray = UIColor(named: "Get-HIITLightGray")!
     static let getHIITWhite = UIColor(named: "Get-HIITWhite")!
+    
 }

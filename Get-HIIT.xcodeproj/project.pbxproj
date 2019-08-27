@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160E7D5B2310897C009DC286 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 160E7D5A2310897C009DC286 /* nunito */; };
 		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
 		16E42B22230DB71B002A6251 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B21230DB71B002A6251 /* Workout.swift */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
@@ -21,7 +20,6 @@
 		85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85137A8D230B374D00CAB428 /* ProfileViewController.swift */; };
 		8596FA07230A5229008CC790 /* SkeletonProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8596FA06230A5229008CC790 /* SkeletonProfileViewController.swift */; };
 		85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBA93123049C1D006990A1 /* AppDelegate.swift */; };
-		85DBA93423049C1D006990A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBA93323049C1D006990A1 /* ViewController.swift */; };
 		85DBA93723049C1D006990A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DBA93523049C1D006990A1 /* Main.storyboard */; };
 		85DBA93923049C1E006990A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DBA93823049C1E006990A1 /* Assets.xcassets */; };
 		85DBA93C23049C1E006990A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DBA93A23049C1E006990A1 /* LaunchScreen.storyboard */; };
@@ -75,10 +73,9 @@
 
 /* Begin PBXFileReference section */
 		1606064A230C63AE00866424 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseController.swift; path = "Get-HIIT/Controllers/Helpers+Extensions/ExerciseController.swift"; sourceTree = SOURCE_ROOT; };
-		160E7D5A2310897C009DC286 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
-		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
-		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
-		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = ../Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
+		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutMainViewController.swift; path = ../WorkoutMainViewController.swift; sourceTree = "<group>"; };
+		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTableViewCell.swift; path = ../WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		16E42B21230DB71B002A6251 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		8596FA06230A5229008CC790 /* SkeletonProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonProfileViewController.swift; sourceTree = "<group>"; };
 		85DBA92E23049C1D006990A1 /* Get-HIIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get-HIIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DBA93123049C1D006990A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85DBA93323049C1D006990A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85DBA93623049C1D006990A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85DBA93823049C1E006990A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85DBA93B23049C1E006990A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -329,7 +325,6 @@
 				85DBA93123049C1D006990A1 /* AppDelegate.swift */,
 				169E01F5230FA24100A7BC79 /* nunito */,
 				85DBA93823049C1E006990A1 /* Assets.xcassets */,
-				160E7D5A2310897C009DC286 /* nunito */,
 				85137A86230B113C00CAB428 /* ColorAssets.xcassets */,
 				85DBA93D23049C1E006990A1 /* Info.plist */,
 			);
@@ -352,11 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				85F5F7562310808C00693594 /* MainTabBarViewController.swift */,
+				85F5F777231451ED00693594 /* WorkoutViewControllers */,
 				85137A8C230B373700CAB428 /* ProfileViewControllers */,
-				85DBA93323049C1D006990A1 /* ViewController.swift */,
-				16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */,
-				16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */,
-				1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */,
 				85DBA97023061E70006990A1 /* Skeleton */,
 			);
 			path = ViewControllers;
@@ -437,6 +429,16 @@
 				85F5F76B23109E9F00693594 /* SIL Open Font License.txt */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		85F5F777231451ED00693594 /* WorkoutViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */,
+				16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */,
+				1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */,
+			);
+			path = WorkoutViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,7 +569,6 @@
 				85F5F77023109E9F00693594 /* Nunito-Black.ttf in Resources */,
 				85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */,
 				85DBA93723049C1D006990A1 /* Main.storyboard in Resources */,
-				160E7D5B2310897C009DC286 /* nunito in Resources */,
 				85DBA96B2304A3BB006990A1 /* AppSkeleton.storyboard in Resources */,
 				85F5F77223109E9F00693594 /* Nunito-Light.ttf in Resources */,
 				85F5F77123109E9F00693594 /* Nunito-ExtraBold.ttf in Resources */,
@@ -685,7 +686,6 @@
 				85F5F70C230C8E1D00693594 /* PasteDisabledTextField.swift in Sources */,
 				85DBA97723073972006990A1 /* SkeletonPostWorkoutViewController.swift in Sources */,
 				85DBA97523071E11006990A1 /* SkeletonWorkoutInProgressViewController.swift in Sources */,
-				85DBA93423049C1D006990A1 /* ViewController.swift in Sources */,
 				85F5F70B230C8DBA00693594 /* Profile.swift in Sources */,
 				85F5F7572310808C00693594 /* MainTabBarViewController.swift in Sources */,
 				85DBA97223061EFD006990A1 /* SkeletonMainTabBarViewController.swift in Sources */,
