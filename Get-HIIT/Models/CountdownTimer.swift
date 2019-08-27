@@ -8,77 +8,25 @@
 
 import UIKit
 
-protocol  CountdownTimerDelegate: class {
-//    func countdownTimerDone()
+protocol CountdownTimerDelegate: class {
     func countdownTime(time: (minutes: String, seconds: String))
+    func updateTimerImage(percentage: Double)
+    func killTimer()
 }
 
 class CountdownTimer {
     
-    weak var delegate: CountdownTimerDelegate?
-//
-//    fileprivate var seconds = 0.0
-//    fileprivate var duration = 0.0
-//    static var durationDummy = 60
-//
-//    // accessing the timer function in UIKit
-//    lazy var timer: Timer = {
-//        let timer = Timer()
-//        return timer
-//    }()
-//
-//    public func setTimer(minutes: Int, seconds: Int) {
-//        let minutesToSeconds = minutes * 60
-//        let secondsToSeconds = seconds
-//
-//        let seconds = secondsToSeconds + minutesToSeconds
-//        self.seconds = Double(seconds)
-//        self.duration = Double(seconds)
-//    }
-//
-//    public func start() {
-//        runTimer()
-//    }
-//
-//    public func stop() {
-//        timer.invalidate()
-//        duration = seconds
-//    }
-//
-//    fileprivate func runTimer() {
-//        timer = Timer.scheduledTimer(timeInterval: TimeInterval(CountdownTimer.durationDummy), target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-//    }
-//
-//    @objc fileprivate func updateTimer() {
-//        if duration < 0.0 {
-//            timer.invalidate()
-//            timerDone()
-//        } else {
-//            duration -= 1
-//            delegate?.countdownTime(time: timeString(time: TimeInterval(duration)))
-//        }
-//        WorkoutTimerViewController.sharedInstance.countdownTime(time: (minutes: "00", seconds: "\(CountdownTimer.durationDummy)"))
-//    }
-//
-//    fileprivate func timeString(time: TimeInterval) -> (minutes: String, seconds: String) {
-//        let minutes = Int(time) / 60 % 60
-//        let seconds = Int(time) % 60
-//
-//        return (minutes: String(format:"%02i", minutes), seconds: String(format:"%02i", seconds))
-//    }
-//
-//    fileprivate func timerDone() {
-//        timer.invalidate()
-//        duration = seconds
-//        delegate?.countdownTimerDone()
-//    }
     
     static let sharedInstance = CountdownTimer()
     
-    var duration: Double = 300
-    var timeInterval: Double = 1
+    let duration: Double = 2
+    lazy var currentTime: Double = duration
+    var timeInterval: Double = 0.01
     var minutes: String = "00"
     var seconds: String = "00"
+    var percentageComplete: Double = 0
+    
+    weak var delegate: CountdownTimerDelegate?
     
     lazy var timer: Timer = {
         let timer = Timer()
@@ -87,14 +35,23 @@ class CountdownTimer {
     
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true, block: { (timer) in
-            let minutesInt = Int( self.duration ) / 60
-            let secondsInt = Int( self.duration ) % 60
-            self.minutes = "\(minutesInt)"
-            self.seconds = "\(secondsInt)"
-            
+            let minutesInt = Int( self.currentTime ) / 60
+            let secondsInt = Int( self.currentTime   ) % 60
+            if ceil(self.currentTime) == self.currentTime {
+                self.minutes = "\(minutesInt)"
+                self.seconds = "\(secondsInt)"
+            }
             self.delegate?.countdownTime(time: (minutes: self.minutes, seconds: self.seconds))
+            self.delegate?.updateTimerImage(percentage: self.percentageComplete)
             
-            self.duration -= 1
+            self.currentTime -= self.timeInterval
+            self.currentTime = floor( self.currentTime / self.timeInterval) * self.timeInterval
+            
+            self.percentageComplete = (1 - self.currentTime/self.duration)
+            
+            if self.currentTime < 0.0 {
+                self.stop()
+            }
         })
     }
     
@@ -105,6 +62,4 @@ class CountdownTimer {
     func stop() {
         timer.invalidate()
     }
-    
-    
 }
