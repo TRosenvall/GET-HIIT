@@ -54,6 +54,11 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     }
     
     // MARK: - Actions
+    
+    @IBAction func exitButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func startTimerButton(_ sender: Any) {
         stopButton.isEnabled = true
         stopButton.alpha = 1.0
