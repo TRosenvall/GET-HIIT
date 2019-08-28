@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1667860E23158E32005785B3 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667860D23158E32005785B3 /* Reminders.swift */; };
 		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
 		4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */; };
@@ -232,6 +233,7 @@
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
 				85F5F7752310CAF500693594 /* SetGradient.swift */,
+				1667860D23158E32005785B3 /* Reminders.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";

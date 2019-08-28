@@ -10,9 +10,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     // IBOutlets for the Views for the buttons and images.
-    @IBOutlet weak var aboutMeView: UIView!
-    @IBOutlet weak var fitnessPlanView: UIView!
-    @IBOutlet weak var remindersView: UIView!
     // IBOutlets and variables.
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var numberOfExercisesLabel: UILabel!
@@ -32,13 +29,6 @@ class ProfileViewController: UIViewController {
     }
     
     func setupViews() {
-        // Set the color and width for the segue buttons.
-        aboutMeView.layer.borderWidth = 1
-        aboutMeView.layer.borderColor = UIColor.getHIITBlack.cgColor
-        fitnessPlanView.layer.borderWidth = 1
-        fitnessPlanView.layer.borderColor = UIColor.getHIITBlack.cgColor
-        remindersView.layer.borderWidth = 1
-        remindersView.layer.borderColor = UIColor.getHIITBlack.cgColor
         // Set the name
         let name = profile.name
         if name == "" {
