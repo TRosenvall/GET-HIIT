@@ -12,12 +12,16 @@ class Workout {
     
     var name: String
     var description: String
-    var duration: CountdownTimer
+    var duration: Int
+    var rest: Int
+    let image: String
     
-    init(name: String, description: String, duration: CountdownTimer) {
+    init(name: String, description: String, duration: Int = 30, rest: Int = 10, image: String) {
         
         self.name = name
         self.description = description
         self.duration = duration
+        self.rest = rest
+        self.image = image
     }
 }

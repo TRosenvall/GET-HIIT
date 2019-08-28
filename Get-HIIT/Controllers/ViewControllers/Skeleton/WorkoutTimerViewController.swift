@@ -54,6 +54,11 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     }
     
     // MARK: - Actions
+    
+    @IBAction func exitButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func startTimerButton(_ sender: Any) {
         stopButton.isEnabled = true
         stopButton.alpha = 1.0
@@ -125,7 +130,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         }
         
         let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.colors = [color1.cgColor, color2.cgColor]
+        gradient.colors = [color2.cgColor, color1.cgColor]
         gradient.locations = [0.0 , 1.0]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
