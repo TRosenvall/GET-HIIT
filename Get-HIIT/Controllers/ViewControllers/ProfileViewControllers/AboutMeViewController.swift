@@ -15,7 +15,6 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var healthKitSwitch: UISwitch!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
-    @IBOutlet weak var enableInSettingsLabel: UILabel!
     @IBOutlet weak var ageTextField: PasteDisabledTextField!
     @IBOutlet weak var weightTextField: PasteDisabledTextField!
     
@@ -26,7 +25,7 @@ class AboutMeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Hide the label for if access is denied to HealthKit.
-        enableInSettingsLabel.isHidden = true
+        
         // Call the functions to setup the views, the picker view and set the right value for the switch.
         setupViews()
         setupPickerView()
@@ -115,10 +114,10 @@ class AboutMeViewController: UIViewController {
             healthKitSwitch.isOn = false
             healthKitSwitch.isEnabled = false
             profile.healthKitIsOn = false
-            enableInSettingsLabel.isHidden = false
+           
         } else {
             // Hide the prompt to manually allow access in the Health app and re-enable the switch
-            enableInSettingsLabel.isHidden = true
+           
             healthKitSwitch.isEnabled = true
         }
     }

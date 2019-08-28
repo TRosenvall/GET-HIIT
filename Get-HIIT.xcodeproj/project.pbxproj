@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1667860E23158E32005785B3 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1667860D23158E32005785B3 /* Reminders.swift */; };
 		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
 		16E42B22230DB71B002A6251 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B21230DB71B002A6251 /* Workout.swift */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
@@ -76,6 +77,7 @@
 		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = ../Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
 		16543A96230B127E009A7A8C /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutMainViewController.swift; path = ../WorkoutMainViewController.swift; sourceTree = "<group>"; };
 		16543A98230B12BB009A7A8C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTableViewCell.swift; path = ../WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		1667860D23158E32005785B3 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		16E42B21230DB71B002A6251 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
 				85F5F7752310CAF500693594 /* SetGradient.swift */,
+				1667860D23158E32005785B3 /* Reminders.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				85F5F71B230E548E00693594 /* RemindersViewController.swift in Sources */,
 				85F5F70D230C8E9700693594 /* WorkoutTimerViewController.swift in Sources */,
 				85F5F705230C549900693594 /* AboutMeViewController.swift in Sources */,
+				1667860E23158E32005785B3 /* Reminders.swift in Sources */,
 				16E42B22230DB71B002A6251 /* Workout.swift in Sources */,
 				85DBA97B2309BE6E006990A1 /* SkeletonCreateNewWorkoutViewController.swift in Sources */,
 			);
