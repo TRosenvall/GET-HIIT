@@ -11,12 +11,18 @@ import UIKit
 class WorkoutMainViewController: UIViewController {
 
     @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var workoutSummaryView: UIView!
     @IBOutlet weak var currentWorkoutTableView: UITableView!
     
+    @IBOutlet weak var workoutMultiplierLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
+    
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
+
+    var timeTotal: Int = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -33,6 +39,8 @@ class WorkoutMainViewController: UIViewController {
         workoutSummaryView.layer.borderWidth = 6
         gradientForWorkoutSummaryView()
         
+        currentWorkoutTableView.backgroundColor = .clear
+        
         startButton.layer.cornerRadius = startButton.frame.height/4
         
         editButton.layer.cornerRadius = editButton.frame.height/4
@@ -40,6 +48,46 @@ class WorkoutMainViewController: UIViewController {
         editButton.layer.borderColor = UIColor.getHIITPrimaryOrange.cgColor
         editButton.layer.shadowOpacity = 0.3
         editButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        currentWorkoutTableView.reloadData()
+        let tempWorkouts = WorkoutsController.sharedInstance.totalWorkouts[0]
+        
+        titleLabel.text = "\(tempWorkouts.name)"
+        
+        workoutMultiplierLabel.text = "\(tempWorkouts.multiplier)X"
+        
+        var tempTimeTotal: Int = 0
+        for workout in tempWorkouts.workouts {
+            tempTimeTotal += workout.duration + workout.rest
+        }
+        if timeTotal != tempTimeTotal {
+            timeTotal = tempTimeTotal
+            tempTimeTotal = 0
+        }
+        
+        timeTotal *= tempWorkouts.multiplier
+        
+        let minutes = timeTotal / 60
+        var minutesLabel = ""
+        let seconds = timeTotal % 60
+        var secondsLabel = ""
+        
+        if minutes < 10 {
+            minutesLabel = "0\(minutes)"
+        } else {
+            minutesLabel = "\(minutes)"
+        }
+        
+        if seconds < 10 {
+            secondsLabel = "0\(seconds)"
+        } else {
+            secondsLabel = "\(seconds)"
+        }
+        
+        totalTimeLabel.text = minutesLabel + ":" + secondsLabel + " Total"
     }
     
     func gradientForWorkoutSummaryView () {
@@ -93,7 +141,7 @@ class WorkoutMainViewController: UIViewController {
         gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
         gradient.frame = CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: view.frame.size.height)
         
-        view.layer.addSublayer(gradient)
+        view.layer.insertSublayer(gradient, at: 0)
     }
 }
 
@@ -104,11 +152,45 @@ extension WorkoutMainViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "currentWorkoutCell", for: indexPath) as? WorkoutTableViewCell else {return UITableViewCell()}
+        cell.layoutIfNeeded()
         cell.backgroundColor = .clear
+        
+        cell.dotView.layer.cornerRadius = cell.dotView.frame.height/2
+
+        cell.exerciseView.layer.cornerRadius = cell.exerciseView.bounds.height/2
+        cell.exerciseView.layer.borderColor = UIColor.getHIITPrimaryOrange.cgColor
+        cell.exerciseView.layer.borderWidth = 3
+        cell.exerciseView.clipsToBounds = true
+
+        cell.restView.layer.cornerRadius = cell.restView.frame.height/2
+        cell.restView.layer.borderColor = UIColor.getHIITPrimaryBlue.cgColor
+        cell.restView.layer.borderWidth = 3
+        cell.restView.clipsToBounds = true
+        
+        let tempWorkouts = WorkoutsController.sharedInstance.totalWorkouts[0]
+        let exercise = tempWorkouts.workouts[indexPath.row]
+        cell.titleLabel.text = exercise.name
+        cell.exerciseTimeLabel.text = "Duration: \(exercise.duration)s"
+        cell.restTimeLabel.text = "Rest: \(exercise.rest)s"
+        cell.exerciseImageView.image = UIImage(named: exercise.image)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return currentWorkoutTableView.frame.height/4
+    }
+    
+    // Mark: - Prepare For Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Identifier
+        if segue.identifier == "toWorkoutEdit" {
+            //Index and Destination
+            guard let destinationVC = segue.destination as?  WorkoutEditViewController else {return}
+            //Object to Send
+            let workouts = WorkoutsController.sharedInstance.totalWorkouts[0]
+            //Object to Set
+            destinationVC.workouts = workouts
+        }
     }
 }

@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         registerForUserNotifications()
+        
+        let exercises = ExerciseController.sharedExercises.workouts
+        let tempWorkouts: [Workout] = [exercises[0], exercises[1], exercises[2], exercises[3]]
+        let tempWorkoutMultiplier: Int = 4
+        
+        WorkoutsController.sharedInstance.createWorkout(name: "Super Sweat", workouts: tempWorkouts, multiplier: tempWorkoutMultiplier)
+         
         return true
     }
     
