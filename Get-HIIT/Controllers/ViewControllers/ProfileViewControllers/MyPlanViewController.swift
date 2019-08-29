@@ -1,24 +1,16 @@
 //
-//  ProfileViewController.swift
+//  MyPlanViewController.swift
 //  Get-HIIT
 //
-//  Created by Timothy Rosenvall on 8/19/19.
+//  Created by Timothy Rosenvall on 8/29/19.
 //  Copyright © 2019 Timothy Rosenvall. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-    // IBOutlets for the Views for the buttons and images.
-    // IBOutlets and variables.
-    @IBOutlet weak var greetingLabel: UILabel!
-    @IBOutlet weak var numberOfExercisesLabel: UILabel!
-    @IBOutlet weak var numberOfMinutesExercisedLabel: UILabel!
-    @IBOutlet weak var numberOfCaloriesBurnedLabel: UILabel!
-    @IBOutlet weak var numberOfExercisesThisWeekLabel: UILabel!
+class MyPlanViewController: UIViewController {
+
     @IBOutlet weak var titleView: UIView!
-    // Source Of Truth
-    var profile = ProfileController.sharedInstance.profile
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -29,35 +21,11 @@ class ProfileViewController: UIViewController {
         setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupViews()
-    }
-    
-    func setupViews() {
-        // Set the name
-        let name = profile.name
-        if name == "" {
- //           greetingLabel.text = "Hey there!"
-        } else {
- //           greetingLabel.text = "Hey \(name)!"
-        }
-        // Set the outlet numbers
-        let numberOfExercises = profile.completedExercises
-        let numberOfMinutes = profile.totalTimeExercising
-        let numberOfCalories = profile.caloriesBurnedThisWeek.reduce(0, +)
-        let numberOfExercisesThisWeek = profile.exercisesThisWeek
-        // Set the proper labels
-        numberOfExercisesLabel.text = "\(numberOfExercises)"
-        numberOfMinutesExercisedLabel.text = "\(numberOfMinutes)"
-        if numberOfCalories == 0 {
-            numberOfCaloriesBurnedLabel.text = "0"
-        } else {
-            numberOfCaloriesBurnedLabel.text = "\(numberOfCalories)"
-        }
-        numberOfExercisesThisWeekLabel.text = "\(numberOfExercisesThisWeek)"
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
@@ -96,4 +64,16 @@ class ProfileViewController: UIViewController {
         
         view.layer.insertSublayer(gradient, at: 0)
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
