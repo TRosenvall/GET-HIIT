@@ -35,16 +35,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1I-Ad-Sb2">
-                                <rect key="frame" x="99" y="111" width="216" height="46"/>
+                                <rect key="frame" x="99" y="171" width="216" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Get-HIITPrimaryOrange"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="19"/>
                                 <state key="normal" title="Create Workout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0w5-04-5tN" kind="show" id="XPa-QW-Xj3"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6Z-FT-T4G">
-                                <rect key="frame" x="20" y="332" width="374" height="506"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6Z-FT-T4G">
+                                <rect key="frame" x="20" y="332" width="374" height="420"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -52,7 +55,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPL-0b-OEY" id="7Ds-t8-b22">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="191.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="192"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Workout name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftJ-wZ-h3x">
@@ -133,6 +136,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7Q-81-3aZ">
+                                <rect key="frame" x="229" y="96" width="152" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                <state key="normal" title="Past">
+                                    <color key="titleColor" name="Get-HIITGray"/>
+                                </state>
+                                <connections>
+                                    <segue destination="V1z-VP-cyi" kind="show" id="Vn8-Qf-fZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmZ-nD-Rn9">
+                                <rect key="frame" x="40" y="96" width="139" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                <state key="normal" title="Upcoming">
+                                    <color key="titleColor" name="Get-HIITGray"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -143,15 +165,527 @@
             </objects>
             <point key="canvasLocation" x="1963.7681159420292" y="-292.63392857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Nj1-MP-gke">
+            <objects>
+                <viewController id="0w5-04-5tN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nY9-pA-6oN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5DD-XH-k0d">
+                                <rect key="frame" x="20" y="140" width="374" height="661"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QFv-Iq-KvD">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QFv-Iq-KvD" id="QBf-57-mi3">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to select exercises for your HIIT workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy0-M4-xEc">
+                                <rect key="frame" x="50" y="80" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GhE-jh-gEB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9aG-fF-9ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205.7971014492755" y="427.90178571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fr6-HK-kef">
+            <objects>
+                <viewController id="b5P-Th-mfk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AdC-bx-qR1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-qJ-nLJ">
+                                <rect key="frame" x="20" y="384" width="242" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="28"/>
+                                <color key="textColor" name="Get-HIITGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Workout Description)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-YW-Ndt">
+                                <rect key="frame" x="20" y="439" width="374" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <color key="textColor" name="Get-HIITBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUy-2f-mFr">
+                                <rect key="frame" x="98" y="754" width="218" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Get-HIITPrimaryOrange"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" name="Get-HIITLightGray"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-de-Q8G">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Description)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH5-xE-Rd9">
+                                        <rect key="frame" x="93" y="37" width="221" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lunge2" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-CM-ToJ">
+                                <rect key="frame" x="73" y="130" width="269" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DYa-wh-pqx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPt-QX-hsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3250.7246376811595" y="427.90178571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LPJ-8S-h5X">
+            <objects>
+                <viewController id="V1z-VP-cyi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HbJ-Pg-BIB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8M-dx-Ehl">
+                                <rect key="frame" x="20" y="191" width="374" height="563"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="4IE-ts-kUM">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4IE-ts-kUM" id="3d3-6t-rbL">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="73.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFy-h0-4lx">
+                                                    <rect key="frame" x="139" y="26" width="133" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsN-Hw-tuY">
+                                                    <rect key="frame" x="312" y="26" width="42" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="767-e1-vSM">
+                                                    <rect key="frame" x="20" y="11" width="42" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="V1z-VP-cyi" id="bK4-Nr-U5J"/>
+                                    <outlet property="delegate" destination="V1z-VP-cyi" id="S1g-dN-PUr"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaP-9i-AAv">
+                                <rect key="frame" x="242" y="123" width="152" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                <state key="normal" title="Past">
+                                    <color key="titleColor" name="Get-HIITGray"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6b-L3-inB">
+                                <rect key="frame" x="20" y="123" width="139" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                <state key="normal" title="Upcoming">
+                                    <color key="titleColor" name="Get-HIITGray"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="M1s-54-3nC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVR-87-SD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3008.6956521739135" y="-293.30357142857139"/>
+        </scene>
+        <!--Workout Edit View Controller-->
+        <scene sceneID="AqT-Kf-5Z8">
+            <objects>
+                <viewController id="w7V-9w-pIY" customClass="WorkoutEditViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BHh-sN-arV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOl-sK-F4k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eug-d0-yd6">
+                                        <rect key="frame" x="13.5" y="45" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Eug-d0-yd6" secondAttribute="height" multiplier="1:1" id="DCy-LJ-w80"/>
+                                        </constraints>
+                                        <state key="normal" image="backArrowIcon"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="dVc-Jz-jXe"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intervals/Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzZ-Gu-fN0">
+                                        <rect key="frame" x="62" y="45" width="290" height="56"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <color key="textColor" name="Get-HIITWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XzZ-Gu-fN0" firstAttribute="height" secondItem="OOl-sK-F4k" secondAttribute="height" multiplier="0.5" id="9eA-uw-qrb"/>
+                                    <constraint firstItem="Eug-d0-yd6" firstAttribute="centerX" secondItem="OOl-sK-F4k" secondAttribute="centerX" multiplier="0.2" id="Dz1-Vz-cOW"/>
+                                    <constraint firstItem="XzZ-Gu-fN0" firstAttribute="width" secondItem="OOl-sK-F4k" secondAttribute="width" multiplier="0.7" id="HMU-Fp-GnQ"/>
+                                    <constraint firstItem="Eug-d0-yd6" firstAttribute="height" secondItem="OOl-sK-F4k" secondAttribute="height" multiplier="0.5" id="LMB-1j-raH"/>
+                                    <constraint firstItem="Eug-d0-yd6" firstAttribute="centerY" secondItem="OOl-sK-F4k" secondAttribute="centerY" multiplier="1.3" id="WmZ-wh-y4C"/>
+                                    <constraint firstItem="XzZ-Gu-fN0" firstAttribute="centerY" secondItem="OOl-sK-F4k" secondAttribute="centerY" multiplier="1.3" id="cNK-Ab-AqN"/>
+                                    <constraint firstItem="XzZ-Gu-fN0" firstAttribute="centerX" secondItem="OOl-sK-F4k" secondAttribute="centerX" id="e54-NK-pGY"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Workout Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPX-Eb-8ju">
+                                <rect key="frame" x="41.5" y="120" width="331" height="37"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rpd-H3-dMT">
+                                <rect key="frame" x="41.5" y="164" width="331" height="555.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutEditCell" rowHeight="150" id="2v4-q1-i3q" customClass="WorkoutEditTableViewCell" customModule="Get_HIIT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="331" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2v4-q1-i3q" id="ZVR-mh-fpj">
+                                            <rect key="frame" x="0.0" y="0.0" width="331" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WG-Wf-mba">
+                                                    <rect key="frame" x="0.0" y="9.5" width="331" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Title)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFB-cE-Hyj">
+                                                            <rect key="frame" x="80.5" y="13" width="142.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3U-jP-I72">
+                                                            <rect key="frame" x="221.5" y="5" width="96.5" height="46"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBQ-9j-lY8">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="46"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                    <state key="normal" title="-">
+                                                                        <color key="titleColor" name="Get-HIITBlack"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="workoutTimeSubtractButtonTapped:" destination="2v4-q1-i3q" eventType="touchUpInside" id="QAS-Gs-XbX"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(#)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s68-YK-UDS">
+                                                                    <rect key="frame" x="30" y="0.0" width="36.5" height="46"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VV-v8-rdL">
+                                                                    <rect key="frame" x="66.5" y="0.0" width="30" height="46"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                    <state key="normal" title="+">
+                                                                        <color key="titleColor" name="Get-HIITBlack"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="workoutTimeAddButtonTapped:" destination="2v4-q1-i3q" eventType="touchUpInside" id="EQJ-3j-MKF"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZQf-jA-JjQ">
+                                                            <rect key="frame" x="24.5" y="2.5" width="50.5" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="ZQf-jA-JjQ" secondAttribute="height" multiplier="1:1" id="ofl-V4-f0b"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="ZQf-jA-JjQ" firstAttribute="centerY" secondItem="6WG-Wf-mba" secondAttribute="centerY" id="7oU-Ec-JUQ"/>
+                                                        <constraint firstItem="sFB-cE-Hyj" firstAttribute="centerX" secondItem="6WG-Wf-mba" secondAttribute="centerX" multiplier="0.9175" id="EAW-sE-4hb"/>
+                                                        <constraint firstItem="ZQf-jA-JjQ" firstAttribute="centerX" secondItem="6WG-Wf-mba" secondAttribute="centerX" multiplier="0.3" id="MvT-IN-5cw"/>
+                                                        <constraint firstItem="N3U-jP-I72" firstAttribute="centerX" secondItem="6WG-Wf-mba" secondAttribute="centerX" multiplier="1.63" id="P7s-QY-vza"/>
+                                                        <constraint firstItem="sFB-cE-Hyj" firstAttribute="width" secondItem="6WG-Wf-mba" secondAttribute="width" multiplier="0.43" id="QPw-yB-TEX"/>
+                                                        <constraint firstItem="sFB-cE-Hyj" firstAttribute="height" secondItem="6WG-Wf-mba" secondAttribute="height" multiplier="0.54" id="kOI-h7-0Al"/>
+                                                        <constraint firstItem="N3U-jP-I72" firstAttribute="centerY" secondItem="6WG-Wf-mba" secondAttribute="centerY" id="kSF-JI-bEM"/>
+                                                        <constraint firstItem="sFB-cE-Hyj" firstAttribute="centerY" secondItem="6WG-Wf-mba" secondAttribute="centerY" id="vIP-sT-9aB"/>
+                                                        <constraint firstItem="ZQf-jA-JjQ" firstAttribute="height" secondItem="6WG-Wf-mba" secondAttribute="height" multiplier="0.9" id="wPp-G2-ABA"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Px-Wk-MKe">
+                                                    <rect key="frame" x="0.0" y="84.5" width="331" height="56"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZR-CR-OwN">
+                                                            <rect key="frame" x="221.5" y="5" width="96.5" height="46"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBG-8U-UKd">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="46"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                    <state key="normal" title="-">
+                                                                        <color key="titleColor" name="Get-HIITBlack"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="restTimeSubtractButtonTapped:" destination="2v4-q1-i3q" eventType="touchUpInside" id="S0n-za-ZHF"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(#)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0x-b6-6rC">
+                                                                    <rect key="frame" x="30" y="0.0" width="36.5" height="46"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSs-iz-Jgj">
+                                                                    <rect key="frame" x="66.5" y="0.0" width="30" height="46"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                    <state key="normal" title="+">
+                                                                        <color key="titleColor" name="Get-HIITBlack"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="restTimeAddButtonTapped:" destination="2v4-q1-i3q" eventType="touchUpInside" id="BCN-bo-4EJ"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egG-p7-2F9">
+                                                            <rect key="frame" x="80.5" y="13" width="142.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GetReady" translatesAutoresizingMaskIntoConstraints="NO" id="ypf-Go-hBX">
+                                                            <rect key="frame" x="24.5" y="2.5" width="50.5" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="ypf-Go-hBX" secondAttribute="height" multiplier="1:1" id="QFR-AG-yxo"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="egG-p7-2F9" firstAttribute="height" secondItem="0Px-Wk-MKe" secondAttribute="height" multiplier="0.54" id="1Jt-Qx-kCc"/>
+                                                        <constraint firstItem="egG-p7-2F9" firstAttribute="centerY" secondItem="0Px-Wk-MKe" secondAttribute="centerY" id="609-Gb-VPa"/>
+                                                        <constraint firstItem="qZR-CR-OwN" firstAttribute="centerX" secondItem="0Px-Wk-MKe" secondAttribute="centerX" multiplier="1.63" id="FLB-rl-rcV"/>
+                                                        <constraint firstItem="egG-p7-2F9" firstAttribute="width" secondItem="0Px-Wk-MKe" secondAttribute="width" multiplier="0.43" id="PFM-dG-x4Y"/>
+                                                        <constraint firstItem="ypf-Go-hBX" firstAttribute="height" secondItem="0Px-Wk-MKe" secondAttribute="height" multiplier="0.9" id="Sab-lD-AL8"/>
+                                                        <constraint firstItem="ypf-Go-hBX" firstAttribute="centerX" secondItem="0Px-Wk-MKe" secondAttribute="centerX" multiplier="0.3" id="XNI-c4-2ZZ"/>
+                                                        <constraint firstItem="egG-p7-2F9" firstAttribute="centerX" secondItem="0Px-Wk-MKe" secondAttribute="centerX" multiplier="0.9175" id="bV4-b9-bY2"/>
+                                                        <constraint firstItem="qZR-CR-OwN" firstAttribute="centerY" secondItem="0Px-Wk-MKe" secondAttribute="centerY" id="kbw-hA-cjH"/>
+                                                        <constraint firstItem="ypf-Go-hBX" firstAttribute="centerY" secondItem="0Px-Wk-MKe" secondAttribute="centerY" id="yJX-PR-ywv"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6WG-Wf-mba" firstAttribute="centerX" secondItem="ZVR-mh-fpj" secondAttribute="centerX" id="3rC-w7-QJG"/>
+                                                <constraint firstItem="0Px-Wk-MKe" firstAttribute="height" secondItem="ZVR-mh-fpj" secondAttribute="height" multiplier="0.375" id="45d-iR-8hP"/>
+                                                <constraint firstItem="0Px-Wk-MKe" firstAttribute="centerY" secondItem="ZVR-mh-fpj" secondAttribute="centerY" multiplier="1.5" id="89y-t1-cmf"/>
+                                                <constraint firstItem="6WG-Wf-mba" firstAttribute="height" secondItem="ZVR-mh-fpj" secondAttribute="height" multiplier="0.375" id="8q5-x5-1cc"/>
+                                                <constraint firstItem="0Px-Wk-MKe" firstAttribute="centerX" secondItem="ZVR-mh-fpj" secondAttribute="centerX" id="Fis-AL-Qri"/>
+                                                <constraint firstItem="0Px-Wk-MKe" firstAttribute="width" secondItem="ZVR-mh-fpj" secondAttribute="width" id="JNM-wt-Riu"/>
+                                                <constraint firstItem="6WG-Wf-mba" firstAttribute="width" secondItem="ZVR-mh-fpj" secondAttribute="width" id="jsv-P5-tbc"/>
+                                                <constraint firstItem="6WG-Wf-mba" firstAttribute="centerY" secondItem="ZVR-mh-fpj" secondAttribute="centerY" multiplier="0.5" id="v7U-tX-1IK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="restTimeLabel" destination="t0x-b6-6rC" id="2DJ-z1-1Xl"/>
+                                            <outlet property="restView" destination="0Px-Wk-MKe" id="EsM-fY-wMT"/>
+                                            <outlet property="workoutImageView" destination="ZQf-jA-JjQ" id="bWJ-V2-Ksn"/>
+                                            <outlet property="workoutTimeLabel" destination="s68-YK-UDS" id="BGc-bY-jC3"/>
+                                            <outlet property="workoutTitle" destination="sFB-cE-Hyj" id="4zm-la-JIw"/>
+                                            <outlet property="workoutView" destination="6WG-Wf-mba" id="Am2-zo-uOX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="w7V-9w-pIY" id="zxh-6J-vFg"/>
+                                    <outlet property="delegate" destination="w7V-9w-pIY" id="NMx-4e-7VN"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INc-tX-BgI">
+                                <rect key="frame" x="114" y="819" width="186" height="38"/>
+                                <color key="backgroundColor" name="Get-HIITPrimaryOrange"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="E4x-jp-IzW"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgd-ig-9Vw">
+                                <rect key="frame" x="249.5" y="741" width="124" height="35.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkv-kj-RoR">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" name="Get-HIITBlack"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="multiplierSubtractButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="qhY-e3-PtU"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="pRi-pC-UDQ">
+                                        <rect key="frame" x="30" y="0.0" width="64" height="35.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="(#)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srt-LA-7Ex">
+                                                <rect key="frame" x="3" y="4.5" width="58" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Srt-LA-7Ex" firstAttribute="centerY" secondItem="pRi-pC-UDQ" secondAttribute="centerY" id="2pg-z2-l60"/>
+                                            <constraint firstItem="Srt-LA-7Ex" firstAttribute="centerX" secondItem="pRi-pC-UDQ" secondAttribute="centerX" id="UQz-4n-gjM"/>
+                                            <constraint firstItem="Srt-LA-7Ex" firstAttribute="height" secondItem="pRi-pC-UDQ" secondAttribute="height" multiplier="0.75" id="UzK-wr-gLd"/>
+                                            <constraint firstItem="Srt-LA-7Ex" firstAttribute="width" secondItem="pRi-pC-UDQ" secondAttribute="width" multiplier="0.9" id="hJE-AX-lWa"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yb-O7-CDR">
+                                        <rect key="frame" x="94" y="0.0" width="30" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" name="Get-HIITBlack"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="multiplierAddButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="izi-bB-cZQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Cycles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnY-sV-d87">
+                                <rect key="frame" x="259" y="725" width="103.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VlD-iz-QL3">
+                                <rect key="frame" x="249" y="777" width="125" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Get-HIITBlack"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(total time)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-IU-PDI">
+                                <rect key="frame" x="278.5" y="779.5" width="95" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Workout Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEQ-fF-WMF">
+                                <rect key="frame" x="270" y="804" width="103.5" height="13.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tjc-IU-PDI" firstAttribute="centerY" secondItem="Trf-Gp-Ubi" secondAttribute="centerY" multiplier="1.75" id="259-KS-5xC"/>
+                            <constraint firstItem="Tjc-IU-PDI" firstAttribute="width" secondItem="BHh-sN-arV" secondAttribute="width" multiplier="0.23" id="5xf-Rw-P2Z"/>
+                            <constraint firstItem="INc-tX-BgI" firstAttribute="centerY" secondItem="Trf-Gp-Ubi" secondAttribute="centerY" multiplier="1.85" id="7yv-Fa-fxd"/>
+                            <constraint firstItem="wPX-Eb-8ju" firstAttribute="top" secondItem="OOl-sK-F4k" secondAttribute="bottom" constant="8" id="Bxb-13-3LT"/>
+                            <constraint firstItem="INc-tX-BgI" firstAttribute="width" secondItem="BHh-sN-arV" secondAttribute="width" multiplier="0.45" id="DzP-T8-wXa"/>
+                            <constraint firstItem="INc-tX-BgI" firstAttribute="centerX" secondItem="Trf-Gp-Ubi" secondAttribute="centerX" id="H0R-A7-aR1"/>
+                            <constraint firstItem="wPX-Eb-8ju" firstAttribute="width" secondItem="BHh-sN-arV" secondAttribute="width" multiplier="0.8" id="Loy-Gh-QZY"/>
+                            <constraint firstItem="FnY-sV-d87" firstAttribute="centerY" secondItem="Trf-Gp-Ubi" secondAttribute="centerY" multiplier="1.615" id="POm-RI-hzZ"/>
+                            <constraint firstItem="pgd-ig-9Vw" firstAttribute="centerY" secondItem="Trf-Gp-Ubi" secondAttribute="centerY" multiplier="1.675" id="cLa-69-X2b"/>
+                            <constraint firstItem="OOl-sK-F4k" firstAttribute="width" secondItem="BHh-sN-arV" secondAttribute="width" id="dFY-3W-1lh"/>
+                            <constraint firstItem="OOl-sK-F4k" firstAttribute="centerX" secondItem="Trf-Gp-Ubi" secondAttribute="centerX" id="dXv-ds-BdN"/>
+                            <constraint firstItem="FnY-sV-d87" firstAttribute="centerX" secondItem="Trf-Gp-Ubi" secondAttribute="centerX" multiplier="1.5" id="eds-Zi-mW9"/>
+                            <constraint firstItem="OOl-sK-F4k" firstAttribute="height" secondItem="BHh-sN-arV" secondAttribute="height" multiplier="0.125" id="fZ9-fz-gMT"/>
+                            <constraint firstItem="FnY-sV-d87" firstAttribute="height" secondItem="BHh-sN-arV" secondAttribute="height" multiplier="0.015" id="hWT-hz-GDr"/>
+                            <constraint firstItem="Rpd-H3-dMT" firstAttribute="width" secondItem="BHh-sN-arV" secondAttribute="width" multiplier="0.8" id="hhK-ue-cQZ"/>
+                            <constraint firstItem="pgd-ig-9Vw" firstAttribute="centerX" secondItem="Trf-Gp-Ubi" secondAttribute="centerX" multiplier="1.505" id="hjF-ph-QJj"/>
+                            <constraint firstItem="FnY-sV-d87" firstAttribute="width" secondItem="BHh-sN-arV" secondAttribute="width" multiplier="0.25" id="i8p-Wy-POd"/>
+                            <constraint firstItem="pgd-ig-9Vw" firstAttribute="width" secondItem="BHh-sN-arV" secondAttribute="width" multiplier="0.3" id="j9X-qK-krp"/>
+                            <constraint firstItem="Rpd-H3-dMT" firstAttribute="centerX" secondItem="Trf-Gp-Ubi" secondAttribute="centerX" id="kEl-FV-QGG"/>
+                            <constraint firstItem="pgd-ig-9Vw" firstAttribute="height" secondItem="BHh-sN-arV" secondAttribute="height" multiplier="0.04" id="lLF-ie-Day"/>
+                            <constraint firstItem="Rpd-H3-dMT" firstAttribute="height" secondItem="BHh-sN-arV" secondAttribute="height" multiplier="0.62" id="nLs-HW-isR"/>
+                            <constraint firstItem="Tjc-IU-PDI" firstAttribute="centerX" secondItem="Trf-Gp-Ubi" secondAttribute="centerX" multiplier="1.575" id="pWC-jk-t6m"/>
+                            <constraint firstItem="INc-tX-BgI" firstAttribute="height" secondItem="BHh-sN-arV" secondAttribute="height" multiplier="0.042" id="pm8-7z-N94"/>
+                            <constraint firstItem="Rpd-H3-dMT" firstAttribute="centerY" secondItem="Trf-Gp-Ubi" secondAttribute="centerY" multiplier="0.975" id="qM8-XZ-sIT"/>
+                            <constraint firstItem="OOl-sK-F4k" firstAttribute="top" secondItem="BHh-sN-arV" secondAttribute="top" id="rd2-sT-Tfp"/>
+                            <constraint firstItem="wPX-Eb-8ju" firstAttribute="centerX" secondItem="Trf-Gp-Ubi" secondAttribute="centerX" id="ykV-rp-bAo"/>
+                            <constraint firstItem="Tjc-IU-PDI" firstAttribute="height" secondItem="BHh-sN-arV" secondAttribute="height" multiplier="0.03" id="zbx-Ep-cad"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Trf-Gp-Ubi"/>
+                    </view>
+                    <connections>
+                        <outlet property="multiplierLabel" destination="Srt-LA-7Ex" id="F9g-0i-9JB"/>
+                        <outlet property="saveButton" destination="INc-tX-BgI" id="1wq-wC-U7W"/>
+                        <outlet property="titleView" destination="OOl-sK-F4k" id="9wU-vZ-X4N"/>
+                        <outlet property="totalTimeLabel" destination="Tjc-IU-PDI" id="y4V-p7-csC"/>
+                        <outlet property="workoutTableView" destination="Rpd-H3-dMT" id="CuC-VN-79V"/>
+                        <outlet property="workoutTitleTextField" destination="wPX-Eb-8ju" id="HNT-jX-BWG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0s-mb-o18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2659" y="1128"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="MyPlanSelectedIcon" width="66.666664123535156" height="66.666664123535156"/>
-        <image name="MyPlanUnselectedIcon" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="GetReady" width="184.5" height="208"/>
+        <image name="Lunge2" width="99" height="115.5"/>
+        <image name="MyPlanSelectedIcon" width="50" height="50"/>
+        <image name="MyPlanUnselectedIcon" width="50" height="50"/>
+        <image name="backArrowIcon" width="14" height="24"/>
+        <namedColor name="Get-HIITBlack">
+            <color red="0.17254901960784313" green="0.16470588235294117" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Get-HIITGray">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Get-HIITLightGray">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Get-HIITPrimaryOrange">
             <color red="1" green="0.50588235294117645" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Get-HIITWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
