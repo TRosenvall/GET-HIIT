@@ -22,17 +22,13 @@
         <!--Dashboard-->
         <scene sceneID="QYh-G4-P3c">
             <objects>
-                <viewController id="zwy-Rw-fU0" sceneMemberID="viewController">
+                <viewController id="zwy-Rw-fU0" customClass="DashboardViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="05u-09-Eil">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-wA-ebc">
-                                <rect key="frame" x="20" y="489" width="374" height="205"/>
-                                <color key="backgroundColor" name="Get-HIITGray"/>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5Lq-Ht-PLz">
-                                <rect key="frame" x="98" y="360" width="152.5" height="56"/>
+                                <rect key="frame" x="98" y="449" width="152.5" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6y-2r-PX6">
                                         <rect key="frame" x="0.0" y="0.0" width="152.5" height="34"/>
@@ -49,50 +45,51 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HQP-Cx-bt1">
-                                <rect key="frame" x="98" y="288" width="162" height="57"/>
+                                <rect key="frame" x="98" y="365" width="163" height="57"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v36-CE-jFT">
-                                        <rect key="frame" x="0.0" y="0.0" width="162" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="FuX-hp-6hU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Workout Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUw-EE-IBp">
-                                        <rect key="frame" x="0.0" y="39" width="162" height="18"/>
+                                        <rect key="frame" x="0.0" y="39" width="163" height="18"/>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
                                         <color key="textColor" name="Get-HIITBlack"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Workout Time Icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="jUb-mY-OqC">
-                                <rect key="frame" x="33" y="267" width="50" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Workout Time Icon" translatesAutoresizingMaskIntoConstraints="NO" id="jUb-mY-OqC">
+                                <rect key="frame" x="33" y="349" width="49" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7SP-kx-W3a"/>
-                                    <constraint firstAttribute="width" constant="50" id="Sci-MG-TUg"/>
+                                    <constraint firstAttribute="height" constant="50" id="lKi-eY-Zfa"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calories Icon" translatesAutoresizingMaskIntoConstraints="NO" id="dmJ-tw-zKw">
-                                <rect key="frame" x="33" y="190" width="50" height="50"/>
+                                <rect key="frame" x="33" y="269" width="49" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="0mp-FC-5cl"/>
-                                    <constraint firstAttribute="height" constant="50" id="BnX-dO-ai0"/>
+                                    <constraint firstAttribute="height" constant="50" id="ndh-kH-6xL"/>
+                                    <constraint firstAttribute="width" constant="49" id="yTk-8u-vGL"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart Rate Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ure-pA-sEY">
-                                <rect key="frame" x="33" y="344" width="50" height="50"/>
+                                <rect key="frame" x="33" y="426" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="gcf-Py-QIc"/>
-                                    <constraint firstAttribute="height" constant="50" id="gfv-Sy-nE1"/>
+                                    <constraint firstAttribute="height" constant="50" id="vmw-F4-eQ9"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-17-tkh">
-                                <rect key="frame" x="20" y="431" width="374" height="50"/>
+                                <rect key="frame" x="20" y="531" width="374" height="50"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Workout Time Icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-pz-hR8">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Workout Time Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-pz-hR8">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="o02-j8-tRc"/>
+                                            <constraint firstAttribute="width" constant="50" id="mU7-ig-MFX"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LI-Ls-ddD">
@@ -102,12 +99,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="iiy-sL-Z5z"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bwp-XF-Eoy">
-                                <rect key="frame" x="98" y="216" width="102" height="57"/>
+                                <rect key="frame" x="98" y="287" width="102" height="57"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pum-nN-Y2e">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="34"/>
@@ -123,46 +117,92 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Get Ready" translatesAutoresizingMaskIntoConstraints="NO" id="M6O-qi-Fj0">
-                                <rect key="frame" x="115" y="0.0" width="185" height="187"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GetReady" translatesAutoresizingMaskIntoConstraints="NO" id="M6O-qi-Fj0">
+                                <rect key="frame" x="115" y="92" width="184" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="kdv-gE-E1z"/>
+                                </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-wA-ebc">
+                                <rect key="frame" x="20" y="582" width="374" height="243"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph slice" translatesAutoresizingMaskIntoConstraints="NO" id="O1Y-Ln-5fe">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="243"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="Get-HIITWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="O1Y-Ln-5fe" secondAttribute="trailing" id="PTv-nT-z0v"/>
+                                    <constraint firstAttribute="bottom" secondItem="O1Y-Ln-5fe" secondAttribute="bottom" id="QXU-3h-TGx"/>
+                                    <constraint firstItem="O1Y-Ln-5fe" firstAttribute="top" secondItem="xRI-wA-ebc" secondAttribute="top" id="dVU-6p-btB"/>
+                                    <constraint firstItem="O1Y-Ln-5fe" firstAttribute="leading" secondItem="xRI-wA-ebc" secondAttribute="leading" id="pCL-sl-Ooj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIB-T6-fN0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Niy-AS-oW2">
+                                        <rect key="frame" x="101" y="37" width="212" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="212" id="uAJ-0x-DlO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="28"/>
+                                        <color key="textColor" name="Get-HIITWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Niy-AS-oW2" firstAttribute="centerX" secondItem="HIB-T6-fN0" secondAttribute="centerX" id="0Bg-75-oOs"/>
+                                    <constraint firstItem="Niy-AS-oW2" firstAttribute="top" secondItem="HIB-T6-fN0" secondAttribute="top" constant="37" id="9r6-bx-3RV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Niy-AS-oW2" secondAttribute="bottom" constant="8" id="e6M-bd-7Q4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="Get-HIITWhite"/>
                         <constraints>
-                            <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="bwp-XF-Eoy" secondAttribute="trailing" constant="214" id="4rq-dw-PUl"/>
-                            <constraint firstItem="yEI-eA-QYP" firstAttribute="bottom" secondItem="xRI-wA-ebc" secondAttribute="bottom" constant="80" id="5Bd-sr-Zcd"/>
-                            <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="HQP-Cx-bt1" secondAttribute="trailing" constant="154" id="8X6-0E-IYi"/>
-                            <constraint firstItem="xRI-wA-ebc" firstAttribute="top" secondItem="SiA-17-tkh" secondAttribute="bottom" constant="8" symbolic="YES" id="8mi-aZ-Zwt"/>
-                            <constraint firstItem="SiA-17-tkh" firstAttribute="leading" secondItem="yEI-eA-QYP" secondAttribute="leading" constant="20" id="B0l-Qw-Z0c"/>
-                            <constraint firstItem="Ure-pA-sEY" firstAttribute="top" secondItem="jUb-mY-OqC" secondAttribute="bottom" constant="27" id="BR6-ZR-b05"/>
-                            <constraint firstItem="5Lq-Ht-PLz" firstAttribute="leading" secondItem="Ure-pA-sEY" secondAttribute="trailing" constant="15" id="Eox-mQ-CVr"/>
-                            <constraint firstItem="5Lq-Ht-PLz" firstAttribute="top" secondItem="HQP-Cx-bt1" secondAttribute="bottom" constant="15" id="IXb-wA-7OS"/>
-                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="leading" secondItem="jUb-mY-OqC" secondAttribute="trailing" constant="15" id="LyQ-O9-dsu"/>
-                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="leading" secondItem="jUb-mY-OqC" secondAttribute="trailing" constant="15" id="WmQ-vU-oXW"/>
-                            <constraint firstItem="SiA-17-tkh" firstAttribute="top" secondItem="5Lq-Ht-PLz" secondAttribute="bottom" constant="15" id="WzY-N0-9Dc"/>
-                            <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="SiA-17-tkh" secondAttribute="trailing" constant="20" id="eHY-D1-Hju"/>
-                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="top" secondItem="bwp-XF-Eoy" secondAttribute="bottom" constant="15" id="fES-rN-fg3"/>
-                            <constraint firstItem="xRI-wA-ebc" firstAttribute="top" secondItem="05u-09-Eil" secondAttribute="top" constant="489" id="hYh-nG-qhg"/>
-                            <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="5Lq-Ht-PLz" secondAttribute="trailing" constant="163.5" id="k0g-3I-uS9"/>
-                            <constraint firstItem="xRI-wA-ebc" firstAttribute="leading" secondItem="SiA-17-tkh" secondAttribute="leading" id="k31-LY-XCh"/>
-                            <constraint firstItem="jUb-mY-OqC" firstAttribute="top" secondItem="dmJ-tw-zKw" secondAttribute="bottom" constant="27" id="l78-zV-YEW"/>
-                            <constraint firstItem="SiA-17-tkh" firstAttribute="top" secondItem="Ure-pA-sEY" secondAttribute="bottom" constant="37" id="lkq-P9-v2A"/>
-                            <constraint firstItem="xRI-wA-ebc" firstAttribute="centerX" secondItem="M6O-qi-Fj0" secondAttribute="centerX" id="npS-xO-Fgb"/>
-                            <constraint firstItem="xRI-wA-ebc" firstAttribute="trailing" secondItem="SiA-17-tkh" secondAttribute="trailing" id="oCD-TD-nbd"/>
-                            <constraint firstItem="5Lq-Ht-PLz" firstAttribute="leading" secondItem="Ure-pA-sEY" secondAttribute="trailing" constant="15" id="oSB-yb-m4X"/>
-                            <constraint firstItem="jUb-mY-OqC" firstAttribute="leading" secondItem="yEI-eA-QYP" secondAttribute="leading" constant="33" id="qvh-zU-Kq4"/>
-                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="top" secondItem="bwp-XF-Eoy" secondAttribute="bottom" constant="15" id="t8L-D3-0jk"/>
-                            <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="SiA-17-tkh" secondAttribute="trailing" constant="20" id="v9W-aK-dU5"/>
-                            <constraint firstItem="Ure-pA-sEY" firstAttribute="leading" secondItem="yEI-eA-QYP" secondAttribute="leading" constant="33" id="vGg-ss-DHo"/>
-                            <constraint firstItem="Ure-pA-sEY" firstAttribute="top" secondItem="jUb-mY-OqC" secondAttribute="bottom" constant="27" id="vaa-op-uIA"/>
-                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="leading" secondItem="dmJ-tw-zKw" secondAttribute="trailing" constant="15" id="vt7-dF-Sfo"/>
-                            <constraint firstItem="SiA-17-tkh" firstAttribute="leading" secondItem="yEI-eA-QYP" secondAttribute="leading" constant="20" id="wIM-eH-JPm"/>
-                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="top" secondItem="M6O-qi-Fj0" secondAttribute="bottom" constant="29" id="xya-6L-zXZ"/>
+                            <constraint firstAttribute="bottom" secondItem="HIB-T6-fN0" secondAttribute="bottom" constant="802" id="00K-i4-jAd"/>
+                            <constraint firstItem="5Lq-Ht-PLz" firstAttribute="leading" secondItem="Ure-pA-sEY" secondAttribute="trailing" constant="15" id="77V-Je-xC5"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="top" secondItem="5Lq-Ht-PLz" secondAttribute="bottom" constant="26" id="8eR-20-7EO"/>
+                            <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="HQP-Cx-bt1" secondAttribute="trailing" constant="153" id="8xw-Ev-hHh"/>
+                            <constraint firstItem="HIB-T6-fN0" firstAttribute="top" secondItem="05u-09-Eil" secondAttribute="top" id="9qt-px-d24"/>
+                            <constraint firstItem="yEI-eA-QYP" firstAttribute="bottom" secondItem="xRI-wA-ebc" secondAttribute="bottom" constant="37" id="Bn1-LW-GYZ"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="trailing" secondItem="xRI-wA-ebc" secondAttribute="trailing" id="HeW-cE-aAE"/>
+                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="leading" secondItem="5Lq-Ht-PLz" secondAttribute="leading" id="Hin-3b-9OD"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="leading" secondItem="jUb-mY-OqC" secondAttribute="leading" id="Iqz-gv-3HT"/>
+                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="leading" secondItem="dmJ-tw-zKw" secondAttribute="trailing" constant="16" id="K8W-3y-yGc"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="trailing" secondItem="jUb-mY-OqC" secondAttribute="trailing" id="NGG-WO-O4i"/>
+                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="top" secondItem="M6O-qi-Fj0" secondAttribute="bottom" constant="8" symbolic="YES" id="NMs-Ec-6Bm"/>
+                            <constraint firstItem="jUb-mY-OqC" firstAttribute="leading" secondItem="Ure-pA-sEY" secondAttribute="leading" id="NdU-qn-jfE"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="leading" secondItem="xRI-wA-ebc" secondAttribute="leading" id="Xo5-JF-QcF"/>
+                            <constraint firstItem="M6O-qi-Fj0" firstAttribute="leading" secondItem="dmJ-tw-zKw" secondAttribute="trailing" constant="33" id="ZXD-uZ-1lP"/>
+                            <constraint firstItem="M6O-qi-Fj0" firstAttribute="top" secondItem="yEI-eA-QYP" secondAttribute="top" constant="48" id="atG-Jb-CJO"/>
+                            <constraint firstItem="bwp-XF-Eoy" firstAttribute="leading" secondItem="HQP-Cx-bt1" secondAttribute="leading" id="fDW-mM-apS"/>
+                            <constraint firstItem="HIB-T6-fN0" firstAttribute="leading" secondItem="05u-09-Eil" secondAttribute="leading" id="fWR-CU-h2P"/>
+                            <constraint firstItem="xRI-wA-ebc" firstAttribute="top" secondItem="05u-09-Eil" secondAttribute="top" constant="582" id="hIt-im-hBX"/>
+                            <constraint firstItem="M6O-qi-Fj0" firstAttribute="centerX" secondItem="SiA-17-tkh" secondAttribute="centerX" id="hzN-AQ-mHx"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="top" secondItem="yEI-eA-QYP" secondAttribute="top" constant="225" id="lE2-hn-lkT"/>
+                            <constraint firstItem="HQP-Cx-bt1" firstAttribute="top" secondItem="bwp-XF-Eoy" secondAttribute="bottom" constant="21" id="laH-68-zez"/>
+                            <constraint firstItem="Ure-pA-sEY" firstAttribute="top" secondItem="jUb-mY-OqC" secondAttribute="bottom" constant="27" id="mut-4R-At8"/>
+                            <constraint firstItem="xRI-wA-ebc" firstAttribute="top" secondItem="SiA-17-tkh" secondAttribute="bottom" constant="1" id="n8g-2u-6vo"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="top" secondItem="Ure-pA-sEY" secondAttribute="bottom" constant="55" id="oeA-Sv-O38"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="trailing" secondItem="05u-09-Eil" secondAttribute="trailingMargin" id="sEd-rh-LTh"/>
+                            <constraint firstItem="5Lq-Ht-PLz" firstAttribute="top" secondItem="05u-09-Eil" secondAttribute="top" constant="449" id="stA-ul-HJr"/>
+                            <constraint firstItem="HIB-T6-fN0" firstAttribute="centerX" secondItem="M6O-qi-Fj0" secondAttribute="centerX" id="veN-rh-w3b"/>
+                            <constraint firstItem="SiA-17-tkh" firstAttribute="leading" secondItem="05u-09-Eil" secondAttribute="leadingMargin" id="wL2-jl-PG1"/>
+                            <constraint firstItem="dmJ-tw-zKw" firstAttribute="leading" secondItem="yEI-eA-QYP" secondAttribute="leading" constant="33" id="xKT-QS-DFV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yEI-eA-QYP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="DashboardUnselectedIcon" selectedImage="DashboardSelectedIcon" id="FWX-Xa-MIz"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="dashboardTitleLabel" destination="Niy-AS-oW2" id="Rkd-2g-YcH"/>
+                        <outlet property="gradientView" destination="HIB-T6-fN0" id="tOZ-5M-ijM"/>
+                        <outlet property="weeklyCaloriesLabel" destination="pum-nN-Y2e" id="Lzs-5o-Q7Y"/>
+                        <outlet property="weeklyHeartrateLabel" destination="L6y-2r-PX6" id="gfg-UK-VQT"/>
+                        <outlet property="weeklyWorkoutMinutesLabel" destination="v36-CE-jFT" id="dWM-9p-Q82"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htq-YY-OiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,17 +210,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Calories Icon" width="24" height="24"/>
-        <image name="DashboardSelectedIcon" width="66.666664123535156" height="66.666664123535156"/>
-        <image name="DashboardUnselectedIcon" width="66.666664123535156" height="66.666664123535156"/>
-        <image name="Get Ready" width="184.5" height="208"/>
-        <image name="Heart Rate Icon" width="24" height="24"/>
-        <image name="Workout Time Icon-1" width="24" height="24"/>
+        <image name="Calories Icon" width="500" height="500"/>
+        <image name="DashboardSelectedIcon" width="50" height="50"/>
+        <image name="DashboardUnselectedIcon" width="50" height="50"/>
+        <image name="GetReady" width="184.5" height="208"/>
+        <image name="Heart Rate Icon" width="500" height="500"/>
+        <image name="Workout Time Icon" width="500" height="500"/>
+        <image name="graph slice" width="250" height="172"/>
         <namedColor name="Get-HIITBlack">
             <color red="0.17254901960784313" green="0.16470588235294117" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Get-HIITGray">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Get-HIITWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
