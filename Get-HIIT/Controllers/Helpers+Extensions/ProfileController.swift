@@ -13,4 +13,9 @@ class ProfileController {
     static let sharedInstance = ProfileController()
     // The user's profile, the source of all truth concerning the user.
     var profile: Profile = Profile()
+    
+    func getCalorieLoss() {
+        
+    }
+    
 }

@@ -16,11 +16,15 @@ class RemindersViewController: UIViewController {
     @IBOutlet weak var reminderTimePicker: UIDatePicker!
     @IBOutlet weak var remindMeLabel: UILabel!
  
+    @IBOutlet weak var titleView: UIView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //setupViews()
     }
     
@@ -34,6 +38,7 @@ class RemindersViewController: UIViewController {
         
     }
     
+
     func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
         
         var color1: UIColor = .getHIITPrimaryOrange
