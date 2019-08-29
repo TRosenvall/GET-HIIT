@@ -24,9 +24,7 @@ class RemindersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
-        titleView.layer.shadowOpacity = 0.3
-        titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
+
         //setupViews()
     }
     
@@ -40,10 +38,7 @@ class RemindersViewController: UIViewController {
         
     }
     
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+
     func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
         
         var color1: UIColor = .getHIITPrimaryOrange
