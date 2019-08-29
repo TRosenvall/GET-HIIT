@@ -1,45 +1,26 @@
 //
-//  RemindersViewController.swift
+//  DashboardViewController.swift
 //  Get-HIIT
 //
-//  Created by Timothy Rosenvall on 8/21/19.
+//  Created by Leah Cluff on 8/29/19.
 //  Copyright © 2019 Timothy Rosenvall. All rights reserved.
 //
 
 import UIKit
-import EventKit
 
-class RemindersViewController: UIViewController {
+class DashboardViewController: UIViewController {
+    @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var weeklyCaloriesLabel: UILabel!
+    @IBOutlet weak var weeklyWorkoutMinutesLabel: UILabel!
+    @IBOutlet weak var dashboardTitleLabel: UILabel!
+    @IBOutlet weak var weeklyHeartrateLabel: UILabel!
     
-
-    @IBOutlet weak var reminderToggle: NSLayoutConstraint!
-    @IBOutlet weak var reminderTimePicker: UIDatePicker!
-    @IBOutlet weak var remindMeLabel: UILabel!
- 
-    @IBOutlet weak var titleView: UIView!
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
-
-        //setupViews()
+        self.setGradient(view: gradientView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
+        // Do any additional setup after loading the view.
     }
     
-        
-    
-    @IBAction func DatePickerTapped(_ sender: Any) {
-        
-    }
-    
-    @IBAction func RemindersToggled(_ sender: Any) {
-        
-    }
-    
-
     func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
         
         var color1: UIColor = .getHIITPrimaryOrange
@@ -76,5 +57,17 @@ class RemindersViewController: UIViewController {
         
         view.layer.insertSublayer(gradient, at: 0)
     }
-}
 
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
