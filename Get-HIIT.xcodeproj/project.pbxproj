@@ -107,9 +107,6 @@
 		1696861A23186F8000C41F48 /* UpcomingWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		1696861C23186FC900C41F48 /* PastWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWorkoutsViewController.swift; sourceTree = "<group>"; };
 		1696861E23186FD300C41F48 /* UpcomingWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsViewController.swift; sourceTree = "<group>"; };
-
-		169686222318816C00C41F48 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-
 		1696862423188DD300C41F48 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -1008,7 +1005,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "TAR.Get-HIIT";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1028,7 +1025,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "TAR.Get-HIIT";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

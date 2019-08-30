@@ -17,7 +17,6 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var timerImageView: UIView!
     
     var gradient = CAGradientLayer()
@@ -31,11 +30,15 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         countdownTimer.delegate = self
-        stopButton.isEnabled = false
-        stopButton.alpha = 0.5
         SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
         gradient = setGradient(chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         setupTimerImage(gradient: gradient)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        countdownTimer.startTimer()
+        countdownTimerDidStart = true
     }
     
     // MARK: - Countdown timer delegate
@@ -62,25 +65,21 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     }
     
     @IBAction func startTimerButton(_ sender: Any) {
-        stopButton.isEnabled = true
-        stopButton.alpha = 1.0
         
         if !countdownTimerDidStart{
             countdownTimer.startTimer()
             countdownTimerDidStart = true
-            startButton.setTitle("Pause", for: .normal)
+            startButton.setImage(UIImage(named: "Pause Button"), for: .normal)
         } else {
             countdownTimer.pause()
             countdownTimerDidStart = false
-            startButton.setTitle("Resume", for: .normal)
+            startButton.setImage(UIImage(named: "PlayButton"), for: .normal)
         }
     }
     
     @IBAction func stopTimerButton(_ sender: Any) {
         countdownTimer.stop()
         countdownTimerDidStart = false
-        stopButton.isEnabled = false
-        stopButton.alpha = 0.5
         startButton.setTitle("Start", for: .normal)
         CountdownTimer.sharedInstance.currentTime = CountdownTimer.sharedInstance.duration
         CountdownTimer.sharedInstance.percentageComplete = 0

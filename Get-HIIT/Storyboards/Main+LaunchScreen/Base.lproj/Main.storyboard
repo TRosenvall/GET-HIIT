@@ -44,20 +44,20 @@
             </objects>
             <point key="canvasLocation" x="1043" y="10"/>
         </scene>
-        <!--Workout-->
+        <!--MyPlan-->
         <scene sceneID="5ji-SV-n3S">
             <objects>
-                <viewControllerPlaceholder storyboardName="Workout" id="rsn-Tt-SbF" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyPlan" id="rsn-Tt-SbF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vd2-Dg-2Cg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSf-lV-Vn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="70"/>
         </scene>
-        <!--MyPlan-->
+        <!--Workout-->
         <scene sceneID="o5n-fY-aw2">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyPlan" id="0Wk-HK-Jkp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Workout" id="0Wk-HK-Jkp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vG8-4o-qBU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdf-aS-fNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
