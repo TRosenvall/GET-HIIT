@@ -15,6 +15,10 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var dashboardTitleLabel: UILabel!
     @IBOutlet weak var weeklyHeartrateLabel: UILabel!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setGradient(view: gradientView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
