@@ -33,17 +33,17 @@
             <objects>
                 <viewController id="leS-xT-ueB" customClass="RemindersViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HS2-fV-dVL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYk-ZI-RPr">
-                                <rect key="frame" x="31" y="384" width="352" height="31"/>
+                                <rect key="frame" x="31" y="428" width="352" height="31"/>
                                 <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="if3-C7-j5G">
-                                <rect key="frame" x="0.0" y="431" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="475" width="414" height="216"/>
                                 <color key="backgroundColor" name="Get-HIITLightGray"/>
                                 <date key="date" timeIntervalSinceReferenceDate="588199655.42217898">
                                     <!--2019-08-22 20:47:35 +0000-->
@@ -53,17 +53,17 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7p-Mb-KvF">
-                                <rect key="frame" x="31" y="210.5" width="352" height="153.5"/>
+                                <rect key="frame" x="31" y="256" width="352" height="152"/>
                                 <string key="text">Reminders increase your chances of staying on track and achieveing your goals. Pick a time and we will be here to help you stay on track for success.</string>
                                 <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-iM-BLy">
-                                <rect key="frame" x="0.0" y="114" width="414" height="48.5"/>
+                                <rect key="frame" x="0.0" y="154.5" width="414" height="53.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5f-KV-efa">
-                                        <rect key="frame" x="31" y="13.5" width="352" height="22"/>
+                                        <rect key="frame" x="31" y="15.5" width="352" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Gw7-yq-tcd"/>
                                         </constraints>
@@ -72,7 +72,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82y-RH-BZB">
-                                        <rect key="frame" x="336" y="9" width="51" height="30.5"/>
+                                        <rect key="frame" x="336" y="9" width="51" height="35.5"/>
                                         <color key="onTintColor" name="Get-HIITPrimaryBlue"/>
                                         <connections>
                                             <action selector="RemindersToggled:" destination="leS-xT-ueB" eventType="valueChanged" id="NBd-ME-ZxO"/>
@@ -91,16 +91,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qg8-lL-wOl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBO-40-hmh">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="67"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" name="Get-HIITWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KU-Qy-9sf">
-                                        <rect key="frame" x="26.5" y="25.5" width="50.5" height="50.5"/>
+                                        <rect key="frame" x="8" y="40" width="42" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3KU-Qy-9sf" secondAttribute="height" multiplier="1:1" id="fWs-xs-Soq"/>
                                         </constraints>
@@ -113,12 +113,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="PBO-40-hmh" firstAttribute="width" secondItem="Qg8-lL-wOl" secondAttribute="width" id="M9d-4P-DXi"/>
-                                    <constraint firstItem="PBO-40-hmh" firstAttribute="centerY" secondItem="Qg8-lL-wOl" secondAttribute="centerY" id="Sh2-Lg-y67"/>
-                                    <constraint firstItem="3KU-Qy-9sf" firstAttribute="centerX" secondItem="PBO-40-hmh" secondAttribute="centerX" multiplier="0.25" id="aL3-VZ-aKA"/>
+                                    <constraint firstItem="PBO-40-hmh" firstAttribute="centerY" secondItem="Qg8-lL-wOl" secondAttribute="centerY" constant="14" id="Sh2-Lg-y67"/>
+                                    <constraint firstItem="3KU-Qy-9sf" firstAttribute="centerX" secondItem="PBO-40-hmh" secondAttribute="centerX" multiplier="0.25" constant="-22.75" id="aL3-VZ-aKA"/>
                                     <constraint firstItem="PBO-40-hmh" firstAttribute="centerX" secondItem="Qg8-lL-wOl" secondAttribute="centerX" id="eQL-2X-2f3"/>
-                                    <constraint firstItem="PBO-40-hmh" firstAttribute="height" secondItem="Qg8-lL-wOl" secondAttribute="height" id="o9d-o2-8rC"/>
-                                    <constraint firstItem="3KU-Qy-9sf" firstAttribute="height" secondItem="PBO-40-hmh" secondAttribute="height" multiplier="0.5" id="qvw-9A-gGy"/>
-                                    <constraint firstItem="3KU-Qy-9sf" firstAttribute="centerY" secondItem="PBO-40-hmh" secondAttribute="centerY" id="wsg-tf-oA0"/>
+                                    <constraint firstItem="PBO-40-hmh" firstAttribute="height" secondItem="Qg8-lL-wOl" secondAttribute="height" constant="-28" id="o9d-o2-8rC"/>
+                                    <constraint firstItem="3KU-Qy-9sf" firstAttribute="height" secondItem="PBO-40-hmh" secondAttribute="height" multiplier="0.5" constant="8.5" id="qvw-9A-gGy"/>
+                                    <constraint firstItem="3KU-Qy-9sf" firstAttribute="centerY" secondItem="PBO-40-hmh" secondAttribute="centerY" constant="-0.5" id="wsg-tf-oA0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -134,7 +134,7 @@
                             <constraint firstItem="Qg8-lL-wOl" firstAttribute="top" secondItem="HS2-fV-dVL" secondAttribute="top" id="QdX-NU-5gS"/>
                             <constraint firstItem="if3-C7-j5G" firstAttribute="leading" secondItem="z9T-iM-BLy" secondAttribute="leading" id="Qlh-AU-MZd"/>
                             <constraint firstItem="Qg8-lL-wOl" firstAttribute="centerX" secondItem="P9W-bO-FqX" secondAttribute="centerX" id="Sj0-YZ-0Av"/>
-                            <constraint firstItem="Qg8-lL-wOl" firstAttribute="height" secondItem="HS2-fV-dVL" secondAttribute="height" multiplier="0.125" id="VIA-au-AXJ"/>
+                            <constraint firstItem="Qg8-lL-wOl" firstAttribute="height" secondItem="HS2-fV-dVL" secondAttribute="height" multiplier="0.125" constant="-17" id="VIA-au-AXJ"/>
                             <constraint firstItem="P9W-bO-FqX" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FYk-ZI-RPr" secondAttribute="trailing" symbolic="YES" id="cyz-ke-E6b"/>
                             <constraint firstItem="z9T-iM-BLy" firstAttribute="width" secondItem="HS2-fV-dVL" secondAttribute="width" id="dkS-8Z-ig8"/>
                             <constraint firstItem="P9W-bO-FqX" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S7p-Mb-KvF" secondAttribute="trailing" symbolic="YES" id="o5Q-zX-QWc"/>
@@ -148,7 +148,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P9W-bO-FqX"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="remindMeLabel" destination="FYk-ZI-RPr" id="N9b-70-GMS"/>
                         <outlet property="reminderTimePicker" destination="if3-C7-j5G" id="HO2-jp-0Ea"/>
@@ -389,19 +389,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-Ya-UxL">
-                                <rect key="frame" x="20" y="324" width="33" height="22"/>
+                                <rect key="frame" x="20" y="324" width="33" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGd-Ur-qfm">
-                                <rect key="frame" x="178" y="324" width="58.5" height="22"/>
+                                <rect key="frame" x="177.5" y="324" width="59" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uI9-cg-TBU">
-                                <rect key="frame" x="335.5" y="324" width="58.5" height="22"/>
+                                <rect key="frame" x="335.5" y="324" width="58.5" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -440,7 +440,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average workout length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwq-rB-uAw">
-                                        <rect key="frame" x="48" y="117" width="154" height="21"/>
+                                        <rect key="frame" x="48" y="117" width="153.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Nunito-ExtraLight" family="Nunito" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -458,7 +458,7 @@
                                         <rect key="frame" x="16" y="17" width="24" height="25"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Workouts in a week)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNt-zz-Urk">
-                                        <rect key="frame" x="140" y="73" width="138" height="18"/>
+                                        <rect key="frame" x="140.5" y="73" width="137.5" height="18"/>
                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -790,6 +790,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nev-do-UpN"/>
+        <segue reference="gCr-31-Rlo"/>
     </inferredMetricsTieBreakers>
 </document>
