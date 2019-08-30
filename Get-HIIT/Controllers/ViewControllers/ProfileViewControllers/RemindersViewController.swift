@@ -38,7 +38,10 @@ class RemindersViewController: UIViewController {
         
     }
     
-
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
         
         var color1: UIColor = .getHIITPrimaryOrange

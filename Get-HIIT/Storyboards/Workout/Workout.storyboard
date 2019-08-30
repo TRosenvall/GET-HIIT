@@ -14,6 +14,9 @@
         <array key="Nunito-Bold.ttf">
             <string>Nunito-Bold</string>
         </array>
+        <array key="Nunito-ExtraBold.ttf">
+            <string>Nunito-ExtraBold</string>
+        </array>
         <array key="Nunito-Regular.ttf">
             <string>Nunito-Regular</string>
         </array>
@@ -584,148 +587,158 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5FT-Ks-OIb">
-                                <rect key="frame" x="98" y="169" width="218" height="136"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="LSv-FY-a5r"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-n5-6wX">
-                                <rect key="frame" x="53" y="327" width="308" height="416"/>
+                                <rect key="frame" x="53" y="354" width="308" height="363"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bAu-cG-i11">
-                                        <rect key="frame" x="99" y="88" width="110" height="240"/>
+                                        <rect key="frame" x="99" y="171" width="110" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpn-AM-oSn">
-                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="240"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="34"/>
+                                                <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="29"/>
+                                                <color key="textColor" name="Get-HIITBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox2-Ij-N2e">
-                                                <rect key="frame" x="51.5" y="0.0" width="7" height="240"/>
+                                                <rect key="frame" x="52" y="0.0" width="6" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="7" id="Tq5-JN-PQ9"/>
+                                                    <constraint firstAttribute="width" constant="6" id="5Fx-my-Ktb"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASm-Z2-0NF">
-                                                <rect key="frame" x="58.5" y="0.0" width="51.5" height="240"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="58" y="0.0" width="52" height="34"/>
+                                                <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="29"/>
+                                                <color key="textColor" name="Get-HIITBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="ox2-Ij-N2e" firstAttribute="centerX" secondItem="bAu-cG-i11" secondAttribute="centerX" id="NYV-F1-VSl"/>
+                                            <constraint firstItem="ox2-Ij-N2e" firstAttribute="centerX" secondItem="bAu-cG-i11" secondAttribute="centerX" id="oc6-br-7dG"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="bAu-cG-i11" firstAttribute="top" secondItem="H9m-n5-6wX" secondAttribute="top" constant="88" id="Bsx-IV-PuW"/>
-                                    <constraint firstItem="bAu-cG-i11" firstAttribute="centerY" secondItem="H9m-n5-6wX" secondAttribute="centerY" id="JJe-xj-5cT"/>
-                                    <constraint firstAttribute="trailing" secondItem="bAu-cG-i11" secondAttribute="trailing" constant="99" id="gGJ-1K-Cqv"/>
-                                    <constraint firstItem="bAu-cG-i11" firstAttribute="centerX" secondItem="H9m-n5-6wX" secondAttribute="centerX" id="sm9-R0-XOi"/>
+                                    <constraint firstAttribute="bottom" secondItem="bAu-cG-i11" secondAttribute="bottom" constant="158" id="G8K-TJ-Ehd"/>
+                                    <constraint firstItem="bAu-cG-i11" firstAttribute="leading" secondItem="H9m-n5-6wX" secondAttribute="leading" constant="99" id="Scf-YO-PHT"/>
+                                    <constraint firstItem="bAu-cG-i11" firstAttribute="centerX" secondItem="H9m-n5-6wX" secondAttribute="centerX" id="cpe-si-C9i"/>
+                                    <constraint firstItem="bAu-cG-i11" firstAttribute="top" secondItem="H9m-n5-6wX" secondAttribute="top" constant="171" id="tCx-To-c5w"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(workout name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqM-ZF-Y6b">
-                                <rect key="frame" x="78" y="101" width="258" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Climber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqM-ZF-Y6b">
+                                <rect key="frame" x="78" y="101" width="258" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hy5-ft-GrA"/>
+                                    <constraint firstAttribute="height" constant="54" id="QpN-CO-7wI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="NotoNastaliqUrdu" family="Noto Nastaliq Urdu" pointSize="28"/>
+                                <color key="textColor" name="Get-HIITBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3G-tp-lwF">
-                                <rect key="frame" x="20" y="63" width="98" height="30"/>
-                                <state key="normal" title="Exit"/>
-                                <connections>
-                                    <action selector="exitButtonTapped:" destination="V8X-va-f7N" eventType="touchUpInside" id="f15-P1-cbt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU0-qI-Nyv">
-                                <rect key="frame" x="356" y="411" width="38" height="248"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU0-qI-Nyv">
+                                <rect key="frame" x="369" y="514" width="38" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="38" id="QIb-Re-hb3"/>
+                                    <constraint firstAttribute="width" constant="38" id="C9T-Xe-dwI"/>
+                                    <constraint firstAttribute="height" constant="56" id="WmV-6y-VbF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <state key="normal" title="&gt;"/>
+                                <state key="normal" title="&gt;" image="Timer Icon Forward"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="V8X-va-f7N" eventType="touchUpInside" id="yO1-DX-o4Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6K-b1-wFv">
-                                <rect key="frame" x="14" y="411" width="40" height="248"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="ABL-vq-lzV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <state key="normal" title="&lt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6K-b1-wFv">
+                                <rect key="frame" x="5" y="500" width="40" height="71"/>
+                                <state key="normal" title="&lt;" image="Timer Icon Back"/>
                                 <connections>
                                     <action selector="previousButtonTapped:" destination="V8X-va-f7N" eventType="touchUpInside" id="no9-mC-Qdj"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="GtI-cG-xYg">
-                                <rect key="frame" x="131" y="808" width="152" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIi-H8-1IA">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
-                                        <state key="normal" title="start "/>
-                                        <connections>
-                                            <action selector="startTimerButton:" destination="V8X-va-f7N" eventType="touchUpInside" id="wSg-Ne-ZNd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fME-bF-rPW">
-                                        <rect key="frame" x="115" y="0.0" width="37" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="37" id="bAE-Or-KtJ"/>
-                                        </constraints>
-                                        <state key="normal" title="stop"/>
-                                        <connections>
-                                            <action selector="stopTimerButton:" destination="V8X-va-f7N" eventType="touchUpInside" id="J6p-HO-kF5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dua-DU-R1Q">
-                                <rect key="frame" x="131" y="846" width="152" height="30"/>
-                                <state key="normal" title="Finished!"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIi-H8-1IA">
+                                <rect key="frame" x="186" y="739" width="42" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="zGq-9S-ck5"/>
+                                </constraints>
+                                <state key="normal" image="Pause Button"/>
                                 <connections>
-                                    <segue destination="Ubu-pE-4fE" kind="show" identifier="exerciseCompletedSegue" id="KVb-2u-Gt3"/>
+                                    <action selector="startTimerButton:" destination="V8X-va-f7N" eventType="touchUpInside" id="wSg-Ne-ZNd"/>
                                 </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Climber2" translatesAutoresizingMaskIntoConstraints="NO" id="5FT-Ks-OIb">
+                                <rect key="frame" x="98" y="163" width="218" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="WUv-4A-uXF"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOS-Gn-PSz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3G-tp-lwF">
+                                        <rect key="frame" x="8" y="35" width="77" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="15D-gg-ESZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="28"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" name="Get-HIITWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exitButtonTapped:" destination="V8X-va-f7N" eventType="touchUpInside" id="f15-P1-cbt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Go!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiR-IZ-sJF">
+                                        <rect key="frame" x="94" y="35" width="226" height="54"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="28"/>
+                                        <color key="textColor" name="Get-HIITWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="y3G-tp-lwF" secondAttribute="bottom" constant="4" id="2KM-MY-GQ3"/>
+                                    <constraint firstItem="y3G-tp-lwF" firstAttribute="bottom" secondItem="qiR-IZ-sJF" secondAttribute="bottom" id="7oZ-9W-Ish"/>
+                                    <constraint firstItem="qiR-IZ-sJF" firstAttribute="leading" secondItem="y3G-tp-lwF" secondAttribute="trailing" constant="9" id="BDi-Q4-8oO"/>
+                                    <constraint firstItem="y3G-tp-lwF" firstAttribute="top" secondItem="hOS-Gn-PSz" secondAttribute="top" constant="35" id="Kej-VK-7ed"/>
+                                    <constraint firstItem="y3G-tp-lwF" firstAttribute="leading" secondItem="hOS-Gn-PSz" secondAttribute="leadingMargin" id="aT8-PK-D19"/>
+                                    <constraint firstItem="qiR-IZ-sJF" firstAttribute="centerX" secondItem="hOS-Gn-PSz" secondAttribute="centerX" id="plM-Az-lil"/>
+                                    <constraint firstItem="y3G-tp-lwF" firstAttribute="top" secondItem="qiR-IZ-sJF" secondAttribute="top" id="ssM-OY-l1i"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Db3-AA-Y3K">
+                                <rect key="frame" x="191" y="793" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IKD-iZ-7mz"/>
+                                </constraints>
+                                <state key="normal" title="Stop"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="top" secondItem="7Ih-LE-CFi" secondAttribute="top" constant="57" id="5NA-ga-Mi3"/>
-                            <constraint firstItem="H9m-n5-6wX" firstAttribute="centerY" secondItem="bU0-qI-Nyv" secondAttribute="centerY" id="9YC-sS-vaQ"/>
-                            <constraint firstItem="d6K-b1-wFv" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="14" id="Aey-EE-sDv"/>
-                            <constraint firstItem="d6K-b1-wFv" firstAttribute="baseline" secondItem="bU0-qI-Nyv" secondAttribute="firstBaseline" id="F3a-va-N1U"/>
-                            <constraint firstItem="bU0-qI-Nyv" firstAttribute="trailing" secondItem="Zfo-O8-s4K" secondAttribute="trailingMargin" id="IUd-HW-QNQ"/>
-                            <constraint firstItem="H9m-n5-6wX" firstAttribute="top" secondItem="5FT-Ks-OIb" secondAttribute="bottom" constant="22" id="KNI-Xo-Agt"/>
-                            <constraint firstItem="5FT-Ks-OIb" firstAttribute="top" secondItem="hqM-ZF-Y6b" secondAttribute="bottom" constant="24" id="KOj-Hp-LkH"/>
-                            <constraint firstAttribute="bottom" secondItem="dua-DU-R1Q" secondAttribute="bottom" constant="20" symbolic="YES" id="O7g-gC-s4m"/>
-                            <constraint firstItem="5FT-Ks-OIb" firstAttribute="centerX" secondItem="H9m-n5-6wX" secondAttribute="centerX" id="Qey-Nq-lAS"/>
-                            <constraint firstItem="dua-DU-R1Q" firstAttribute="top" secondItem="GtI-cG-xYg" secondAttribute="bottom" constant="8" symbolic="YES" id="RZ5-L9-Tiq"/>
-                            <constraint firstItem="GtI-cG-xYg" firstAttribute="centerX" secondItem="dua-DU-R1Q" secondAttribute="centerX" id="SAp-jg-41q"/>
-                            <constraint firstItem="GtI-cG-xYg" firstAttribute="centerX" secondItem="Zfo-O8-s4K" secondAttribute="centerX" id="Uq6-Or-VmX"/>
-                            <constraint firstItem="y3G-tp-lwF" firstAttribute="leading" secondItem="Zfo-O8-s4K" secondAttribute="leadingMargin" id="VaQ-62-N6B"/>
-                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="centerX" secondItem="5FT-Ks-OIb" secondAttribute="centerX" id="WAb-mO-4ox"/>
-                            <constraint firstItem="H9m-n5-6wX" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="53" id="XZG-PI-yxr"/>
-                            <constraint firstItem="7Ih-LE-CFi" firstAttribute="bottom" secondItem="d6K-b1-wFv" secondAttribute="bottom" constant="203" id="Z0d-d5-zdZ"/>
-                            <constraint firstItem="7Ih-LE-CFi" firstAttribute="trailing" secondItem="y3G-tp-lwF" secondAttribute="trailing" constant="296" id="ZaW-TC-HiA"/>
-                            <constraint firstItem="d6K-b1-wFv" firstAttribute="top" secondItem="bU0-qI-Nyv" secondAttribute="top" id="cAP-V6-ebo"/>
-                            <constraint firstItem="H9m-n5-6wX" firstAttribute="centerX" secondItem="GtI-cG-xYg" secondAttribute="centerX" id="iqW-j3-Scl"/>
-                            <constraint firstItem="GtI-cG-xYg" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="131" id="kvf-tl-Rjf"/>
-                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="78" id="mUD-hA-3DQ"/>
-                            <constraint firstItem="bU0-qI-Nyv" firstAttribute="top" secondItem="7Ih-LE-CFi" secondAttribute="top" constant="367" id="tgu-uq-RCr"/>
-                            <constraint firstItem="dua-DU-R1Q" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="131" id="v3d-LW-w9c"/>
-                            <constraint firstItem="5FT-Ks-OIb" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="98" id="wLm-Cf-av9"/>
-                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="top" secondItem="y3G-tp-lwF" secondAttribute="bottom" constant="8" symbolic="YES" id="yg3-5M-Km7"/>
+                            <constraint firstItem="wIi-H8-1IA" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="186" id="1SI-HY-9l7"/>
+                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="top" secondItem="hOS-Gn-PSz" secondAttribute="bottom" constant="8" symbolic="YES" id="2eg-3r-YZb"/>
+                            <constraint firstItem="5FT-Ks-OIb" firstAttribute="top" secondItem="hqM-ZF-Y6b" secondAttribute="bottom" constant="8" symbolic="YES" id="3XP-PT-VGT"/>
+                            <constraint firstItem="7Ih-LE-CFi" firstAttribute="bottom" secondItem="d6K-b1-wFv" secondAttribute="bottom" constant="291" id="9MD-xf-UHH"/>
+                            <constraint firstAttribute="trailing" secondItem="hOS-Gn-PSz" secondAttribute="trailing" id="DUC-Ud-QbJ"/>
+                            <constraint firstItem="Db3-AA-Y3K" firstAttribute="top" secondItem="wIi-H8-1IA" secondAttribute="bottom" constant="8" symbolic="YES" id="EFo-W1-Ab5"/>
+                            <constraint firstItem="wIi-H8-1IA" firstAttribute="centerX" secondItem="Db3-AA-Y3K" secondAttribute="centerX" id="EqG-u0-GSH"/>
+                            <constraint firstItem="hOS-Gn-PSz" firstAttribute="top" secondItem="Zfo-O8-s4K" secondAttribute="top" id="GzC-uu-IGN"/>
+                            <constraint firstItem="d6K-b1-wFv" firstAttribute="centerY" secondItem="H9m-n5-6wX" secondAttribute="centerY" id="LRw-Es-W4m"/>
+                            <constraint firstItem="hOS-Gn-PSz" firstAttribute="centerX" secondItem="hqM-ZF-Y6b" secondAttribute="centerX" id="Pr6-9q-iua"/>
+                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="centerX" secondItem="5FT-Ks-OIb" secondAttribute="centerX" id="Ryx-fS-Mgo"/>
+                            <constraint firstItem="d6K-b1-wFv" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="5" id="apf-RU-rCg"/>
+                            <constraint firstItem="7Ih-LE-CFi" firstAttribute="bottom" secondItem="bU0-qI-Nyv" secondAttribute="bottom" constant="292" id="awy-IE-x9l"/>
+                            <constraint firstItem="7Ih-LE-CFi" firstAttribute="trailing" secondItem="bU0-qI-Nyv" secondAttribute="trailing" constant="7" id="egB-Qj-8Ts"/>
+                            <constraint firstItem="hOS-Gn-PSz" firstAttribute="leading" secondItem="Zfo-O8-s4K" secondAttribute="leading" id="fKT-W2-JHO"/>
+                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="78" id="gC6-z9-0vH"/>
+                            <constraint firstItem="wIi-H8-1IA" firstAttribute="top" secondItem="H9m-n5-6wX" secondAttribute="bottom" constant="22" id="nZU-PQ-Wyp"/>
+                            <constraint firstItem="5FT-Ks-OIb" firstAttribute="centerX" secondItem="H9m-n5-6wX" secondAttribute="centerX" id="p9L-CL-pSc"/>
+                            <constraint firstItem="5FT-Ks-OIb" firstAttribute="leading" secondItem="7Ih-LE-CFi" secondAttribute="leading" constant="98" id="pwX-lG-Vdd"/>
+                            <constraint firstItem="bU0-qI-Nyv" firstAttribute="leading" secondItem="H9m-n5-6wX" secondAttribute="trailing" constant="8" symbolic="YES" id="syk-wP-Wcg"/>
+                            <constraint firstItem="H9m-n5-6wX" firstAttribute="leading" secondItem="d6K-b1-wFv" secondAttribute="trailing" constant="8" symbolic="YES" id="t7J-xK-9Ey"/>
+                            <constraint firstItem="H9m-n5-6wX" firstAttribute="top" secondItem="5FT-Ks-OIb" secondAttribute="bottom" constant="8" symbolic="YES" id="tGt-Of-gaI"/>
+                            <constraint firstItem="hqM-ZF-Y6b" firstAttribute="top" secondItem="Zfo-O8-s4K" secondAttribute="top" constant="101" id="wlh-2u-NDj"/>
+                            <constraint firstItem="H9m-n5-6wX" firstAttribute="centerX" secondItem="wIi-H8-1IA" secondAttribute="centerX" id="xY1-Fs-dbW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Ih-LE-CFi"/>
                     </view>
@@ -734,7 +747,8 @@
                         <outlet property="minutesLabel" destination="Vpn-AM-oSn" id="UnP-DT-KE6"/>
                         <outlet property="secondsLabel" destination="ASm-Z2-0NF" id="HOU-aW-zPH"/>
                         <outlet property="startButton" destination="wIi-H8-1IA" id="SUG-fZ-aNJ"/>
-                        <outlet property="stopButton" destination="fME-bF-rPW" id="7Rr-dm-ean"/>
+                        <outlet property="stopButton" destination="Db3-AA-Y3K" id="a8m-No-ZLC"/>
+                        <outlet property="timerHeaderGradient" destination="hOS-Gn-PSz" id="tqK-BQ-0hQ"/>
                         <outlet property="timerImageView" destination="H9m-n5-6wX" id="Upt-fD-hlE"/>
                         <outlet property="workoutImage" destination="5FT-Ks-OIb" id="gsg-JF-LLE"/>
                         <outlet property="workoutNameLabel" destination="hqM-ZF-Y6b" id="W62-J0-e3I"/>
@@ -742,7 +756,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuw-3L-EVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2951" y="1249"/>
+            <point key="canvasLocation" x="2950.7246376811595" y="1248.8839285714284"/>
         </scene>
         <!--Workout Complete View Controller-->
         <scene sceneID="fAw-l3-5Cm">
@@ -906,8 +920,12 @@
     </scenes>
     <resources>
         <image name="Calories Icon" width="500" height="500"/>
+        <image name="Climber2" width="135.5" height="73.5"/>
         <image name="GetReady" width="184.5" height="208"/>
         <image name="Heart Rate Icon" width="500" height="500"/>
+        <image name="Pause Button" width="18" height="32"/>
+        <image name="Timer Icon Back" width="500" height="947"/>
+        <image name="Timer Icon Forward" width="500" height="947"/>
         <image name="WorkoutSelectedIcon" width="50" height="50"/>
         <image name="WorkoutUnselectedIcon" width="50" height="50"/>
         <image name="backArrowIcon" width="14" height="24"/>

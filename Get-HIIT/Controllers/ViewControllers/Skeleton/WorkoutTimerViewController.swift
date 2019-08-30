@@ -10,6 +10,7 @@ import UIKit
 
 class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     
+    @IBOutlet weak var timerHeaderGradient: UIView!
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var workoutNameLabel: UILabel!
     @IBOutlet weak var workoutImage: UIImageView!
@@ -32,6 +33,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         countdownTimer.delegate = self
         stopButton.isEnabled = false
         stopButton.alpha = 0.5
+        SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
         gradient = setGradient(chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         setupTimerImage(gradient: gradient)
     }
@@ -108,6 +110,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         
         setupTimerImage(gradient: gradient)
     }
+    
     
     // Mark: - Helper Functions
     func setGradient(chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool) -> CAGradientLayer {

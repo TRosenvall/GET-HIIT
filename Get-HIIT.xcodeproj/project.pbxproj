@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16284C2B2318DD4E00135BAB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16284C2A2318DD4E00135BAB /* DashboardViewController.swift */; };
+		16284C2D231977BD00135BAB /* GifHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16284C2C231977BD00135BAB /* GifHelper.swift */; };
+		16284C30231978A100135BAB /* GifAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16284C2F231978A100135BAB /* GifAssets.xcassets */; };
 		162B50C2231851B200681627 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B50C1231851B200681627 /* DescriptionViewController.swift */; };
 		1696860E23186AA200C41F48 /* CreateWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696860D23186AA200C41F48 /* CreateWorkoutTableViewCell.swift */; };
 		1696861223186C5000C41F48 /* CreateWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */; };
@@ -90,6 +93,10 @@
 
 /* Begin PBXFileReference section */
 		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = ../Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
+		16284C2A2318DD4E00135BAB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		16284C2C231977BD00135BAB /* GifHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifHelper.swift; sourceTree = "<group>"; };
+		16284C2F231978A100135BAB /* GifAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GifAssets.xcassets; sourceTree = "<group>"; };
+		16284C3123197CC800135BAB /* NotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotificationPayload.apns; sourceTree = "<group>"; };
 		162B50C1231851B200681627 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		1696860D23186AA200C41F48 /* CreateWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateWorkoutTableViewCell.swift; path = "Get-HIIT/Views/My Plan Cells/CreateWorkoutTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateWorkoutViewController.swift; path = "Get-HIIT/Controllers/ViewControllers/ProfileViewControllers/CreateWorkoutViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -100,7 +107,6 @@
 		1696861C23186FC900C41F48 /* PastWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWorkoutsViewController.swift; sourceTree = "<group>"; };
 		1696861E23186FD300C41F48 /* UpcomingWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsViewController.swift; sourceTree = "<group>"; };
 		1696862023186FEE00C41F48 /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutViewController.swift; sourceTree = "<group>"; };
-		169686222318816C00C41F48 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		1696862423188DD300C41F48 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -286,6 +292,7 @@
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
 				85013DC32318CFD400A36EC7 /* SetGradient.swift */,
+				16284C2C231977BD00135BAB /* GifHelper.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -397,9 +404,11 @@
 			children = (
 				85F5F76223109E8000693594 /* Font */,
 				85DBA93123049C1D006990A1 /* AppDelegate.swift */,
+				16284C3123197CC800135BAB /* NotificationPayload.apns */,
 				169E01F5230FA24100A7BC79 /* nunito */,
 				85DBA93823049C1E006990A1 /* Assets.xcassets */,
 				85137A86230B113C00CAB428 /* ColorAssets.xcassets */,
+				16284C2F231978A100135BAB /* GifAssets.xcassets */,
 				85DBA93D23049C1E006990A1 /* Info.plist */,
 			);
 			path = Resources;
@@ -420,8 +429,8 @@
 		85DBA96123049D98006990A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				169686222318816C00C41F48 /* DashboardViewController.swift */,
 				85F5F7562310808C00693594 /* MainTabBarViewController.swift */,
+				16284C2A2318DD4E00135BAB /* DashboardViewController.swift */,
 				85F5F777231451ED00693594 /* WorkoutViewControllers */,
 				85137A8C230B373700CAB428 /* ProfileViewControllers */,
 				162B50C3231851B500681627 /* My Plan View Controllers */,
@@ -636,6 +645,7 @@
 				85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */,
 				85F5F77323109E9F00693594 /* Nunito-Medium.ttf in Resources */,
 				85137A87230B113C00CAB428 /* ColorAssets.xcassets in Resources */,
+				16284C30231978A100135BAB /* GifAssets.xcassets in Resources */,
 				169E01F6230FA24100A7BC79 /* nunito in Resources */,
 				85DBA93923049C1E006990A1 /* Assets.xcassets in Resources */,
 				85F5F77023109E9F00693594 /* Nunito-Black.ttf in Resources */,
@@ -774,6 +784,7 @@
 				85590BB22317C07C00DD278E /* WorkoutEditTableViewCell.swift in Sources */,
 				1696861723186F2400C41F48 /* SelectWorkoutTableViewCell.swift in Sources */,
 				85F5F719230DBE5600693594 /* HealthKitController.swift in Sources */,
+				16284C2B2318DD4E00135BAB /* DashboardViewController.swift in Sources */,
 				85BED41123173EDF00011F9A /* WorkoutsController.swift in Sources */,
 				1696861223186C5000C41F48 /* CreateWorkoutViewController.swift in Sources */,
 				85BED40D23173D8800011F9A /* Workouts.swift in Sources */,
@@ -782,6 +793,7 @@
 				1696860E23186AA200C41F48 /* CreateWorkoutTableViewCell.swift in Sources */,
 				85013DC42318CFD400A36EC7 /* SetGradient.swift in Sources */,
 				85137A89230B14DA00CAB428 /* ColorExtension.swift in Sources */,
+				16284C2D231977BD00135BAB /* GifHelper.swift in Sources */,
 				85BED4012315980300011F9A /* WorkoutTableViewCell.swift in Sources */,
 				85BED3FE2315959B00011F9A /* WorkoutMainViewController.swift in Sources */,
 				1696861923186F7200C41F48 /* PastWorkoutsTableViewCell.swift in Sources */,

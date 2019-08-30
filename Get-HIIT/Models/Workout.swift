@@ -15,13 +15,15 @@ class Workout {
     var duration: Int
     var rest: Int
     let image: String
+    let gif: String
     
-    init(name: String, description: String, duration: Int = 30, rest: Int = 10, image: String) {
+    init(name: String, description: String, duration: Int = 30, rest: Int = 10, image: String, gif: String) {
         
         self.name = name
         self.description = description
         self.duration = duration
         self.rest = rest
         self.image = image
+        self.gif = gif
     }
 }

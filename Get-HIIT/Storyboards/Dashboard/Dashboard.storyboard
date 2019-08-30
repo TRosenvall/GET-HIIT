@@ -196,6 +196,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="DashboardUnselectedIcon" selectedImage="DashboardSelectedIcon" id="FWX-Xa-MIz"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="dashboardGradient" destination="HIB-T6-fN0" id="twU-PM-edA"/>
+                        <outlet property="weeklyAvgHeartRateLabel" destination="L6y-2r-PX6" id="Pkp-YR-2rk"/>
+                        <outlet property="weeklyCalLabel" destination="pum-nN-Y2e" id="H94-UB-hCS"/>
+                        <outlet property="weeklyWorkoutMinLabel" destination="v36-CE-jFT" id="l3w-Oa-Z8C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htq-YY-OiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
