@@ -23,10 +23,6 @@ class DescriptionViewController: UIViewController {
     
     var exerciseLandingPad: Workout?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         SetGradient.setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
