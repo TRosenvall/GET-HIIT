@@ -10,21 +10,40 @@ import UIKit
 
 class PastWorkoutsViewController: UIViewController {
 
+    @IBOutlet weak var titleView: UIView!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        SetGradient.setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
+        titleView.layer.shadowOpacity = 0.3
+        titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func upcomingButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: false)
     }
-    */
 
+}
+
+extension PastWorkoutsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return WorkoutsController.sharedInstance.totalWorkouts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pastWorkoutCell", for: indexPath) as! PastWorkoutsTableViewCell
+        let workouts = WorkoutsController.sharedInstance.totalWorkouts[indexPath.row]
+        cell.workoutNameLabel.text = workouts.name
+        return cell
+    }
+    
+    
+    
+    
+    
 }

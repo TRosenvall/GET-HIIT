@@ -10,15 +10,14 @@ import UIKit
 
 class UpcomingWorkoutsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    @IBOutlet weak var workoutNameLabel: UILabel!
+    
+    @IBOutlet weak var workout1Label: UILabel!
+    @IBOutlet weak var workout2Label: UILabel!
+    @IBOutlet weak var workout3Label: UILabel!
+    @IBOutlet weak var workout4Label: UILabel!
+    
+    @IBOutlet weak var totalTimeLabel: UILabel!
+    @IBOutlet weak var calorieCount: UILabel!
+    
 }

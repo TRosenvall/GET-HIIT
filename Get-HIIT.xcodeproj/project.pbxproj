@@ -16,8 +16,7 @@
 		1696861B23186F8000C41F48 /* UpcomingWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861A23186F8000C41F48 /* UpcomingWorkoutsTableViewCell.swift */; };
 		1696861D23186FC900C41F48 /* PastWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861C23186FC900C41F48 /* PastWorkoutsViewController.swift */; };
 		1696861F23186FD300C41F48 /* UpcomingWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861E23186FD300C41F48 /* UpcomingWorkoutsViewController.swift */; };
-		169686232318816C00C41F48 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169686222318816C00C41F48 /* DashboardViewController.swift */; };
-		1696862523188DD300C41F48 /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696862423188DD300C41F48 /* WorkoutCompleteViewController.swift */; };
+
 		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
 		4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */; };
@@ -29,6 +28,7 @@
 		85137A89230B14DA00CAB428 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85137A88230B14DA00CAB428 /* ColorExtension.swift */; };
 		85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85137A8D230B374D00CAB428 /* ProfileViewController.swift */; };
 		85590BB22317C07C00DD278E /* WorkoutEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85590BB12317C07C00DD278E /* WorkoutEditTableViewCell.swift */; };
+
 		8596FA07230A5229008CC790 /* SkeletonProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8596FA06230A5229008CC790 /* SkeletonProfileViewController.swift */; };
 		85BED3FE2315959B00011F9A /* WorkoutMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BED3FD2315959B00011F9A /* WorkoutMainViewController.swift */; };
 		85BED4012315980300011F9A /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BED4002315980300011F9A /* WorkoutTableViewCell.swift */; };
@@ -68,7 +68,6 @@
 		85F5F77223109E9F00693594 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76923109E9F00693594 /* Nunito-Light.ttf */; };
 		85F5F77323109E9F00693594 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76A23109E9F00693594 /* Nunito-Medium.ttf */; };
 		85F5F77423109E9F00693594 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 85F5F76B23109E9F00693594 /* SIL Open Font License.txt */; };
-		85F5F7762310CAF500693594 /* SetGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F7752310CAF500693594 /* SetGradient.swift */; };
 		B66D8E823902E014DAD84D00 /* Pods_Get_HIIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */; };
 		DAF270A9612F4993383774C3 /* Pods_Get_HIITTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +117,7 @@
 		85137A8D230B374D00CAB428 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		85590BB12317C07C00DD278E /* WorkoutEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutEditTableViewCell.swift; sourceTree = "<group>"; };
 		85590BB32318600900DD278E /* MyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
+		85590BB523187BC400DD278E /* SetGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGradient.swift; sourceTree = "<group>"; };
 		8596FA06230A5229008CC790 /* SkeletonProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonProfileViewController.swift; sourceTree = "<group>"; };
 		85BED3FD2315959B00011F9A /* WorkoutMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMainViewController.swift; sourceTree = "<group>"; };
 		85BED4002315980300011F9A /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -164,7 +164,6 @@
 		85F5F76923109E9F00693594 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		85F5F76A23109E9F00693594 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
 		85F5F76B23109E9F00693594 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
-		85F5F7752310CAF500693594 /* SetGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGradient.swift; sourceTree = "<group>"; };
 		8EE7231185A5D4DC2C815043 /* Pods-Get-HIITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIITTests.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIITTests/Pods-Get-HIITTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIITUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,7 +286,7 @@
 			children = (
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
-				85F5F7752310CAF500693594 /* SetGradient.swift */,
+				85590BB523187BC400DD278E /* SetGradient.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -771,7 +770,6 @@
 				85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */,
 				1696861D23186FC900C41F48 /* PastWorkoutsViewController.swift in Sources */,
 				85BED4052315A15100011F9A /* ExerciseController.swift in Sources */,
-				85F5F7762310CAF500693594 /* SetGradient.swift in Sources */,
 				85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */,
 				8596FA07230A5229008CC790 /* SkeletonProfileViewController.swift in Sources */,
 				85590BB22317C07C00DD278E /* WorkoutEditTableViewCell.swift in Sources */,
@@ -785,6 +783,7 @@
 				85DBA97923076C91006990A1 /* SkeletonMyPlanViewController.swift in Sources */,
 				85BED4152317B5FF00011F9A /* WorkoutEditViewController.swift in Sources */,
 				1696860E23186AA200C41F48 /* CreateWorkoutTableViewCell.swift in Sources */,
+				85590BB623187BC400DD278E /* SetGradient.swift in Sources */,
 				85137A89230B14DA00CAB428 /* ColorExtension.swift in Sources */,
 				85BED4012315980300011F9A /* WorkoutTableViewCell.swift in Sources */,
 				85BED3FE2315959B00011F9A /* WorkoutMainViewController.swift in Sources */,
