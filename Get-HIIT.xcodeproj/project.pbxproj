@@ -23,6 +23,7 @@
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
 		4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */; };
 		85013DC42318CFD400A36EC7 /* SetGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85013DC32318CFD400A36EC7 /* SetGradient.swift */; };
+		85013DCB2318E7E100A36EC7 /* CreateNewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85013DCA2318E7E100A36EC7 /* CreateNewWorkoutViewController.swift */; };
 		85137A77230B01A800CAB428 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A76230B01A800CAB428 /* Dashboard.storyboard */; };
 		85137A7A230B01C500CAB428 /* MyPlan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A78230B01C500CAB428 /* MyPlan.storyboard */; };
 		85137A7C230B01E400CAB428 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85137A7B230B01E400CAB428 /* Workout.storyboard */; };
@@ -106,7 +107,9 @@
 		1696861A23186F8000C41F48 /* UpcomingWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		1696861C23186FC900C41F48 /* PastWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWorkoutsViewController.swift; sourceTree = "<group>"; };
 		1696861E23186FD300C41F48 /* UpcomingWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsViewController.swift; sourceTree = "<group>"; };
-		1696862023186FEE00C41F48 /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutViewController.swift; sourceTree = "<group>"; };
+
+		169686222318816C00C41F48 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+
 		1696862423188DD300C41F48 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		3EB631764EB12882A9CABC16 /* Pods-Get-HIIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.release.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.release.xcconfig"; sourceTree = "<group>"; };
 		8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_HIITTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85013DC32318CFD400A36EC7 /* SetGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGradient.swift; sourceTree = "<group>"; };
+		85013DCA2318E7E100A36EC7 /* CreateNewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWorkoutViewController.swift; sourceTree = "<group>"; };
 		85137A76230B01A800CAB428 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		85137A79230B01C500CAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Get-HIIT/Storyboards/Base.lproj/MyPlan.storyboard"; sourceTree = "<group>"; };
 		85137A7B230B01E400CAB428 /* Workout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workout.storyboard; sourceTree = "<group>"; };
@@ -213,7 +217,7 @@
 				162B50C1231851B200681627 /* DescriptionViewController.swift */,
 				1696861C23186FC900C41F48 /* PastWorkoutsViewController.swift */,
 				1696861E23186FD300C41F48 /* UpcomingWorkoutsViewController.swift */,
-				1696862023186FEE00C41F48 /* CreateWorkoutViewController.swift */,
+				85013DCA2318E7E100A36EC7 /* CreateNewWorkoutViewController.swift */,
 			);
 			path = "My Plan View Controllers";
 			sourceTree = "<group>";
@@ -787,6 +791,7 @@
 				16284C2B2318DD4E00135BAB /* DashboardViewController.swift in Sources */,
 				85BED41123173EDF00011F9A /* WorkoutsController.swift in Sources */,
 				1696861223186C5000C41F48 /* CreateWorkoutViewController.swift in Sources */,
+				85013DCB2318E7E100A36EC7 /* CreateNewWorkoutViewController.swift in Sources */,
 				85BED40D23173D8800011F9A /* Workouts.swift in Sources */,
 				85DBA97923076C91006990A1 /* SkeletonMyPlanViewController.swift in Sources */,
 				85BED4152317B5FF00011F9A /* WorkoutEditViewController.swift in Sources */,
