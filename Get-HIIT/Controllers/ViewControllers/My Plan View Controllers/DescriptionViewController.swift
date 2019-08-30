@@ -14,14 +14,18 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var HeaderTitleLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var workoutInfoLabel: UILabel!
+    @IBOutlet weak var exerciseImageView: UIImageView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    var exerciseLandingPad: Workout?
+    var exerciseLandingPad: Workout?{
+        didSet {
+            updateViews()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +42,11 @@ class DescriptionViewController: UIViewController {
     
     
     func updateViews() {
-        
+        guard let exercise = exerciseLandingPad else {return}
+        loadViewIfNeeded()
+        HeaderTitleLabel.text = exercise.name
+        workoutInfoLabel.text = exercise.description
+        exerciseImageView.image = UIImage(named: exercise.image)
     }
     
 

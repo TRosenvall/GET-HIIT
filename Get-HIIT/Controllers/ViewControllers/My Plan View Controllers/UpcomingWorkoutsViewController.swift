@@ -28,6 +28,11 @@ class UpcomingWorkoutsViewController: UIViewController {
         planTableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        planTableView.reloadData()
+    }
+    
     @IBAction func pastButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MyPlan", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PastWorkoutsStoryboard")

@@ -269,6 +269,7 @@
                                                     </constraints>
                                                     <state key="normal" title="Info"/>
                                                     <connections>
+                                                        <action selector="infoButtonTapped:" destination="0w5-04-5tN" eventType="touchUpInside" id="cwF-WH-7Ys"/>
                                                         <segue destination="b5P-Th-mfk" kind="show" identifier="selectWorkoutCell" id="TGW-od-b4P"/>
                                                     </connections>
                                                 </button>
@@ -322,7 +323,7 @@
                                     <segue destination="w7V-9w-pIY" kind="show" id="cpb-kq-soA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to select exercises for your HIIT workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy0-M4-xEc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to select exercises for your HIIT workout. (Please select four)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy0-M4-xEc">
                                 <rect key="frame" x="20" y="126" width="374" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
@@ -338,13 +339,26 @@
                                         <color key="textColor" name="Get-HIITWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-hU-2mU">
+                                        <rect key="frame" x="29.5" y="45" width="44.5" height="44.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gLw-hU-2mU" secondAttribute="height" multiplier="1:1" id="r2m-ce-F4R"/>
+                                        </constraints>
+                                        <state key="normal" image="backArrowIcon"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="0w5-04-5tN" eventType="touchUpInside" id="HYh-PL-1jq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="gLw-hU-2mU" firstAttribute="centerX" secondItem="Hwx-le-0L3" secondAttribute="centerX" multiplier="0.25" id="JX0-o7-cVh"/>
                                     <constraint firstItem="gl9-xo-P5o" firstAttribute="centerY" secondItem="Hwx-le-0L3" secondAttribute="centerY" multiplier="1.2" id="NJ3-M2-Wa2"/>
                                     <constraint firstItem="gl9-xo-P5o" firstAttribute="centerX" secondItem="Hwx-le-0L3" secondAttribute="centerX" id="PfV-aW-iIf"/>
                                     <constraint firstItem="gl9-xo-P5o" firstAttribute="height" secondItem="Hwx-le-0L3" secondAttribute="height" multiplier="0.3" id="TeT-KC-BGI"/>
+                                    <constraint firstItem="gLw-hU-2mU" firstAttribute="centerY" secondItem="Hwx-le-0L3" secondAttribute="centerY" multiplier="1.2" id="X6O-DD-YNo"/>
                                     <constraint firstItem="gl9-xo-P5o" firstAttribute="width" secondItem="Hwx-le-0L3" secondAttribute="width" multiplier="0.7" id="gZ1-HN-gNr"/>
+                                    <constraint firstItem="gLw-hU-2mU" firstAttribute="height" secondItem="Hwx-le-0L3" secondAttribute="height" multiplier="0.4" id="pwn-VY-ka4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -359,12 +373,13 @@
                     </view>
                     <connections>
                         <outlet property="exerciseTableView" destination="5DD-XH-k0d" id="zeJ-cR-Mo9"/>
+                        <outlet property="nextButton" destination="dg3-3i-89k" id="Oa8-mP-Htp"/>
                         <outlet property="titleView" destination="Hwx-le-0L3" id="QEb-tR-wVA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9aG-fF-9ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425" y="428"/>
+            <point key="canvasLocation" x="2424.6376811594205" y="427.90178571428572"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="fr6-HK-kef">
@@ -374,37 +389,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-qJ-nLJ">
-                                <rect key="frame" x="20" y="384" width="242" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-qJ-nLJ">
+                                <rect key="frame" x="20.5" y="398" width="373" height="36"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="28"/>
                                 <color key="textColor" name="Get-HIITGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Workout Description)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-YW-Ndt">
-                                <rect key="frame" x="20" y="439" width="374" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Workout Description)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-YW-Ndt">
+                                <rect key="frame" x="20.5" y="445" width="373" height="403"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="22"/>
                                 <color key="textColor" name="Get-HIITBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUy-2f-mFr">
-                                <rect key="frame" x="98" y="754" width="218" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Get-HIITPrimaryOrange"/>
-                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" name="Get-HIITLightGray"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="saveButtonTapped:" destination="b5P-Th-mfk" eventType="touchUpInside" id="52q-f4-MVm"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-de-Q8G">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                 <subviews>
@@ -436,30 +432,42 @@
                                     <constraint firstItem="FCU-eK-DiP" firstAttribute="height" secondItem="a8o-de-Q8G" secondAttribute="height" multiplier="0.4" id="v8f-Ka-FSE"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-CM-ToJ">
-                                <rect key="frame" x="73" y="130" width="269" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-CM-ToJ">
+                                <rect key="frame" x="86" y="134" width="242" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qfa-CM-ToJ" secondAttribute="height" multiplier="1:1" id="V5g-RG-xu4"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="centerX" secondItem="AdC-bx-qR1" secondAttribute="centerX" id="Bzt-LU-yJC"/>
                             <constraint firstItem="a8o-de-Q8G" firstAttribute="top" secondItem="AdC-bx-qR1" secondAttribute="top" id="Gtp-au-Rpp"/>
+                            <constraint firstItem="Qfa-CM-ToJ" firstAttribute="height" secondItem="AdC-bx-qR1" secondAttribute="height" multiplier="0.27" id="MdN-3X-W0E"/>
                             <constraint firstItem="a8o-de-Q8G" firstAttribute="centerX" secondItem="DYa-wh-pqx" secondAttribute="centerX" id="N0g-cu-kmb"/>
+                            <constraint firstItem="Qfa-CM-ToJ" firstAttribute="top" secondItem="a8o-de-Q8G" secondAttribute="bottom" constant="22" id="Nd1-to-HNl"/>
+                            <constraint firstItem="2Su-qJ-nLJ" firstAttribute="top" secondItem="Qfa-CM-ToJ" secondAttribute="bottom" constant="22" id="OTQ-px-Sa5"/>
+                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="width" secondItem="AdC-bx-qR1" secondAttribute="width" multiplier="0.9" id="R1V-UV-hyl"/>
+                            <constraint firstItem="Qfa-CM-ToJ" firstAttribute="centerX" secondItem="AdC-bx-qR1" secondAttribute="centerX" id="StQ-sh-LYY"/>
+                            <constraint firstItem="2Su-qJ-nLJ" firstAttribute="centerX" secondItem="DYa-wh-pqx" secondAttribute="centerX" id="Wpl-q1-wYf"/>
+                            <constraint firstItem="2Su-qJ-nLJ" firstAttribute="width" secondItem="AdC-bx-qR1" secondAttribute="width" multiplier="0.9" id="XQA-Zi-hs5"/>
                             <constraint firstItem="a8o-de-Q8G" firstAttribute="height" secondItem="AdC-bx-qR1" secondAttribute="height" multiplier="0.125" id="dTd-bF-iXc"/>
                             <constraint firstItem="a8o-de-Q8G" firstAttribute="width" secondItem="AdC-bx-qR1" secondAttribute="width" id="fxv-wC-wiO"/>
+                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="height" secondItem="AdC-bx-qR1" secondAttribute="height" multiplier="0.45" id="rJh-4O-Lhg"/>
+                            <constraint firstItem="XkK-YW-Ndt" firstAttribute="top" secondItem="2Su-qJ-nLJ" secondAttribute="bottom" constant="11" id="wC3-Qj-qTa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DYa-wh-pqx"/>
                     </view>
                     <connections>
                         <outlet property="HeaderTitleLabel" destination="aH5-xE-Rd9" id="AId-e4-ZFo"/>
-                        <outlet property="descriptionLabel" destination="2Su-qJ-nLJ" id="S2n-cR-hiW"/>
+                        <outlet property="exerciseImageView" destination="Qfa-CM-ToJ" id="tgV-mA-aYB"/>
                         <outlet property="titleView" destination="a8o-de-Q8G" id="7TR-BM-uEV"/>
                         <outlet property="workoutInfoLabel" destination="XkK-YW-Ndt" id="q0q-rj-TTt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPt-QX-hsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3371" y="428"/>
+            <point key="canvasLocation" x="3369.5652173913045" y="427.90178571428572"/>
         </scene>
         <!--Past Workouts View Controller-->
         <scene sceneID="LPJ-8S-h5X">
@@ -591,10 +599,10 @@
             </objects>
             <point key="canvasLocation" x="3822" y="-293"/>
         </scene>
-        <!--Create Workout View Controller-->
+        <!--Create New Workout View Controller-->
         <scene sceneID="AqT-Kf-5Z8">
             <objects>
-                <viewController id="w7V-9w-pIY" customClass="CreateWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w7V-9w-pIY" customClass="CreateNewWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BHh-sN-arV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -609,7 +617,7 @@
                                         </constraints>
                                         <state key="normal" image="backArrowIcon"/>
                                         <connections>
-                                            <segue destination="0w5-04-5tN" kind="show" id="ubn-Ym-GkE"/>
+                                            <action selector="backButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="crG-u8-w2m"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intervals/Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzZ-Gu-fN0">
@@ -797,6 +805,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="u7o-hz-ROs"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgd-ig-9Vw">
                                 <rect key="frame" x="249.5" y="741" width="124" height="35.5"/>
@@ -807,6 +818,9 @@
                                         <state key="normal" title="-">
                                             <color key="titleColor" name="Get-HIITBlack"/>
                                         </state>
+                                        <connections>
+                                            <action selector="multiplierSubtractButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="3Xb-Vo-Evo"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="pRi-pC-UDQ">
                                         <rect key="frame" x="30" y="0.0" width="64" height="35.5"/>
@@ -832,6 +846,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" name="Get-HIITBlack"/>
                                         </state>
+                                        <connections>
+                                            <action selector="multiplierAddButtonTapped:" destination="w7V-9w-pIY" eventType="touchUpInside" id="vLx-9l-Prn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -892,10 +909,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Trf-Gp-Ubi"/>
                     </view>
+                    <connections>
+                        <outlet property="multiplierLabel" destination="Srt-LA-7Ex" id="EjL-Cf-I7e"/>
+                        <outlet property="saveButton" destination="INc-tX-BgI" id="Wo2-aQ-3E4"/>
+                        <outlet property="titleView" destination="OOl-sK-F4k" id="IrR-qV-ZmI"/>
+                        <outlet property="totalTimeLabel" destination="Tjc-IU-PDI" id="tXh-hh-V8m"/>
+                        <outlet property="workoutTableView" destination="Rpd-H3-dMT" id="CVu-NC-R0s"/>
+                        <outlet property="workoutTitleTextField" destination="wPX-Eb-8ju" id="DaR-uz-se3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0s-mb-o18" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2659" y="1128"/>
+            <point key="canvasLocation" x="2874" y="1157"/>
         </scene>
         <!--My Plan-->
         <scene sceneID="O1D-Lr-g8x">
@@ -928,9 +953,6 @@
         <namedColor name="Get-HIITGray">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Get-HIITLightGray">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Get-HIITPrimaryBlue">
             <color red="0.035294117647058823" green="0.70196078431372544" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -941,7 +963,4 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="cpb-kq-soA"/>
-    </inferredMetricsTieBreakers>
 </document>
