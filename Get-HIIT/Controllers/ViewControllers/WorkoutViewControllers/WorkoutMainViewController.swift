@@ -46,8 +46,9 @@ class WorkoutMainViewController: UIViewController {
         editButton.layer.cornerRadius = editButton.frame.height/4
         editButton.layer.borderWidth = 3
         editButton.layer.borderColor = UIColor.getHIITPrimaryOrange.cgColor
-        editButton.layer.shadowOpacity = 0.3
-        editButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        editButton.layer.shadowOpacity = 0.25
+        editButton.layer.shadowRadius = 4
+        editButton.layer.shadowOffset = CGSize(width: 0, height: 2)
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSRemindersUsageDescription</key>
-	<string>Rem Usage</string>
-	<key>NSCalendarsUsageDescription</key>
-	<string>Cal Usage</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -24,6 +20,25 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Cal Usage</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Allow Get-HIIT to have access to push data to HealthKit</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Allow Get-HIIT to have access to HealthKit to pull biometric data.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Rem Usage</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nunito-Black.ttf</string>
+		<string>Nunito-Bold.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
+		<string>Nunito-ExtraLight.ttf</string>
+		<string>Nunito-Light.ttf</string>
+		<string>Nunito-Medium.ttf</string>
+		<string>Nunito-Regular.ttf</string>
+		<string>Nunito-SemiBold.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -44,21 +59,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>Allow Get-HIIT to have access to HealthKit to pull biometric data.</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>Allow Get-HIIT to have access to push data to HealthKit</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Nunito-Black.ttf</string>
-		<string>Nunito-Bold.ttf</string>
-		<string>Nunito-ExtraBold.ttf</string>
-		<string>Nunito-ExtraLight.ttf</string>
-		<string>Nunito-Light.ttf</string>
-		<string>Nunito-Medium.ttf</string>
-		<string>Nunito-Regular.ttf</string>
-		<string>Nunito-SemiBold.ttf</string>
 	</array>
 </dict>
 </plist>
