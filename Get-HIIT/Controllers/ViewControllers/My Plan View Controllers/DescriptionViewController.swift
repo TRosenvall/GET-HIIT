@@ -17,6 +17,9 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var workoutInfoLabel: UILabel!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     var exerciseLandingPad: Workout?
     

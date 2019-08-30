@@ -9,6 +9,10 @@
 import UIKit
 
 class PastWorkoutsViewController: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBOutlet weak var titleView: UIView!
     
