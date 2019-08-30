@@ -14,6 +14,8 @@ class WorkoutCompleteViewController: UIViewController {
     @IBOutlet weak var completeCalorieCount: UILabel!
     @IBOutlet weak var completedMinutes: UILabel!
     @IBOutlet weak var finishedHeartrate: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
