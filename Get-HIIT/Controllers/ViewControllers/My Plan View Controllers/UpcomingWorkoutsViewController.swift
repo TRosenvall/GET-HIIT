@@ -17,10 +17,6 @@ class UpcomingWorkoutsViewController: UIViewController {
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var planTableView: UITableView!
     
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
