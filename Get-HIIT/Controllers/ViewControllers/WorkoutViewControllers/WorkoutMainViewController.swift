@@ -23,6 +23,7 @@ class WorkoutMainViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
 
     var timeTotal: Int = 0
+    static var lastSelectedIndex: Int = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -54,7 +55,7 @@ class WorkoutMainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         currentWorkoutTableView.reloadData()
-        let tempWorkouts = WorkoutsController.sharedInstance.totalWorkouts[0]
+        let tempWorkouts = WorkoutsController.sharedInstance.totalWorkouts[WorkoutMainViewController.lastSelectedIndex]
         
         titleLabel.text = "\(tempWorkouts.name)"
         
