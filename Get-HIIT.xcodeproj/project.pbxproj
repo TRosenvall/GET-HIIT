@@ -20,6 +20,8 @@
 		1696861D23186FC900C41F48 /* PastWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861C23186FC900C41F48 /* PastWorkoutsViewController.swift */; };
 		1696861F23186FD300C41F48 /* UpcomingWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861E23186FD300C41F48 /* UpcomingWorkoutsViewController.swift */; };
 		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
+		16B13EA82319CE86006C9066 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B13EA72319CE86006C9066 /* NotificationHelper.swift */; };
+		16B13EAA2319D56C006C9066 /* RecurringEventsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B13EA92319D56C006C9066 /* RecurringEventsExtension.swift */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
 		4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */; };
 		85013DC42318CFD400A36EC7 /* SetGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85013DC32318CFD400A36EC7 /* SetGradient.swift */; };
@@ -107,11 +109,10 @@
 		1696861A23186F8000C41F48 /* UpcomingWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
 		1696861C23186FC900C41F48 /* PastWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWorkoutsViewController.swift; sourceTree = "<group>"; };
 		1696861E23186FD300C41F48 /* UpcomingWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingWorkoutsViewController.swift; sourceTree = "<group>"; };
-
-		169686222318816C00C41F48 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-
 		1696862423188DD300C41F48 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
+		16B13EA72319CE86006C9066 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		16B13EA92319D56C006C9066 /* RecurringEventsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringEventsExtension.swift; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		25FFF6610E22626BFCCC89E9 /* Pods-Get-HIIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB631764EB12882A9CABC16 /* Pods-Get-HIIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.release.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.release.xcconfig"; sourceTree = "<group>"; };
@@ -296,6 +297,8 @@
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
 				85013DC32318CFD400A36EC7 /* SetGradient.swift */,
+				16B13EA72319CE86006C9066 /* NotificationHelper.swift */,
+				16B13EA92319D56C006C9066 /* RecurringEventsExtension.swift */,
 				16284C2C231977BD00135BAB /* GifHelper.swift */,
 			);
 			path = "Helpers+Extensions";
@@ -807,7 +810,9 @@
 				85F5F70D230C8E9700693594 /* WorkoutTimerViewController.swift in Sources */,
 				85F5F705230C549900693594 /* AboutMeViewController.swift in Sources */,
 				85DBA97B2309BE6E006990A1 /* SkeletonCreateNewWorkoutViewController.swift in Sources */,
+				16B13EAA2319D56C006C9066 /* RecurringEventsExtension.swift in Sources */,
 				85BED40B2315ADDF00011F9A /* WorkoutListTableViewCell.swift in Sources */,
+				16B13EA82319CE86006C9066 /* NotificationHelper.swift in Sources */,
 				1696861F23186FD300C41F48 /* UpcomingWorkoutsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

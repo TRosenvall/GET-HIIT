@@ -10,57 +10,57 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        registerForUserNotifications()
+        
         
         let exercises = ExerciseController.sharedExercises.workouts
         let tempWorkouts: [Workout] = [exercises[0], exercises[1], exercises[2], exercises[3]]
         let tempWorkoutMultiplier: Int = 4
+        
+        let yesAction = UNNotificationAction(identifier: "accept_identifier", title: "accept")
+        let noAction = UNNotificationAction(identifier: "delcline_identifier", title: "decline")
+        
+        let customCategory = UNNotificationCategory(identifier: "custom", actions: [yesAction, noAction], intentIdentifiers: [])
+        UNUserNotificationCenter.current().setNotificationCategories([customCategory])
+            
         
         WorkoutsController.sharedInstance.createWorkout(name: "Super Sweat", workouts: tempWorkouts, multiplier: tempWorkoutMultiplier)
          
         return true
     }
     
-    func registerForUserNotifications() {
-        UNUserNotificationCenter.current()
-            .requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] (granted, error) in
-                print("Permission granted \(granted)")
-                guard granted else  { return }
-                self?.getNotificationSettings()
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token =  deviceToken.map { String(format:"%02.2hhx",$0) }.joined()
+        print(token)
+        
+    }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        defer {
+            completionHandler() }
+        print("User tapped push notifications")
         }
     }
     
-    func application(
-        _ application: UIApplication,
-        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
-        ) {
-        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-        let token = tokenParts.joined()
-        print("Device Token: \(token)")
-    }
-    
-    func application(
-        _ application: UIApplication,
-        didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("Failed to register: \(error)")
-    }
-    
-    func getNotificationSettings() {
-        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
-            print("Notification settings \(settings)")
-            guard settings .authorizationStatus == .authorized else {
-                return }
+    func prepareForPushNotifications(for application: UIApplication) {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) { (granted, error) in
+            guard granted else {
+                return
+            }
             DispatchQueue.main.async {
-                UIApplication.shared.registerForRemoteNotifications()
+                application.registerForRemoteNotifications()
             }
         }
     }
-}
+
+
+
 
 func applicationWillResignActive(_ application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -84,3 +84,8 @@ func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.badge, .sound, .alert])
+    }
+}
