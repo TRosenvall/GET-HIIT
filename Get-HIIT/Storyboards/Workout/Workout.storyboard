@@ -25,10 +25,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Choose Workout View Controller-->
         <scene sceneID="V5m-o4-kqB">
             <objects>
-                <viewController id="ByX-UD-AI7" sceneMemberID="viewController">
+                <viewController id="ByX-UD-AI7" customClass="ChooseWorkoutViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kbD-zH-b3U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,6 +48,9 @@
                                             <constraint firstAttribute="width" secondItem="dlt-Dh-glW" secondAttribute="height" multiplier="1:1" id="Ywh-ee-PGO"/>
                                         </constraints>
                                         <state key="normal" image="backArrowIcon"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="ByX-UD-AI7" eventType="touchUpInside" id="ZSe-p4-M5g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -60,20 +63,46 @@
                                     <constraint firstItem="jPf-0G-OA1" firstAttribute="centerY" secondItem="b4E-bh-6ya" secondAttribute="centerY" multiplier="1.2" id="oJz-tS-PxJ"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yAf-ca-4kM">
+                                <rect key="frame" x="0.0" y="112" width="414" height="750"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutCell" id="3nf-t4-UwZ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3nf-t4-UwZ" id="Pxs-qu-CiZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ByX-UD-AI7" id="v6y-mp-ALA"/>
+                                    <outlet property="delegate" destination="ByX-UD-AI7" id="XaX-HY-L91"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yAf-ca-4kM" firstAttribute="leading" secondItem="9eH-wT-gPM" secondAttribute="leading" id="4zE-UP-mVx"/>
+                            <constraint firstItem="9eH-wT-gPM" firstAttribute="bottom" secondItem="yAf-ca-4kM" secondAttribute="bottom" id="7Lw-vS-9Fv"/>
                             <constraint firstItem="b4E-bh-6ya" firstAttribute="top" secondItem="kbD-zH-b3U" secondAttribute="top" id="JJW-kN-w8U"/>
                             <constraint firstItem="b4E-bh-6ya" firstAttribute="centerX" secondItem="9eH-wT-gPM" secondAttribute="centerX" id="Pai-f2-2ys"/>
                             <constraint firstItem="b4E-bh-6ya" firstAttribute="width" secondItem="kbD-zH-b3U" secondAttribute="width" id="SNY-b1-jDB"/>
                             <constraint firstItem="b4E-bh-6ya" firstAttribute="height" secondItem="kbD-zH-b3U" secondAttribute="height" multiplier="0.125" id="eZf-PV-3WI"/>
+                            <constraint firstItem="9eH-wT-gPM" firstAttribute="trailing" secondItem="yAf-ca-4kM" secondAttribute="trailing" id="rC5-zy-MVb"/>
+                            <constraint firstItem="yAf-ca-4kM" firstAttribute="top" secondItem="b4E-bh-6ya" secondAttribute="bottom" id="xMx-Zh-IVU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9eH-wT-gPM"/>
                     </view>
+                    <connections>
+                        <outlet property="titleView" destination="b4E-bh-6ya" id="RP9-e1-znw"/>
+                        <outlet property="workoutTableView" destination="yAf-ca-4kM" id="Thg-k6-FNs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7i-mD-MLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="433"/>
+            <point key="canvasLocation" x="3874" y="-410"/>
         </scene>
         <!--Workout-->
         <scene sceneID="Esc-YG-7jr">
@@ -975,7 +1004,7 @@
         <image name="Calories Icon" width="500" height="500"/>
         <image name="GetReady" width="184.5" height="208"/>
         <image name="Heart Rate Icon" width="500" height="500"/>
-        <image name="Pause Button" width="18" height="32"/>
+        <image name="Pause Button" width="56" height="56"/>
         <image name="SwapWorkoutsIcon" width="66.666664123535156" height="66.666664123535156"/>
         <image name="Timer Icon Back" width="500" height="947"/>
         <image name="Timer Icon Forward" width="500" height="947"/>

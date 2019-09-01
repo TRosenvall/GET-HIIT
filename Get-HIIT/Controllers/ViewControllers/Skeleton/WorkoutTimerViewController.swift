@@ -21,6 +21,8 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     
     var gradient = CAGradientLayer()
     var countdownTimerDidStart = false
+    var workouts: Workouts = WorkoutsController.sharedInstance.totalWorkouts[WorkoutMainViewController.lastSelectedIndex]
+    var exercises: [(String, Int)] = []
     
     lazy var countdownTimer: CountdownTimer = {
         let countdownTimer = CountdownTimer()
@@ -37,8 +39,23 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setExercises()
         countdownTimer.startTimer()
         countdownTimerDidStart = true
+    }
+    
+    func setupLabels() {
+        
+    }
+    
+    func setExercises() {
+        let workout = workouts.workouts
+        for exercise in workout {
+            let exerciseTuple = (exercise.name, exercise.duration)
+            let restTuple = ("Rest", exercise.rest)
+            exercises.append(exerciseTuple)
+            exercises.append(restTuple)
+        }
     }
     
     // MARK: - Countdown timer delegate
