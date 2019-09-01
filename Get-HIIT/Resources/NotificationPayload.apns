@@ -2,10 +2,10 @@
     "aps": {
         "alert": {
             "body": "Test message",
-            "title": "Optional title",
+            "title": "Testing 1, 2, 3",
             "subtitle": "Optional subtitle"
         },
-        "category": "myCategory"
+        "category": "custom"
     },
     
     
