@@ -15,7 +15,6 @@ class RemindersViewController: UIViewController {
     @IBOutlet weak var reminderToggle: NSLayoutConstraint!
     @IBOutlet weak var reminderTimePicker: UIDatePicker!
     @IBOutlet weak var remindMeLabel: UILabel!
- 
     @IBOutlet weak var titleView: UIView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -35,6 +34,7 @@ class RemindersViewController: UIViewController {
     }
     
     @IBAction func RemindersToggled(_ sender: Any) {
+       
         
     }
     

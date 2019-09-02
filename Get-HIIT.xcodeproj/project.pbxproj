@@ -12,7 +12,6 @@
 		16284C30231978A100135BAB /* GifAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16284C2F231978A100135BAB /* GifAssets.xcassets */; };
 		162B50C2231851B200681627 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B50C1231851B200681627 /* DescriptionViewController.swift */; };
 		1696860E23186AA200C41F48 /* CreateWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696860D23186AA200C41F48 /* CreateWorkoutTableViewCell.swift */; };
-		1696861223186C5000C41F48 /* CreateWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */; };
 		1696861523186F0200C41F48 /* SelectWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861423186F0200C41F48 /* SelectWorkoutViewController.swift */; };
 		1696861723186F2400C41F48 /* SelectWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861623186F2400C41F48 /* SelectWorkoutTableViewCell.swift */; };
 		1696861923186F7200C41F48 /* PastWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861823186F7200C41F48 /* PastWorkoutsTableViewCell.swift */; };
@@ -22,6 +21,8 @@
 		169E01F6230FA24100A7BC79 /* nunito in Resources */ = {isa = PBXBuildFile; fileRef = 169E01F5230FA24100A7BC79 /* nunito */; };
 		16B13EA82319CE86006C9066 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B13EA72319CE86006C9066 /* NotificationHelper.swift */; };
 		16B13EAA2319D56C006C9066 /* RecurringEventsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B13EA92319D56C006C9066 /* RecurringEventsExtension.swift */; };
+		16B13EAC231CE6BE006C9066 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B13EAB231CE6BE006C9066 /* Reminder.swift */; };
+		16B13EAE231CEA66006C9066 /* ReminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B13EAD231CEA66006C9066 /* ReminderController.swift */; };
 		16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E42B23230DBE17002A6251 /* CountdownTimer.swift */; };
 		4CF1471945C577D89242A38C /* Pods_Get_HIITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECDE3AEE575E37E4339330 /* Pods_Get_HIITUITests.framework */; };
 		85013DC42318CFD400A36EC7 /* SetGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85013DC32318CFD400A36EC7 /* SetGradient.swift */; };
@@ -103,7 +104,6 @@
 		16284C3123197CC800135BAB /* NotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotificationPayload.apns; sourceTree = "<group>"; };
 		162B50C1231851B200681627 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		1696860D23186AA200C41F48 /* CreateWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateWorkoutTableViewCell.swift; path = "Get-HIIT/Views/My Plan Cells/CreateWorkoutTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
-		1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateWorkoutViewController.swift; path = "Get-HIIT/Controllers/ViewControllers/ProfileViewControllers/CreateWorkoutViewController.swift"; sourceTree = SOURCE_ROOT; };
 		1696861423186F0200C41F48 /* SelectWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkoutViewController.swift; sourceTree = "<group>"; };
 		1696861623186F2400C41F48 /* SelectWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		1696861823186F7200C41F48 /* PastWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,6 +114,8 @@
 		169E01F5230FA24100A7BC79 /* nunito */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nunito; sourceTree = "<group>"; };
 		16B13EA72319CE86006C9066 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		16B13EA92319D56C006C9066 /* RecurringEventsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringEventsExtension.swift; sourceTree = "<group>"; };
+		16B13EAB231CE6BE006C9066 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		16B13EAD231CEA66006C9066 /* ReminderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderController.swift; sourceTree = "<group>"; };
 		16E42B23230DBE17002A6251 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		25FFF6610E22626BFCCC89E9 /* Pods-Get-HIIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.debug.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB631764EB12882A9CABC16 /* Pods-Get-HIIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get-HIIT.release.xcconfig"; path = "Target Support Files/Pods-Get-HIIT/Pods-Get-HIIT.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,7 +290,7 @@
 				85BED4042315A15100011F9A /* ExerciseController.swift */,
 				85F5F712230CAA3F00693594 /* ProfileController.swift */,
 				85BED41023173EDF00011F9A /* WorkoutsController.swift */,
-				1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */,
+				16B13EAD231CEA66006C9066 /* ReminderController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -465,6 +467,7 @@
 				16E42B23230DBE17002A6251 /* CountdownTimer.swift */,
 				85BED4022315A0EA00011F9A /* Workout.swift */,
 				85BED40C23173D8800011F9A /* Workouts.swift */,
+				16B13EAB231CE6BE006C9066 /* Reminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -521,8 +524,8 @@
 			isa = PBXGroup;
 			children = (
 				85BED3FD2315959B00011F9A /* WorkoutMainViewController.swift */,
-				1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */,
 				85BED4142317B5FF00011F9A /* WorkoutEditViewController.swift */,
+				1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */,
 				1696862423188DD300C41F48 /* WorkoutCompleteViewController.swift */,
 				8581825C231B0A4A00D7772A /* ChooseWorkoutViewController.swift */,
 			);
@@ -785,8 +788,10 @@
 				85F5F7572310808C00693594 /* MainTabBarViewController.swift in Sources */,
 				8581825D231B0A4A00D7772A /* ChooseWorkoutViewController.swift in Sources */,
 				85DBA97223061EFD006990A1 /* SkeletonMainTabBarViewController.swift in Sources */,
+				16B13EAC231CE6BE006C9066 /* Reminder.swift in Sources */,
 				16E42B24230DBE17002A6251 /* CountdownTimer.swift in Sources */,
 				85F5F713230CAA3F00693594 /* ProfileController.swift in Sources */,
+				16B13EAE231CEA66006C9066 /* ReminderController.swift in Sources */,
 				85137A8E230B374D00CAB428 /* ProfileViewController.swift in Sources */,
 				1696861D23186FC900C41F48 /* PastWorkoutsViewController.swift in Sources */,
 				85BED4052315A15100011F9A /* ExerciseController.swift in Sources */,
@@ -797,7 +802,6 @@
 				85F5F719230DBE5600693594 /* HealthKitController.swift in Sources */,
 				16284C2B2318DD4E00135BAB /* DashboardViewController.swift in Sources */,
 				85BED41123173EDF00011F9A /* WorkoutsController.swift in Sources */,
-				1696861223186C5000C41F48 /* CreateWorkoutViewController.swift in Sources */,
 				85013DCB2318E7E100A36EC7 /* CreateNewWorkoutViewController.swift in Sources */,
 				85BED40D23173D8800011F9A /* Workouts.swift in Sources */,
 				85DBA97923076C91006990A1 /* SkeletonMyPlanViewController.swift in Sources */,
