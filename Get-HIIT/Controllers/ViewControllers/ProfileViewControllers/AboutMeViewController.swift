@@ -278,7 +278,7 @@ extension AboutMeViewController: UITextFieldDelegate {
         // If it's the field for the age or weight
         if textField == ageTextField || textField == weightTextField {
             // Limit to five characters
-            return text.count < 5
+            return text.count < 3
         }
         // For the name, limit to nine characters.
         return text.count < 9
