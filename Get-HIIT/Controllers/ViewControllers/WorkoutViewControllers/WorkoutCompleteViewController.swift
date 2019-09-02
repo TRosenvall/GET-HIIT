@@ -2,7 +2,7 @@
 //  WorkoutCompleteViewController.swift
 //  Get-HIIT
 //
-//  Created by Leah Cluff on 8/29/19.
+//  Created by Timothy Rosenvall on 9/2/19.
 //  Copyright © 2019 Timothy Rosenvall. All rights reserved.
 //
 
@@ -10,27 +10,28 @@ import UIKit
 
 class WorkoutCompleteViewController: UIViewController {
 
-    @IBOutlet weak var workoutCompleteHeaderView: UIView!
-    @IBOutlet weak var completeCalorieCount: UILabel!
-    @IBOutlet weak var completedMinutes: UILabel!
-    @IBOutlet weak var finishedHeartrate: UILabel!
+    @IBOutlet weak var titleView: UIView!
     
+    @IBOutlet weak var calorieCount: UILabel!
+    @IBOutlet weak var totalTime: UILabel!
+    @IBOutlet weak var averageHeartRate: UILabel!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        SetGradient.setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
+        titleView.layer.shadowOpacity = 0.3
+        titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
 }

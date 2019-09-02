@@ -19,12 +19,13 @@ class CountdownTimer {
     
     static let sharedInstance = CountdownTimer()
     
-    let duration: Double = 2
+    var duration: Double = 0
     lazy var currentTime: Double = duration
     var timeInterval: Double = 0.01
     var minutes: String = "00"
     var seconds: String = "00"
     var percentageComplete: Double = 0
+    var newTimer: Bool = true
     
     weak var delegate: CountdownTimerDelegate?
     
@@ -34,6 +35,13 @@ class CountdownTimer {
     }()
     
     func startTimer() {
+        newTimer = CountdownTimer.sharedInstance.newTimer
+        if newTimer {
+            duration = CountdownTimer.sharedInstance.duration
+            currentTime = duration
+            percentageComplete = 0
+            CountdownTimer.sharedInstance.newTimer = false
+        }
         timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true, block: { (timer) in
             let minutesInt = Int( self.currentTime ) / 60
             let secondsInt = Int( self.currentTime   ) % 60
