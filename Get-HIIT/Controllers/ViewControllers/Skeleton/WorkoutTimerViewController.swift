@@ -18,16 +18,23 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var timerImageView: UIView!
+    @IBOutlet weak var setNumberLabel: UILabel!
+    @IBOutlet weak var exerciseNumberLabel: UILabel!
     
     var gradient = CAGradientLayer()
     var countdownTimerDidStart = false
     var workouts: Workouts = WorkoutsController.sharedInstance.totalWorkouts[WorkoutMainViewController.lastSelectedIndex]
-    var exercises: [(String, Int)] = []
+    var exercises: [(String, Double, String)] = []
+    var currentExercise: Int = 0
+    static var totalTime: Int = 0
+    
+    lazy var multiplier = workouts.multiplier
     
     lazy var countdownTimer: CountdownTimer = {
         let countdownTimer = CountdownTimer()
         return countdownTimer
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,24 +42,42 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
         gradient = setGradient(chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         setupTimerImage(gradient: gradient)
+        print("1")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setExercises()
-        countdownTimer.startTimer()
-        countdownTimerDidStart = true
+        setupLabels { (finished) in
+            if finished {
+                DispatchQueue.main.async {
+                    self.countdownTimer.startTimer()
+                    self.countdownTimerDidStart = true
+                }
+            }
+        }
     }
     
-    func setupLabels() {
+    func setupLabels(completion: @escaping (Bool) -> Void) {
+        let curr = currentExercise % exercises.count
+        workoutNameLabel.text = exercises[curr].0
+        workoutImage.image = UIImage(named: exercises[curr].2)
+        CountdownTimer.sharedInstance.duration = exercises[curr].1
+        CountdownTimer.sharedInstance.currentTime = exercises[curr].1
+        CountdownTimer.sharedInstance.percentageComplete = 0
         
+        setNumberLabel.text = "\(currentExercise / exercises.count + 1)"
+        if (curr + 1) % 2 != 0 {
+            exerciseNumberLabel.text = "\(((curr + 1) / 2) + 1)"
+        }
+        completion(true)
     }
     
     func setExercises() {
         let workout = workouts.workouts
         for exercise in workout {
-            let exerciseTuple = (exercise.name, exercise.duration)
-            let restTuple = ("Rest", exercise.rest)
+            let exerciseTuple = (exercise.name, Double(exercise.duration), exercise.image)
+            let restTuple = ("Rest", Double(exercise.rest), "GetReady")
             exercises.append(exerciseTuple)
             exercises.append(restTuple)
         }
@@ -94,20 +119,61 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         }
     }
     
-    @IBAction func stopTimerButton(_ sender: Any) {
+    @IBAction func nextButtonTapped(_ sender: Any) {
         countdownTimer.stop()
-        countdownTimerDidStart = false
-        startButton.setTitle("Start", for: .normal)
-        CountdownTimer.sharedInstance.currentTime = CountdownTimer.sharedInstance.duration
-        CountdownTimer.sharedInstance.percentageComplete = 0
-        let sublayers = timerImageView.layer.sublayers
-        guard let firstLayer = sublayers?[0] else {return}
-        firstLayer.removeFromSuperlayer()
-        
-        setupTimerImage(gradient: gradient)
+        self.countdownTimerDidStart = false
+        if currentExercise >= (exercises.count * multiplier) - 1 {
+            setOrange()
+            let currStoryboard = UIStoryboard(name: "Workout", bundle: nil)
+            let vc = currStoryboard.instantiateViewController(withIdentifier: "workoutView")
+            currentExercise = 0
+            present(vc, animated: true, completion: nil)
+        } else {
+            currentExercise += 1
+            setupLabels { (finished) in
+                if finished {
+                    DispatchQueue.main.async {
+                        if self.exercises[self.currentExercise % self.exercises.count].0 == "Rest" {
+                            self.setBlue()
+                        } else {
+                            self.setOrange()
+                        }
+                        self.countdownTimer.startTimer()
+                        self.countdownTimerDidStart = true
+                    }
+                }
+            }
+        }
+        CountdownTimer.sharedInstance.newTimer = true
     }
     
-    @IBAction func nextButtonTapped(_ sender: Any) {
+    @IBAction func previousButtonTapped(_ sender: Any) {
+        countdownTimer.stop()
+        countdownTimerDidStart = false
+        if currentExercise > 0 {
+            currentExercise -= 1
+            setupLabels { (finished) in
+                if finished {
+                    DispatchQueue.main.async {
+                        if self.exercises[self.currentExercise].0 == "Rest" {
+                            self.setBlue()
+                        } else {
+                            self.setOrange()
+                        }
+                        self.countdownTimer.startTimer()
+                        self.countdownTimerDidStart = true
+                    }
+                }
+            }
+            CountdownTimer.sharedInstance.newTimer = true
+        } else {
+            CountdownTimer.sharedInstance.newTimer = false
+        }
+    }
+    
+    
+    // Mark: - Helper Functions
+    func setBlue() {
         gradient = setGradient(chooseTwo: false, primaryBlue: true, accentOrange: false, accentBlue: true)
         
         let sublayers = timerImageView.layer.sublayers
@@ -115,9 +181,15 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         firstLayer.removeFromSuperlayer()
         
         setupTimerImage(gradient: gradient)
+        
+        let headerSublayers = timerHeaderGradient.layer.sublayers
+        guard let headerFirstLayer = headerSublayers?[0] else {return}
+        headerFirstLayer.removeFromSuperlayer()
+        
+        SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: false, primaryBlue: true, accentOrange: false, accentBlue: true, verticalFlip: false)
     }
     
-    @IBAction func previousButtonTapped(_ sender: Any) {
+    func setOrange() {
         gradient = setGradient(chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         
         let sublayers = timerImageView.layer.sublayers
@@ -125,10 +197,14 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         firstLayer.removeFromSuperlayer()
         
         setupTimerImage(gradient: gradient)
+        
+        let headerSublayers = timerHeaderGradient.layer.sublayers
+        guard let headerFirstLayer = headerSublayers?[0] else {return}
+        headerFirstLayer.removeFromSuperlayer()
+        
+        SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
     }
     
-    
-    // Mark: - Helper Functions
     func setGradient(chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool) -> CAGradientLayer {
         
         var color1: UIColor = .getHIITPrimaryOrange
@@ -175,12 +251,6 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         gradient.type = .conic
         gradient.startPoint = CGPoint(x: 0.5, y: 0.5)
         gradient.endPoint = CGPoint(x: 0.5, y: 0)
-        
         timerImageView.layer.insertSublayer(gradient, at: 0)
-    }
-    
-    // Mark: - Prepare For Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
     }
 }
