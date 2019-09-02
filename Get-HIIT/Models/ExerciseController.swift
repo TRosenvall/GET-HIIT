@@ -24,16 +24,4 @@ class ExerciseController {
         return [sitUp, lunges, squats, pushUps, climbers, pullUps, dips, pike]
     }
     
-    func createWorkout() {
-        
-    }
-    
-    func updateWorkout() {
-        
-    }
-    
-    func deleteWorkout() {
-        
-    }
-    
 }

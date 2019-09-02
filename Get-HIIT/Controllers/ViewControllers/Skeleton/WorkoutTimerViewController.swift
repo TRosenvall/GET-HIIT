@@ -40,7 +40,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         countdownTimer.delegate = self
-        SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
+          SetGradient.setGradient(view: timerHeaderGradient, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         gradient = setGradient(chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         setupTimerImage(gradient: gradient)
     }
@@ -204,7 +204,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         guard let headerFirstLayer = headerSublayers?[0] else {return}
         headerFirstLayer.removeFromSuperlayer()
         
-        SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: false, primaryBlue: true, accentOrange: false, accentBlue: true, verticalFlip: false)
+         SetGradient.setGradient(view: timerImageView, mainColor: UIColor.getHIITPrimaryBlue, secondColor: UIColor.getHIITAccentBlue)
     }
     
     func setOrange() {
@@ -220,7 +220,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         guard let headerFirstLayer = headerSublayers?[0] else {return}
         headerFirstLayer.removeFromSuperlayer()
         
-        SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
+        SetGradient.setGradient(view: timerImageView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
     }
     
     func setGradient(chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool) -> CAGradientLayer {
