@@ -21,7 +21,7 @@ class DashboardViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        SetGradient.setGradient(view: dashboardGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
+          SetGradient.setGradient(view: dashboardGradient, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
 
         // Do any additional setup after loading the view.
     }

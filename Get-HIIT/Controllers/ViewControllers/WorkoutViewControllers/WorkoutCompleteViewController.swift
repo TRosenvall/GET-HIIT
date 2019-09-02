@@ -22,7 +22,7 @@ class WorkoutCompleteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SetGradient.setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
+       SetGradient.setGradient(view: titleView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
