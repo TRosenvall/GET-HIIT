@@ -58,7 +58,7 @@ class CountdownTimer {
             self.percentageComplete = (1 - self.currentTime/self.duration)
             
             if self.currentTime < 0.0 {
-                self.stop()
+                self.delegate?.killTimer()
             }
         })
     }
