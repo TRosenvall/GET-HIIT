@@ -26,7 +26,8 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     var workouts: Workouts = WorkoutsController.sharedInstance.totalWorkouts[WorkoutMainViewController.lastSelectedIndex]
     var exercises: [(String, Double, String)] = []
     var currentExercise: Int = 0
-    static var totalTime: Int = 0
+    var percentage: Double = 0
+    static var totalTime: Double = 0
     
     lazy var multiplier = workouts.multiplier
     
@@ -42,11 +43,11 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         SetGradient.setGradient(view: timerHeaderGradient, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
         gradient = setGradient(chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         setupTimerImage(gradient: gradient)
-        print("1")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        CountdownTimer.sharedInstance.newTimer = true
         setExercises()
         setupLabels { (finished) in
             if finished {
@@ -94,15 +95,19 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         guard let firstLayer = sublayers?[0] else {return}
         firstLayer.removeFromSuperlayer()
         setupTimerImage(gradient: gradient, percentageComplete: percentage)
+        self.percentage = percentage
     }
     
     func killTimer() {
-        CountdownTimer.sharedInstance.stop()
+        nextExercise()
     }
     
     // MARK: - Actions
     
     @IBAction func exitButtonTapped(_ sender: Any) {
+        CountdownTimer.sharedInstance.newTimer = true
+        countdownTimer.pause()
+        countdownTimerDidStart = false
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -120,31 +125,7 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        countdownTimer.stop()
-        self.countdownTimerDidStart = false
-        if currentExercise >= (exercises.count * multiplier) - 1 {
-            setOrange()
-            let currStoryboard = UIStoryboard(name: "Workout", bundle: nil)
-            let vc = currStoryboard.instantiateViewController(withIdentifier: "workoutView")
-            currentExercise = 0
-            present(vc, animated: true, completion: nil)
-        } else {
-            currentExercise += 1
-            setupLabels { (finished) in
-                if finished {
-                    DispatchQueue.main.async {
-                        if self.exercises[self.currentExercise % self.exercises.count].0 == "Rest" {
-                            self.setBlue()
-                        } else {
-                            self.setOrange()
-                        }
-                        self.countdownTimer.startTimer()
-                        self.countdownTimerDidStart = true
-                    }
-                }
-            }
-        }
-        CountdownTimer.sharedInstance.newTimer = true
+        nextExercise()
     }
     
     @IBAction func previousButtonTapped(_ sender: Any) {
@@ -167,12 +148,49 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
             }
             CountdownTimer.sharedInstance.newTimer = true
         } else {
+            countdownTimer.startTimer()
+            countdownTimerDidStart = true
             CountdownTimer.sharedInstance.newTimer = false
         }
     }
     
-    
     // Mark: - Helper Functions
+    func nextExercise() {
+        let currentWorkoutTime = exercises[currentExercise % exercises.count].1
+        print(currentWorkoutTime)
+        WorkoutTimerViewController.totalTime += (percentage) * currentWorkoutTime
+        WorkoutTimerViewController.totalTime = Double((Int(WorkoutTimerViewController.totalTime * 100)))/100
+        print(WorkoutTimerViewController.totalTime)
+        countdownTimer.stop()
+        self.countdownTimerDidStart = false
+        if currentExercise >= (exercises.count * multiplier) - 1 {
+            countdownTimer.pause()
+            countdownTimerDidStart = false
+            CountdownTimer.sharedInstance.newTimer = true
+            currentExercise = 0
+            setOrange()
+            let currStoryboard = UIStoryboard(name: "Workout", bundle: nil)
+            let vc = currStoryboard.instantiateViewController(withIdentifier: "workoutView")
+            present(vc, animated: true, completion: nil)
+        } else {
+            currentExercise += 1
+            setupLabels { (finished) in
+                if finished {
+                    DispatchQueue.main.async {
+                        if self.exercises[self.currentExercise % self.exercises.count].0 == "Rest" {
+                            self.setBlue()
+                        } else {
+                            self.setOrange()
+                        }
+                        self.countdownTimer.startTimer()
+                        self.countdownTimerDidStart = true
+                    }
+                }
+            }
+        }
+        CountdownTimer.sharedInstance.newTimer = true
+    }
+    
     func setBlue() {
         gradient = setGradient(chooseTwo: false, primaryBlue: true, accentOrange: false, accentBlue: true)
         
