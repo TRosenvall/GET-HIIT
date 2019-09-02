@@ -15,6 +15,7 @@ class WorkoutCompleteViewController: UIViewController {
     @IBOutlet weak var calorieCount: UILabel!
     @IBOutlet weak var totalTime: UILabel!
     @IBOutlet weak var averageHeartRate: UILabel!
+    var time: Double = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -25,6 +26,11 @@ class WorkoutCompleteViewController: UIViewController {
        SetGradient.setGradient(view: titleView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        time = WorkoutTimerViewController.totalTime
+        let minutesString = "\( Int(time / 60) )"
+        let secondsString = "\(Int(time.truncatingRemainder(dividingBy: 60.0)))"
+        totalTime.text = minutesString + ":" + secondsString
+        WorkoutTimerViewController.totalTime = 0
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
