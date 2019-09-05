@@ -926,8 +926,9 @@
         <scene sceneID="O1D-Lr-g8x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bij-y9-efh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Plan" image="MyPlanUnselectedIcon" selectedImage="MyPlanSelectedIcon" id="UDF-3h-b2F"/>
+                    <tabBarItem key="tabBarItem" title="My Plan" image="MyPlanUnselectedIcon" selectedImage="MyPlanSelectedIcon" id="JNG-TT-wdc"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NcY-kO-ZUw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

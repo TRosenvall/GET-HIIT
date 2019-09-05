@@ -11,6 +11,10 @@ import UIKit
 class MyPlanViewController: UIViewController {
 
     @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var preferenceLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -21,12 +25,30 @@ class MyPlanViewController: UIViewController {
         setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        if ProfileController.sharedInstance.profile.firstLogin {
+            backButton.isHidden = true
+            doneButton.isHidden = false
+            preferenceLabel.isHidden = false
+            progressView.isHidden = false
+        } else {
+            backButton.isHidden = false
+            doneButton.isHidden = true
+            preferenceLabel.isHidden = true
+            progressView.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        ProfileController.sharedInstance.profile.firstLogin = false
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     
     func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
         

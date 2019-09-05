@@ -17,9 +17,11 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var ageTextField: PasteDisabledTextField!
     @IBOutlet weak var weightTextField: PasteDisabledTextField!
-    
     @IBOutlet weak var titleView: UIView!
-    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var preferenceLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     
     // Set the user profile and create a Picker View for the gender
     let profile = ProfileController.sharedInstance.profile
@@ -34,6 +36,18 @@ class AboutMeViewController: UIViewController {
         setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        if ProfileController.sharedInstance.profile.firstLogin {
+            backButton.isHidden = true
+            nextButton.isHidden = false
+            preferenceLabel.isHidden = false
+            progressView.isHidden = false
+        } else {
+            backButton.isHidden = false
+            nextButton.isHidden = true
+            preferenceLabel.isHidden = true
+            progressView.isHidden = true
+        }
         
         // Hide the label for if access is denied to HealthKit.
         

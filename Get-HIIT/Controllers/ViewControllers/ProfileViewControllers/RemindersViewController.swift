@@ -11,7 +11,6 @@ import EventKit
 
 class RemindersViewController: UIViewController {
     
-
     @IBOutlet weak var reminderToggle: NSLayoutConstraint!
     @IBOutlet weak var reminderTimePicker: UIDatePicker!
     @IBOutlet weak var remindMeLabel: UILabel!
@@ -25,10 +24,9 @@ class RemindersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
-        
+        titleView.layer.shadowOpacity = 0.3
+        titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
-    
-        
     
     @IBAction func DatePickerTapped(_ sender: Any) {
         
