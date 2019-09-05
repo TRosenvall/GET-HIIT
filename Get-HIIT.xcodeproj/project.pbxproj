@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		16284C2B2318DD4E00135BAB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16284C2A2318DD4E00135BAB /* DashboardViewController.swift */; };
-		16284C2D231977BD00135BAB /* GifHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16284C2C231977BD00135BAB /* GifHelper.swift */; };
 		16284C30231978A100135BAB /* GifAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16284C2F231978A100135BAB /* GifAssets.xcassets */; };
 		162B50C2231851B200681627 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B50C1231851B200681627 /* DescriptionViewController.swift */; };
 		1696860E23186AA200C41F48 /* CreateWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696860D23186AA200C41F48 /* CreateWorkoutTableViewCell.swift */; };
-		1696861223186C5000C41F48 /* CreateWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */; };
 		1696861523186F0200C41F48 /* SelectWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861423186F0200C41F48 /* SelectWorkoutViewController.swift */; };
 		1696861723186F2400C41F48 /* SelectWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861623186F2400C41F48 /* SelectWorkoutTableViewCell.swift */; };
 		1696861923186F7200C41F48 /* PastWorkoutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1696861823186F7200C41F48 /* PastWorkoutsTableViewCell.swift */; };
@@ -143,12 +141,10 @@
 /* Begin PBXFileReference section */
 		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = ../Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
 		16284C2A2318DD4E00135BAB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		16284C2C231977BD00135BAB /* GifHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifHelper.swift; sourceTree = "<group>"; };
 		16284C2F231978A100135BAB /* GifAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GifAssets.xcassets; sourceTree = "<group>"; };
 		16284C3123197CC800135BAB /* NotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotificationPayload.apns; sourceTree = "<group>"; };
 		162B50C1231851B200681627 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		1696860D23186AA200C41F48 /* CreateWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateWorkoutTableViewCell.swift; path = "Get-HIIT/Views/My Plan Cells/CreateWorkoutTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
-		1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateWorkoutViewController.swift; path = "Get-HIIT/Controllers/ViewControllers/ProfileViewControllers/CreateWorkoutViewController.swift"; sourceTree = SOURCE_ROOT; };
 		1696861423186F0200C41F48 /* SelectWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkoutViewController.swift; sourceTree = "<group>"; };
 		1696861623186F2400C41F48 /* SelectWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		1696861823186F7200C41F48 /* PastWorkoutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWorkoutsTableViewCell.swift; sourceTree = "<group>"; };
@@ -349,7 +345,6 @@
 				85F5F712230CAA3F00693594 /* ProfileController.swift */,
 				16FC2354231F2B0800DFD43D /* ReminderController.swift */,
 				85BED41023173EDF00011F9A /* WorkoutsController.swift */,
-				1696861123186C5000C41F48 /* CreateWorkoutViewController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -359,9 +354,9 @@
 			children = (
 				85137A88230B14DA00CAB428 /* ColorExtension.swift */,
 				85F5F708230C84FA00693594 /* PasteDisabledTextField.swift */,
+				16E42B23230DBE17002A6251 /* CountdownTimer.swift */,
 				85013DC32318CFD400A36EC7 /* SetGradient.swift */,
 				16B13EA72319CE86006C9066 /* NotificationHelper.swift */,
-				16284C2C231977BD00135BAB /* GifHelper.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -548,7 +543,6 @@
 			isa = PBXGroup;
 			children = (
 				85F5F70A230C8DBA00693594 /* Profile.swift */,
-				16E42B23230DBE17002A6251 /* CountdownTimer.swift */,
 				85BED4022315A0EA00011F9A /* Workout.swift */,
 				85BED40C23173D8800011F9A /* Workouts.swift */,
 				16FC2356231F2B1300DFD43D /* Reminders.swift */,
@@ -942,14 +936,12 @@
 				85F5F719230DBE5600693594 /* HealthKitController.swift in Sources */,
 				16284C2B2318DD4E00135BAB /* DashboardViewController.swift in Sources */,
 				85BED41123173EDF00011F9A /* WorkoutsController.swift in Sources */,
-				1696861223186C5000C41F48 /* CreateWorkoutViewController.swift in Sources */,
 				85013DCB2318E7E100A36EC7 /* CreateNewWorkoutViewController.swift in Sources */,
 				85BED40D23173D8800011F9A /* Workouts.swift in Sources */,
 				85BED4152317B5FF00011F9A /* WorkoutEditViewController.swift in Sources */,
 				1696860E23186AA200C41F48 /* CreateWorkoutTableViewCell.swift in Sources */,
 				85013DC42318CFD400A36EC7 /* SetGradient.swift in Sources */,
 				85137A89230B14DA00CAB428 /* ColorExtension.swift in Sources */,
-				16284C2D231977BD00135BAB /* GifHelper.swift in Sources */,
 				85BED4012315980300011F9A /* WorkoutTableViewCell.swift in Sources */,
 				85C4F47C231D877400E3C372 /* MyPlanViewController.swift in Sources */,
 				85BED3FE2315959B00011F9A /* WorkoutMainViewController.swift in Sources */,

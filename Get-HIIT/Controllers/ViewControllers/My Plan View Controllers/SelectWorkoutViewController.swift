@@ -26,7 +26,6 @@ class SelectWorkoutViewController: UIViewController {
           SetGradient.setGradient(view: titleView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        nextButton.layer.cornerRadius = nextButton.frame.height/2
         nextButton.isEnabled = false
     }
     
