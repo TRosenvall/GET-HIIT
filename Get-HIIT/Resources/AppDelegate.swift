@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         
         let exercises = ExerciseController.sharedExercises.workouts
         let tempWorkouts: [Workout] = [exercises[0], exercises[1], exercises[2], exercises[3]]

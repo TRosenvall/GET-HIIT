@@ -21,6 +21,7 @@ class HealthKitController {
     var timestampsWeight: [Date] = []
     var timestampsHeartRate: [Date] = []
     var timestampsCalorie: [Date] = []
+    var observerQuery: HKObserverQuery!
     // Units for HKObjects
     let weightUnit = HKUnit.pound()
     let heartRateUnit = HKUnit(from: "count/min")
@@ -73,5 +74,46 @@ class HealthKitController {
                 completion(false)
             }
         }
+    }
+    
+    func checkHeartRate(completion: @escaping(Double) -> Void) {
+        var heartRate: Double = 0.0
+        guard let heartRateType = HKSampleType.quantityType(forIdentifier: .heartRate) else {return}
+        let queryHeartRate = HKSampleQuery(sampleType: heartRateType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, results, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                print("Error with readProfile function - heartRate query")
+            }
+            if let results = results {
+                print(results)
+                for result in results {
+                    if let sample = result as? HKQuantitySample {
+                        print(sample.quantity)
+                    }
+                }
+            }
+            if let result = results?.last as? HKQuantitySample {
+                heartRate = result.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                completion(heartRate)
+            }
+        }
+        healthKitStore.execute(queryHeartRate)
+    }
+    
+    func heartRateObserver () {
+        guard let sampleType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {return}
+        
+        let queryHeartRate = HKObserverQuery(sampleType: sampleType, predicate: nil) { (query, completionHandler, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                print("Error in HKOberserver")
+            }
+            self.checkHeartRate(completion: { (heartRate) in
+                self.heartRates.append(heartRate)
+                print(self.heartRates)
+                completionHandler()
+            })
+        }
+        healthKitStore.execute(queryHeartRate)
     }
 }

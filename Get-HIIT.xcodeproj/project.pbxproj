@@ -44,6 +44,16 @@
 		85BED4152317B5FF00011F9A /* WorkoutEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BED4142317B5FF00011F9A /* WorkoutEditViewController.swift */; };
 		85C4F47A231D451B00E3C372 /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F479231D451B00E3C372 /* WorkoutCompleteViewController.swift */; };
 		85C4F47C231D877400E3C372 /* MyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F47B231D877400E3C372 /* MyPlanViewController.swift */; };
+		85C4F4AB232049CF00E3C372 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F4A9232049CF00E3C372 /* Interface.storyboard */; };
+		85C4F4AD232049D100E3C372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F4AC232049D100E3C372 /* Assets.xcassets */; };
+		85C4F4B4232049D200E3C372 /* Get-HIITWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 85C4F4B3232049D200E3C372 /* Get-HIITWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		85C4F4B9232049D200E3C372 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F4B8232049D200E3C372 /* InterfaceController.swift */; };
+		85C4F4BB232049D200E3C372 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F4BA232049D200E3C372 /* ExtensionDelegate.swift */; };
+		85C4F4BD232049D200E3C372 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F4BC232049D200E3C372 /* NotificationController.swift */; };
+		85C4F4BF232049D200E3C372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C4F4BE232049D200E3C372 /* Assets.xcassets */; };
+		85C4F4C4232049D200E3C372 /* Get-HIITWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 85C4F4A7232049CF00E3C372 /* Get-HIITWatch.app */; };
+		85C4F4CD23204A1600E3C372 /* HealthKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5F718230DBE5600693594 /* HealthKitController.swift */; };
+		85C4F4D0232053AB00E3C372 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C4F4CF232053AB00E3C372 /* HealthKit.framework */; };
 		85DBA93223049C1D006990A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBA93123049C1D006990A1 /* AppDelegate.swift */; };
 		85DBA93723049C1D006990A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DBA93523049C1D006990A1 /* Main.storyboard */; };
 		85DBA93923049C1E006990A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DBA93823049C1E006990A1 /* Assets.xcassets */; };
@@ -73,6 +83,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		85C4F4B5232049D200E3C372 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85DBA92623049C1D006990A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85C4F4B2232049D200E3C372;
+			remoteInfo = "Get-HIITWatch Extension";
+		};
+		85C4F4C2232049D200E3C372 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85DBA92623049C1D006990A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85C4F4A6232049CF00E3C372;
+			remoteInfo = "Get-HIITWatch";
+		};
 		85DBA94323049C1E006990A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85DBA92623049C1D006990A1 /* Project object */;
@@ -88,6 +112,31 @@
 			remoteInfo = "Get-HIIT";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85C4F4C8232049D200E3C372 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				85C4F4B4232049D200E3C372 /* Get-HIITWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C4F4CC232049D200E3C372 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				85C4F4C4232049D200E3C372 /* Get-HIITWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1619ED0C230C840200DFACEC /* WorkoutTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTimerViewController.swift; path = ../Skeleton/WorkoutTimerViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +180,19 @@
 		85BED4142317B5FF00011F9A /* WorkoutEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutEditViewController.swift; sourceTree = "<group>"; };
 		85C4F479231D451B00E3C372 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		85C4F47B231D877400E3C372 /* MyPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
+		85C4F4A7232049CF00E3C372 /* Get-HIITWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get-HIITWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C4F4AA232049CF00E3C372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		85C4F4AC232049D100E3C372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85C4F4AE232049D100E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C4F4B3232049D200E3C372 /* Get-HIITWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Get-HIITWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C4F4B8232049D200E3C372 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		85C4F4BA232049D200E3C372 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		85C4F4BC232049D200E3C372 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		85C4F4BE232049D200E3C372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85C4F4C0232049D200E3C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C4F4C1232049D200E3C372 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		85C4F4CE232053A500E3C372 /* Get-HIITWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Get-HIITWatch Extension.entitlements"; sourceTree = "<group>"; };
+		85C4F4CF232053AB00E3C372 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		85DBA92E23049C1D006990A1 /* Get-HIIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get-HIIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DBA93123049C1D006990A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85DBA93623049C1D006990A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +233,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		85C4F4B0232049D200E3C372 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F4D0232053AB00E3C372 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85DBA92B23049C1D006990A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,12 +408,38 @@
 			path = Workouts;
 			sourceTree = "<group>";
 		};
+		85C4F4A8232049CF00E3C372 /* Get-HIITWatch */ = {
+			isa = PBXGroup;
+			children = (
+				85C4F4A9232049CF00E3C372 /* Interface.storyboard */,
+				85C4F4AC232049D100E3C372 /* Assets.xcassets */,
+				85C4F4AE232049D100E3C372 /* Info.plist */,
+			);
+			path = "Get-HIITWatch";
+			sourceTree = "<group>";
+		};
+		85C4F4B7232049D200E3C372 /* Get-HIITWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				85C4F4CE232053A500E3C372 /* Get-HIITWatch Extension.entitlements */,
+				85C4F4B8232049D200E3C372 /* InterfaceController.swift */,
+				85C4F4BA232049D200E3C372 /* ExtensionDelegate.swift */,
+				85C4F4BC232049D200E3C372 /* NotificationController.swift */,
+				85C4F4BE232049D200E3C372 /* Assets.xcassets */,
+				85C4F4C0232049D200E3C372 /* Info.plist */,
+				85C4F4C1232049D200E3C372 /* PushNotificationPayload.apns */,
+			);
+			path = "Get-HIITWatch Extension";
+			sourceTree = "<group>";
+		};
 		85DBA92523049C1D006990A1 = {
 			isa = PBXGroup;
 			children = (
 				85DBA93023049C1D006990A1 /* Get-HIIT */,
 				85DBA94523049C1E006990A1 /* Get-HIITTests */,
 				85DBA95023049C1E006990A1 /* Get-HIITUITests */,
+				85C4F4A8232049CF00E3C372 /* Get-HIITWatch */,
+				85C4F4B7232049D200E3C372 /* Get-HIITWatch Extension */,
 				85DBA92F23049C1D006990A1 /* Products */,
 				85137A84230B078600CAB428 /* Recovered References */,
 				85F5F715230DBE1000693594 /* Frameworks */,
@@ -357,6 +453,8 @@
 				85DBA92E23049C1D006990A1 /* Get-HIIT.app */,
 				85DBA94223049C1E006990A1 /* Get-HIITTests.xctest */,
 				85DBA94D23049C1E006990A1 /* Get-HIITUITests.xctest */,
+				85C4F4A7232049CF00E3C372 /* Get-HIITWatch.app */,
+				85C4F4B3232049D200E3C372 /* Get-HIITWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -424,9 +522,9 @@
 			children = (
 				85F5F7562310808C00693594 /* MainTabBarViewController.swift */,
 				16284C2A2318DD4E00135BAB /* DashboardViewController.swift */,
+				162B50C3231851B500681627 /* My Plan View Controllers */,
 				85F5F777231451ED00693594 /* WorkoutViewControllers */,
 				85137A8C230B373700CAB428 /* ProfileViewControllers */,
-				162B50C3231851B500681627 /* My Plan View Controllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -455,6 +553,7 @@
 		85F5F715230DBE1000693594 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85C4F4CF232053AB00E3C372 /* HealthKit.framework */,
 				85F5F716230DBE1000693594 /* HealthKit.framework */,
 				9AE9562EB7F723C76F3C7709 /* Pods_Get_HIIT.framework */,
 				8202494FFD63DD4962657554 /* Pods_Get_HIITTests.framework */,
@@ -494,6 +593,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		85C4F4A6232049CF00E3C372 /* Get-HIITWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85C4F4C9232049D200E3C372 /* Build configuration list for PBXNativeTarget "Get-HIITWatch" */;
+			buildPhases = (
+				85C4F4A5232049CF00E3C372 /* Resources */,
+				85C4F4C8232049D200E3C372 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85C4F4B6232049D200E3C372 /* PBXTargetDependency */,
+			);
+			name = "Get-HIITWatch";
+			productName = "Get-HIITWatch";
+			productReference = 85C4F4A7232049CF00E3C372 /* Get-HIITWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		85C4F4B2232049D200E3C372 /* Get-HIITWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85C4F4C5232049D200E3C372 /* Build configuration list for PBXNativeTarget "Get-HIITWatch Extension" */;
+			buildPhases = (
+				85C4F4AF232049D200E3C372 /* Sources */,
+				85C4F4B0232049D200E3C372 /* Frameworks */,
+				85C4F4B1232049D200E3C372 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Get-HIITWatch Extension";
+			productName = "Get-HIITWatch Extension";
+			productReference = 85C4F4B3232049D200E3C372 /* Get-HIITWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		85DBA92D23049C1D006990A1 /* Get-HIIT */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85DBA95623049C1E006990A1 /* Build configuration list for PBXNativeTarget "Get-HIIT" */;
@@ -503,10 +636,12 @@
 				85DBA92B23049C1D006990A1 /* Frameworks */,
 				85DBA92C23049C1D006990A1 /* Resources */,
 				5B1E5FFAFA89DF83E4A3B0EB /* [CP] Embed Pods Frameworks */,
+				85C4F4CC232049D200E3C372 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				85C4F4C3232049D200E3C372 /* PBXTargetDependency */,
 			);
 			name = "Get-HIIT";
 			productName = "Get-HIIT";
@@ -561,6 +696,20 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Timothy Rosenvall";
 				TargetAttributes = {
+					85C4F4A6232049CF00E3C372 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					85C4F4B2232049D200E3C372 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					85DBA92D23049C1D006990A1 = {
 						CreatedOnToolsVersion = 10.3;
 						SystemCapabilities = {
@@ -598,11 +747,30 @@
 				85DBA92D23049C1D006990A1 /* Get-HIIT */,
 				85DBA94123049C1E006990A1 /* Get-HIITTests */,
 				85DBA94C23049C1E006990A1 /* Get-HIITUITests */,
+				85C4F4A6232049CF00E3C372 /* Get-HIITWatch */,
+				85C4F4B2232049D200E3C372 /* Get-HIITWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		85C4F4A5232049CF00E3C372 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F4AD232049D100E3C372 /* Assets.xcassets in Resources */,
+				85C4F4AB232049CF00E3C372 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C4F4B1232049D200E3C372 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F4BF232049D200E3C372 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85DBA92C23049C1D006990A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -732,6 +900,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		85C4F4AF232049D200E3C372 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4F4BD232049D200E3C372 /* NotificationController.swift in Sources */,
+				85C4F4BB232049D200E3C372 /* ExtensionDelegate.swift in Sources */,
+				85C4F4CD23204A1600E3C372 /* HealthKitController.swift in Sources */,
+				85C4F4B9232049D200E3C372 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85DBA92A23049C1D006990A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -796,6 +975,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		85C4F4B6232049D200E3C372 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85C4F4B2232049D200E3C372 /* Get-HIITWatch Extension */;
+			targetProxy = 85C4F4B5232049D200E3C372 /* PBXContainerItemProxy */;
+		};
+		85C4F4C3232049D200E3C372 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85C4F4A6232049CF00E3C372 /* Get-HIITWatch */;
+			targetProxy = 85C4F4C2232049D200E3C372 /* PBXContainerItemProxy */;
+		};
 		85DBA94423049C1E006990A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85DBA92D23049C1D006990A1 /* Get-HIIT */;
@@ -825,6 +1014,14 @@
 			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
+		85C4F4A9232049CF00E3C372 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85C4F4AA232049CF00E3C372 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		85DBA93523049C1D006990A1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -844,6 +1041,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		85C4F4C6232049D200E3C372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Get-HIITWatch Extension/Get-HIITWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				INFOPLIST_FILE = "Get-HIITWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		85C4F4C7232049D200E3C372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Get-HIITWatch Extension/Get-HIITWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				INFOPLIST_FILE = "Get-HIITWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		85C4F4CA232049D200E3C372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				IBSC_MODULE = Get_HIITWatch_Extension;
+				INFOPLIST_FILE = "Get-HIITWatch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		85C4F4CB232049D200E3C372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
+				IBSC_MODULE = Get_HIITWatch_Extension;
+				INFOPLIST_FILE = "Get-HIITWatch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TAR.Get-HIIT.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
 		85DBA95423049C1E006990A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -967,7 +1248,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Get-HIIT/Get-HIIT.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Get-HIIT/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -987,7 +1268,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Get-HIIT/Get-HIIT.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C3BD4H8DKG;
+				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Get-HIIT/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1089,6 +1370,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		85C4F4C5232049D200E3C372 /* Build configuration list for PBXNativeTarget "Get-HIITWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85C4F4C6232049D200E3C372 /* Debug */,
+				85C4F4C7232049D200E3C372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85C4F4C9232049D200E3C372 /* Build configuration list for PBXNativeTarget "Get-HIITWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85C4F4CA232049D200E3C372 /* Debug */,
+				85C4F4CB232049D200E3C372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		85DBA92923049C1D006990A1 /* Build configuration list for PBXProject "Get-HIIT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
