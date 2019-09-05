@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct Constants {
+    
+}
+
 class Profile {
     // Profile Variables
     var name: String
