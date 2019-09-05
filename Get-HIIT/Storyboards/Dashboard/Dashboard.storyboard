@@ -123,28 +123,17 @@
                                     <constraint firstAttribute="height" constant="187" id="kdv-gE-E1z"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-wA-ebc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-wA-ebc" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="582" width="374" height="243"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph slice" translatesAutoresizingMaskIntoConstraints="NO" id="O1Y-Ln-5fe">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="243"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" name="Get-HIITWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="O1Y-Ln-5fe" secondAttribute="trailing" id="PTv-nT-z0v"/>
-                                    <constraint firstAttribute="bottom" secondItem="O1Y-Ln-5fe" secondAttribute="bottom" id="QXU-3h-TGx"/>
-                                    <constraint firstItem="O1Y-Ln-5fe" firstAttribute="top" secondItem="xRI-wA-ebc" secondAttribute="top" id="dVU-6p-btB"/>
-                                    <constraint firstItem="O1Y-Ln-5fe" firstAttribute="leading" secondItem="xRI-wA-ebc" secondAttribute="leading" id="pCL-sl-Ooj"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIB-T6-fN0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Niy-AS-oW2">
-                                        <rect key="frame" x="101" y="37" width="212" height="49"/>
+                                        <rect key="frame" x="0.0" y="37" width="414" height="49"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="212" id="uAJ-0x-DlO"/>
+                                            <constraint firstAttribute="width" constant="414" id="uAJ-0x-DlO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="28"/>
                                         <color key="textColor" name="Get-HIITWhite"/>
@@ -198,6 +187,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="dashboardGradient" destination="HIB-T6-fN0" id="twU-PM-edA"/>
+                        <outlet property="lineChart" destination="xRI-wA-ebc" id="FFs-l8-RFy"/>
                         <outlet property="weeklyAvgHeartRateLabel" destination="L6y-2r-PX6" id="Pkp-YR-2rk"/>
                         <outlet property="weeklyCalLabel" destination="pum-nN-Y2e" id="H94-UB-hCS"/>
                         <outlet property="weeklyWorkoutMinLabel" destination="v36-CE-jFT" id="l3w-Oa-Z8C"/>
@@ -215,7 +205,6 @@
         <image name="GetReady" width="184.5" height="208"/>
         <image name="Heart Rate Icon" width="500" height="500"/>
         <image name="Workout Time Icon" width="500" height="500"/>
-        <image name="graph slice" width="250" height="172"/>
         <namedColor name="Get-HIITBlack">
             <color red="0.17254901960784313" green="0.16470588235294117" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

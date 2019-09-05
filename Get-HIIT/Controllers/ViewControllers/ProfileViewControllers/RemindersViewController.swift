@@ -9,14 +9,16 @@
 import UIKit
 import EventKit
 
-class RemindersViewController: UIViewController {
+class RemindersViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
 
-    @IBOutlet weak var reminderToggle: NSLayoutConstraint!
-    @IBOutlet weak var reminderTimePicker: UIDatePicker!
+    @IBOutlet weak var reminderToggle: UISwitch!
+    @IBOutlet weak var datePicker: UIPickerView!
     @IBOutlet weak var remindMeLabel: UILabel!
- 
     @IBOutlet weak var titleView: UIView!
+    
+    let pickerData = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -24,59 +26,35 @@ class RemindersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false, verticalFlip: false)
+        
+       SetGradient.setGradient(view: titleView, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         
     }
     
-        
     
-    @IBAction func DatePickerTapped(_ sender: Any) {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    @IBAction func reminderToggleTapped(_ sender: Any) {
+        
         
     }
     
-    @IBAction func RemindersToggled(_ sender: Any) {
-        
-    }
+   
     
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func setGradient(view: UIView, chooseTwo primaryOrange: Bool, primaryBlue: Bool, accentOrange: Bool, accentBlue: Bool, verticalFlip: Bool = false) {
-        
-        var color1: UIColor = .getHIITPrimaryOrange
-        var color2: UIColor = .getHIITAccentOrange
-        var placeholder: UIColor = UIColor()
-        
-        switch (primaryOrange, primaryBlue, accentOrange, accentBlue) {
-        case (true, true, false, false):
-            color1 = .getHIITPrimaryOrange
-            color2 = .getHIITPrimaryBlue
-        case (true, false, true, false):
-            color1 = .getHIITPrimaryOrange
-            color2 = .getHIITAccentOrange
-        case (false, true, false, true):
-            color1 = .getHIITPrimaryBlue
-            color2 = .getHIITAccentBlue
-        default:
-            print("That gradient didnt work")
-        }
-        
-        if verticalFlip == true {
-            placeholder = color1
-            color1 = color2
-            color2 = placeholder
-            placeholder = UIColor()
-        }
-        
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.colors = [color1.cgColor, color2.cgColor]
-        gradient.locations = [0.0 , 1.0]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
-        gradient.frame = CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: view.frame.size.height)
-        
-        view.layer.insertSublayer(gradient, at: 0)
-    }
+   
 }
 
