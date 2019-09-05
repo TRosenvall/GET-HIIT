@@ -128,7 +128,7 @@
                                 <color key="backgroundColor" name="Get-HIITWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIB-T6-fN0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Niy-AS-oW2">
                                         <rect key="frame" x="0.0" y="37" width="414" height="49"/>
@@ -144,13 +144,13 @@
                                 <constraints>
                                     <constraint firstItem="Niy-AS-oW2" firstAttribute="centerX" secondItem="HIB-T6-fN0" secondAttribute="centerX" id="0Bg-75-oOs"/>
                                     <constraint firstItem="Niy-AS-oW2" firstAttribute="top" secondItem="HIB-T6-fN0" secondAttribute="top" constant="37" id="9r6-bx-3RV"/>
-                                    <constraint firstAttribute="bottom" secondItem="Niy-AS-oW2" secondAttribute="bottom" constant="8" id="e6M-bd-7Q4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Niy-AS-oW2" secondAttribute="bottom" constant="4" id="e6M-bd-7Q4"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="Get-HIITWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="HIB-T6-fN0" secondAttribute="bottom" constant="802" id="00K-i4-jAd"/>
+                            <constraint firstAttribute="bottom" secondItem="HIB-T6-fN0" secondAttribute="bottom" constant="806" id="00K-i4-jAd"/>
                             <constraint firstItem="5Lq-Ht-PLz" firstAttribute="leading" secondItem="Ure-pA-sEY" secondAttribute="trailing" constant="15" id="77V-Je-xC5"/>
                             <constraint firstItem="SiA-17-tkh" firstAttribute="top" secondItem="5Lq-Ht-PLz" secondAttribute="bottom" constant="26" id="8eR-20-7EO"/>
                             <constraint firstItem="yEI-eA-QYP" firstAttribute="trailing" secondItem="HQP-Cx-bt1" secondAttribute="trailing" constant="153" id="8xw-Ev-hHh"/>

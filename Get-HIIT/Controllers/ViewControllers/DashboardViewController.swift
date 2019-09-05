@@ -24,6 +24,8 @@ class DashboardViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        dashboardGradient.layer.shadowOpacity = 0.3
+        dashboardGradient.layer.shadowOffset = CGSize(width: 0, height: 3)
         lineChart.chartDescription?.text = ""
         
           SetGradient.setGradient(view: dashboardGradient, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
