@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HealthKit
+import WatchConnectivity
 
 class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     
@@ -29,8 +31,13 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
     var percentage: Double = 0
     static var totalTime: Double = 0
     
-    lazy var multiplier = workouts.multiplier
+    let defaultSession = WCSession.default
+    let healthStore = HKHealthStore()
+    var currentHeartRateSample : [HKSample]?
+    var currentHeartLastSample : HKSample?
+    var currentHeartRateBPM = Double()
     
+    lazy var multiplier = workouts.multiplier
     lazy var countdownTimer: CountdownTimer = {
         let countdownTimer = CountdownTimer()
         return countdownTimer
@@ -43,6 +50,13 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
           SetGradient.setGradient(view: timerHeaderGradient, mainColor: UIColor.getHIITPrimaryOrange, secondColor: UIColor.getHIITAccentOrange)
         gradient = setGradient(chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         setupTimerImage(gradient: gradient)
+        
+        if WCSession.isSupported() {
+            let wcsession = WCSession.default
+            wcsession.delegate = self
+            wcsession.activate()
+            print("Success")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -270,5 +284,68 @@ class WorkoutTimerViewController: UIViewController, CountdownTimerDelegate {
         gradient.startPoint = CGPoint(x: 0.5, y: 0.5)
         gradient.endPoint = CGPoint(x: 0.5, y: 0)
         timerImageView.layer.insertSublayer(gradient, at: 0)
+    }
+}
+
+extension WorkoutTimerViewController: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        getCurrentHeartRateData(session: session)
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    func getCurrentHeartRateData(session: WCSession){
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: Date())
+        let startDate : Date = calendar.date(from: components)!
+        let endDate : Date = calendar.date(byAdding: Calendar.Component.day, value: 1, to: startDate as Date)!
+        let sampleType : HKSampleType =  HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+        let predicate : NSPredicate =  HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
+        let anchor: HKQueryAnchor = HKQueryAnchor(fromValue: 0)
+        let anchoredQuery = HKAnchoredObjectQuery(type: sampleType, predicate: predicate, anchor: anchor, limit: HKObjectQueryNoLimit) { (query, samples, deletedObjects, anchor, error ) in
+            if samples != nil {
+                self.collectCurrentHeartRateSample(currentSampleType: samples!, deleted: deletedObjects!, session: session)
+            }
+        }
+        anchoredQuery.updateHandler = { (query, samples, deletedObjects, anchor, error) -> Void in
+            self.collectCurrentHeartRateSample(currentSampleType: samples!, deleted: deletedObjects!, session: session)
+        }
+        self.healthStore.execute(anchoredQuery)
+    }
+    
+    //Retrived necessary parameter from HK Sample
+    func collectCurrentHeartRateSample(currentSampleType : [HKSample]?, deleted : [HKDeletedObject]?, session: WCSession){
+        self.currentHeartRateSample = currentSampleType
+        //Get Last Sample of Heart Rate
+        self.currentHeartLastSample = self.currentHeartRateSample?.last
+        if self.currentHeartLastSample != nil {
+            let lastHeartRateSample = self.currentHeartLastSample as! HKQuantitySample
+            self.currentHeartRateBPM = lastHeartRateSample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            let heartRateStartDate = lastHeartRateSample.startDate
+            let heartRateEndDate = lastHeartRateSample.endDate
+            //Send Heart Rate Data Using Send Messge
+            DispatchQueue.main.async {
+                let message = [
+                    "HeartRateBPM" : "\(self.currentHeartRateBPM)",
+                    "HeartRateStartDate" : "\(heartRateStartDate)",
+                    "HeartRateEndDate" : "\(heartRateEndDate)"
+                ]
+                //Transfer data from watch to iPhone
+                self.defaultSession.sendMessage(message, replyHandler:nil, errorHandler: { (error) in
+                    print("Error in send message : \(error)")
+                })
+                
+                if let currentSample = self.currentHeartRateSample {
+                    print(currentSample)
+                }
+                if let lastSample = self.currentHeartLastSample {
+                    print(lastSample)
+                }
+            }
+        }
     }
 }
