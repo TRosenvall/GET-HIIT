@@ -31,8 +31,10 @@ class Profile {
     var totalCaloriesBurned: Double
     var weightsForWeeklyPlot: [Double]
     var caloriesBurnedThisWeek: [Double]
+    var firstLogin: Bool
     // Profile Initializer
-    init(name: String = "", gender: Int = -1, healthKitIsOn: Bool = false, remindersEnabled: Bool = false, notificationsEnabled: Bool = false, age: Int = -1, goal: Int = 0, idealPlan: Int = 0, exercisesThisWeek: Int = 0, completedExercises: Int = 0, totalTimeExericising: Int = 0, weight: Double = -1, averageHeartRate: Double = 0.0, caloriesBurnedToday: Double = 0.0, totalCaloriesBurned: Double = 0.0, weightsForWeeklyPlot: [Double] = [], caloriesBurnedThisWeek: [Double] = []) {
+    init(name: String = "", gender: Int = -1, healthKitIsOn: Bool = false, remindersEnabled: Bool = false, notificationsEnabled: Bool = false, age: Int = -1, goal: Int = 0, idealPlan: Int = 0, exercisesThisWeek: Int = 0, completedExercises: Int = 0, totalTimeExericising: Int = 0, weight: Double = -1, averageHeartRate: Double = 0.0, caloriesBurnedToday: Double = 0.0, totalCaloriesBurned: Double = 0.0, weightsForWeeklyPlot: [Double] = [], caloriesBurnedThisWeek: [Double] = [],
+         firstLogin: Bool = true) {
         self.name = name
         self.gender = gender
         self.healthKitIsOn = healthKitIsOn
@@ -50,5 +52,6 @@ class Profile {
         self.totalCaloriesBurned = totalCaloriesBurned
         self.weightsForWeeklyPlot = weightsForWeeklyPlot
         self.caloriesBurnedThisWeek = caloriesBurnedThisWeek
+        self.firstLogin = firstLogin
     }
 }

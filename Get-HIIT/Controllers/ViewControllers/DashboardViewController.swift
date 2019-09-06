@@ -39,7 +39,16 @@ class DashboardViewController: UIViewController {
         self.minutes.append(minutes1)
         self.minutes.append(minutes2)
         updateDataChart()
-    } 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if ProfileController.sharedInstance.profile.firstLogin {
+            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "aboutMeViewController")
+            self.present(viewController, animated: false, completion: nil)
+        }
+    }
     
     func updateDataChart() {
         print(minutes)

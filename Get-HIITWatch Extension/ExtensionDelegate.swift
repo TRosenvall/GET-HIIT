@@ -16,7 +16,9 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         HealthKitController.sharedInstance.authorizeHeatlhKitInApp { (success) in
             print(success)
         }
-        HealthKitController.sharedInstance.heartRateObserver()
+        HealthKitController.sharedInstance.heartRateObserver { (heartRate) in
+            NotificationCenter.default.post(name: NSNotification.Name("sendHeartRate"), object: heartRate)
+        }
     }
 
     func applicationDidBecomeActive() {

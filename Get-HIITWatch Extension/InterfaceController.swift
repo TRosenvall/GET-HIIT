@@ -11,11 +11,18 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLabel), name: NSNotification.Name("sendHeartRate"), object: nil)
+    }
+    
+    @objc func updateLabel(notification: NSNotification) {
+        let heartRate = notification.object
+        heartRateLabel.setText("\(heartRate)")
     }
     
     override func willActivate() {

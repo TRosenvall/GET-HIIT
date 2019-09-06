@@ -20,6 +20,10 @@ class AboutMeViewController: UIViewController {
     
     @IBOutlet weak var titleView: UIView!
     
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var preferenceLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     // Set the user profile and create a Picker View for the gender
     let profile = ProfileController.sharedInstance.profile
@@ -34,6 +38,18 @@ class AboutMeViewController: UIViewController {
         setGradient(view: titleView, chooseTwo: true, primaryBlue: false, accentOrange: true, accentBlue: false)
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        if ProfileController.sharedInstance.profile.firstLogin {
+            progressView.isHidden = false
+            preferenceLabel.isHidden = false
+            backButton.isHidden = true
+            nextButton.isHidden = false
+        } else {
+            progressView.isHidden = true
+            preferenceLabel.isHidden = true
+            backButton.isHidden = false
+            nextButton.isHidden = true
+        }
         
         // Hide the label for if access is denied to HealthKit.
         

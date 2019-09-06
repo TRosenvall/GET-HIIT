@@ -12,6 +12,11 @@ class MyPlanViewController: UIViewController {
 
     @IBOutlet weak var titleView: UIView!
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var preferenceLabel: UILabel!
+    @IBOutlet weak var doneButton: UIButton!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -22,6 +27,19 @@ class MyPlanViewController: UIViewController {
         titleView.layer.shadowOpacity = 0.3
         titleView.layer.shadowOffset = CGSize(width: 0, height: 3)
         // Do any additional setup after loading the view.
+        
+        if ProfileController.sharedInstance.profile.firstLogin {
+            progressView.isHidden = false
+            preferenceLabel.isHidden = false
+            backButton.isHidden = true
+            doneButton.isHidden = false
+        } else {
+            progressView.isHidden = true
+            preferenceLabel.isHidden = true
+            backButton.isHidden = false
+            doneButton.isHidden = true
+        }
+        
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -29,7 +47,8 @@ class MyPlanViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
+        ProfileController.sharedInstance.profile.firstLogin = false
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
     
     /*
