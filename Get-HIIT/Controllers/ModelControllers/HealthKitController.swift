@@ -84,23 +84,24 @@ class HealthKitController {
                 print(error.localizedDescription)
                 print("Error with readProfile function - heartRate query")
             }
-            if let results = results {
-                print(results)
-                for result in results {
-                    if let sample = result as? HKQuantitySample {
-                        print(sample.quantity)
-                    }
-                }
-            }
+//            if let results = results {
+//                print(results)
+//                for result in results {
+//                    if let sample = result as? HKQuantitySample {
+//                        print(sample.quantity)
+//                    }
+//                }
+//            }
             if let result = results?.last as? HKQuantitySample {
                 heartRate = result.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                print(heartRate)
                 completion(heartRate)
             }
         }
         healthKitStore.execute(queryHeartRate)
     }
     
-    func heartRateObserver () {
+    func heartRateObserver (completion: @escaping (Double) -> Void) {
         guard let sampleType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {return}
         
         let queryHeartRate = HKObserverQuery(sampleType: sampleType, predicate: nil) { (query, completionHandler, error) in
@@ -112,6 +113,7 @@ class HealthKitController {
                 self.heartRates.append(heartRate)
                 print(self.heartRates)
                 completionHandler()
+                completion(heartRate)
             })
         }
         healthKitStore.execute(queryHeartRate)

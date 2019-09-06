@@ -182,7 +182,7 @@
         <!--About Me View Controller-->
         <scene sceneID="Ws1-lf-Zbf">
             <objects>
-                <viewController id="NJB-c8-CHz" customClass="AboutMeViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutMeViewController" id="NJB-c8-CHz" customClass="AboutMeViewController" customModule="Get_HIIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4L-AC-Ad5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,9 +385,13 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="ageTextField" destination="mMx-Ri-pAG" id="v10-5s-RIr"/>
+                        <outlet property="backButton" destination="HH2-sV-SfU" id="pal-ja-gyH"/>
                         <outlet property="genderTextField" destination="yR4-7Q-SwJ" id="AVA-N6-WbM"/>
                         <outlet property="healthKitSwitch" destination="kFl-oj-2c4" id="PmV-zh-b6G"/>
                         <outlet property="nameTextField" destination="8a2-nz-aY9" id="rbf-Dl-Go0"/>
+                        <outlet property="nextButton" destination="UdR-OI-FZh" id="O3f-HP-WF5"/>
+                        <outlet property="preferenceLabel" destination="GpD-bU-IpI" id="She-pg-Nbn"/>
+                        <outlet property="progressView" destination="XDl-ju-quw" id="lVa-jk-8qA"/>
                         <outlet property="titleView" destination="q4a-66-NRc" id="WiH-pU-UFE"/>
                         <outlet property="weightTextField" destination="jEH-ap-RN2" id="6hB-Js-fZT"/>
                     </connections>
@@ -625,6 +629,10 @@
                         <viewLayoutGuide key="safeArea" id="SI0-WV-gmO"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="AQ7-49-5Ve" id="O6w-a9-cyL"/>
+                        <outlet property="doneButton" destination="ImY-H1-oeH" id="4Jw-NQ-ks0"/>
+                        <outlet property="preferenceLabel" destination="rBT-XB-dJf" id="dqh-hc-Gkl"/>
+                        <outlet property="progressView" destination="wnB-MT-6Ta" id="TtI-3L-Sep"/>
                         <outlet property="titleView" destination="kwQ-FG-0Pj" id="JcH-kv-jq2"/>
                     </connections>
                 </viewController>
